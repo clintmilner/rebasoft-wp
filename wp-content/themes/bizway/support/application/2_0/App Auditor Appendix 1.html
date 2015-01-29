@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+		<title>App Auditor Appendix 1.html</title>
+	</head>
+	<body>
+		<div id="App-Auditor-Appendix-1.html" xml:lang="en-US">
+			<div class="story">
+				<p>Appendix 1: Application Auditor V2.0 Release notes</p>
+			</div>
+			<div class="story">
+				<table id="table-1">
+					<tbody>
+						<tr>
+							<td>Build</td>
+							<td>Comment</td>
+						</tr>
+						<tr>
+							<td>385</td>
+							<td>Working on Cos Reporting in forensics</td>
+						</tr>
+						<tr>
+							<td>384</td>
+							<td>Added tos display selector to report settings</td>
+						</tr>
+						<tr>
+							<td>378</td>
+							<td>Working on linkage between summary and forensics at the subnet to interface level. Now you have a link at the top of the subnet overview to go to its supplying interface</td>
+						</tr>
+						<tr>
+							<td>374</td>
+							<td>Fix for when installing with Auditor Core already installed</td>
+						</tr>
+						<tr>
+							<td>373</td>
+							<td>Fixed issue where port 514 is mistakenly assigned to netflow rather than syslog. If happens in production, just remove and re-add 514 as syslog</td>
+						</tr>
+						<tr>
+							<td>366</td>
+							<td>Unknown ints are now configurable in device settings</td>
+						</tr>
+						<tr>
+							<td>364</td>
+							<td>Working on rest apps</td>
+						</tr>
+						<tr>
+							<td>363</td>
+							<td>Added sorting to filter options</td>
+						</tr>
+						<tr>
+							<td>362</td>
+							<td>Added subnet filter to forensics. Subnets can be entered as with slash or space delimiters ip mask e.g. 172.21.40.0 255.255.255.0 ip prefixlen e.g. 172.21.40.0 24 ip/mask e.g. 172.21.40.0/255.255.255.0 ip/prefixlen e.g. 172.21.40.0/24 If no mask is defined, a class c is used by default</td>
+						</tr>
+						<tr>
+							<td>349</td>
+							<td>Fixed issue with netflow v9 and embedded flowsets</td>
+						</tr>
+						<tr>
+							<td>336</td>
+							<td>Built subnet manager</td>
+						</tr>
+						<tr>
+							<td>335</td>
+							<td>dns resolver for forensics reports</td>
+						</tr>
+						<tr>
+							<td>332</td>
+							<td>Finished communities section of AA settings</td>
+						</tr>
+						<tr>
+							<td>330</td>
+							<td>Added user settings page. If no users are defined it will add a default of admin/admin with admin rights</td>
+						</tr>
+						<tr>
+							<td>328</td>
+							<td>Changed summariser to include all interfaces instead of just in and out.</td>
+						</tr>
+						<tr>
+							<td>325</td>
+							<td>Changed slow duration to 60000, was stored as 0 as sflow doesn&apos;t contain flow duration!!</td>
+						</tr>
+						<tr>
+							<td>322</td>
+							<td>Set netscreen to use zone for interface names</td>
+						</tr>
+						<tr>
+							<td>318</td>
+							<td>changed netscreens as they were timing by millisecond instead of seconds.</td>
+						</tr>
+						<tr>
+							<td>314</td>
+							<td>Added service field to juniper tables</td>
+						</tr>
+						<tr>
+							<td>312</td>
+							<td>Performance tuning on mediator with regards to unrequired subnet lookups</td>
+						</tr>
+						<tr>
+							<td>311</td>
+							<td>All forensics fields should now have human text Added vendorapp, vendornestedapp, ident and identroles to juniper apptrack and rtflow tables</td>
+						</tr>
+						<tr>
+							<td>309</td>
+							<td>Priority on applications list now takes effect. First the specific data source will be checked then the priority from highest to lowest. default 0 means first hit</td>
+						</tr>
+						<tr>
+							<td>307</td>
+							<td>Added pattern matching to the url application definitions e.g. www.facebook.com matched any url with (anything)+www.facebook.com+(anything) photos.*fbcdn.net matched any site with (anything)+ photos+(anything)+*fbcdn.net+(anything)</td>
+						</tr>
+						<tr>
+							<td>305</td>
+							<td>New application definition section in app settings</td>
+						</tr>
+						<tr>
+							<td>299</td>
+							<td>Added domain to subnet report links</td>
+						</tr>
+						<tr>
+							<td>295</td>
+							<td>Added new overview reports to the server reports. Added subnet overview link to treeview</td>
+						</tr>
+						<tr>
+							<td>294</td>
+							<td>Added startup screen to inform users of startup progress</td>
+						</tr>
+						<tr>
+							<td>293</td>
+							<td>Working on new graphs for reports Fixed timing issue with netflow v9 fields, should have been longs but were ints</td>
+						</tr>
+						<tr>
+							<td>278</td>
+							<td>Support for overlapping subnet</td>
+						</tr>
+						<tr>
+							<td>275</td>
+							<td>Fixed ability to have decimal places in interface speeds</td>
+						</tr>
+						<tr>
+							<td>274</td>
+							<td>Added ability to edit ifalias and speeds, speed accepts 10000 or 10kb or 10m</td>
+						</tr>
+						<tr>
+							<td>268</td>
+							<td>Added Pct reporting on the interfaces page. green To 70%, yellow to 90% and red above 90%</td>
+						</tr>
+						<tr>
+							<td>267</td>
+							<td>Device settings now shows which type of packets the receiver has received for each data source</td>
+						</tr>
+						<tr>
+							<td>264</td>
+							<td>Adding mapping between indexed and unindexed interfaces</td>
+						</tr>
+						<tr>
+							<td>246</td>
+							<td>Added underlines to device nad interface links</td>
+						</tr>
+						<tr>
+							<td>236</td>
+							<td>Added table/chart selector to forensics reports</td>
+						</tr>
+						<tr>
+							<td>233</td>
+							<td>Added flow and packet rate graphs to the interface reports</td>
+						</tr>
+						<tr>
+							<td>228</td>
+							<td>Adding new reports</td>
+						</tr>
+						<tr>
+							<td>210</td>
+							<td>Installed new graphing engine</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="story">
+				<p>Appendix 1: Application Auditor V2.0 Release notes</p>
+			</div>
+		</div>
+	</body>
+</html>

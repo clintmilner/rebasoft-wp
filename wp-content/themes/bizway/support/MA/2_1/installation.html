@@ -1,0 +1,63 @@
+<h2>Installing Rebasoft Auditor</h2>
+<p>Installation is achieved by executing the Rebasoft Auditor installation wizard. This wizard guides
+    administrators through the installation or updating process and allows the
+    specification of a number of parameters - it should only take a few minutes to
+  install the system. </p>
+<p>The installer can be run whether performing a new installation or updating an existing system. In the
+    case of an upgrade, data is preserved; Rebasoft does, however, advise
+    administrators to perform a data back-up regularly and especially prior to
+system upgrade.</p>
+<table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+     <td class="box" style="font-size:0.8em;"><b><i><span style='color:red'>Note:</span></i></b><br />    
+       Due to Windows security sometimes the PostgreSQL installer may not complete due to directory permission issues; Rebasoft recommends that the installer be run as the Local Administrator as a work around.
+     </td>
+   </tr>
+  </table>
+<p>To start installation,
+  simply execute the installer:</p>
+<p>1)</p>
+  <center><img src="../img/Usermanual_2_0/image046.jpg" width="400" /></center>
+  <p align="right">Click next....</p>
+  <p>2) </p>
+    <center><img src="../img/Usermanual_2_0/image047.jpg" width="400" /></center>
+  <p>Click "I Agree" to accept the
+  licence agreement....</p>
+  <p>3)  </p>
+  <center><img src="../img/Usermanual_2_0/image048.jpg" width="400" /></center>
+  <p align="right">Click next....</p>
+  <p>Select components to install and
+  click next....</p>
+  <p>4)</p>
+    <center><img src="../img/Usermanual_2_0/image049.jpg" width="400" /></center>
+    <br /><br />
+      <table cellpadding=0 cellspacing=0 width="100%">
+        <tr>
+          <td class="box" style="font-size:0.8em;"><b><i><span style='color:red'>Note:</span></i></b><br />
+            The Java installer does not permit spaces in the specification of the destination folder</td>
+        </tr>
+      </table>
+  <p>Specify installation directory for installation and click next....</p>
+  <p>5)</p>
+    <center><img src="../img/Usermanual_2_0/image050.jpg" width="400" /></center>
+  <p>For threads setting please see System parameters for more details.</p>
+       <center>
+      <img src="../img/Usermanual_2_1/image062.png" alt="port prompt" /></center>
+      <br /><br /><table cellpadding=0 cellspacing=0 width="100%">
+        <tr>
+          <td class="box" style="font-size:0.8em;"><b><i><span style='color:red'>Note:</span></i></b><br />
+            If the http or https ports entered are already in use by another application, the installation will prompt you to change the port numbers. If you chose to continue, then installer will complete, but
+              an entry stating "bind failed, port already in use" will appear in the "MACAuditor.log" file and the MACAuditor service will fail to start.</td>
+        </tr>
+      </table>
+     
+  <p>Click next - (If upgrading the installer will stop the MACAuditor service)</p>
+  <p>6)</p>
+    <center><img src="../img/Usermanual_2_0/image051.jpg" width="400" /></center>
+  <p>If not installed Rebasoft Auditor installer will install PostgreSQL and JRE</p>
+  <p>7)</p>
+    <center><img src="../img/Usermanual_2_0/image052.jpg" width="400" /></center>
+  <p>Rebasoft Auditor installs as a system service (called MACAuditor); a command window should appear during this process</p>
+  <p>8)</p>
+  <center><img src="../img/Usermanual_2_0/image053.jpg" width="400" /></center>
+<p>Once Rebasoft Auditor installation is complete (administrators can view the details of where files have been installed by clicking the details button) click next....</p>

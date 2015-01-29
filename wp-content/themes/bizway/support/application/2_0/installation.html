@@ -1,0 +1,76 @@
+<h1><span class="purple">Installing Application Auditor</span></h1>
+				<p>Installation is achieved by executing the Application Auditor installation wizard. This wizard guides administrators through the installation or updating process and allows the specification of a number of parameters – it should only take a few minutes to install the system. </p>
+				<p>The installer can be run whether performing a new installation or updating an existing system. In the case of an upgrade, data is preserved; Rebasoft does, however, advise administrators to perform a data back-up regularly using pgAdmin (see appendix) and especially prior to system upgrade.</p>
+			<table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+                <tr valign="middle">
+                <td style="background:#ff9900;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+                <td style="border: 1px solid #ff9900;">
+				Due to windows security, we recommend that the installer be run as the Local Administrator</td></tr></table>
+				<p></p>
+			
+				<p>To start installation, simply execute the installer </p>
+				<p>1) Click next:</p>
+			<center><img src="2_0/images/installer1.PNG" width="400" /></center>
+				<p>2) Click “I Agree” to accept the licence agreement:</p>
+			<center><img src="2_0/images/installer2.PNG" width="400" /></center>
+				<p>3) Select components to install and click next:</p>
+			
+			
+				<center><img src="2_0/images/installer3.PNG" width="400" /></center>
+			
+				<p>4) Enter desired http/https port together Threads and RAM settings desired:</p>
+			<center><img src="2_0/images/installer4.PNG"  width="400" /></center>
+				<p>The number of threads is a measure of the number of parallel pollers Auditor should use. The larger the network, the more pollers should be set. Larger numbers of threads requires more RAM. RAM can also be set.</p>
+				
+                5) Specify installation directory for installation and click next:</p>
+			
+            <center><img src="2_0/images/installer5.PNG" width="400" /></center><br /><br />
+				<table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+                <tr valign="middle">
+                <td style="background:#ff9900;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">Note</span></td>
+                <td style="border: 1px solid #ff9900;">If Auditor is already installed, the installer will now stop the MACAuditor service in preparation for the upgrade of files.</td></tr></table>
+			    <br /><br />
+				<table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+                <tr valign="middle">
+                <td style="background:#ff9900;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">Note</span></td>
+                <td style="border: 1px solid #ff9900;">The Java installer does not permit spaces in the specification of the destination folder</td></tr></table>
+			
+				<p>6) If not installed Auditor  will install PostgreSQL and JRE:</p>
+			<center><img src="2_0/images/installer6.PNG" width="400" /></center><br /><br />
+				<p>And install the necessary components:</p>
+			
+			<center><img src="2_0/images/installer7.PNG" width="400" /></center>	
+            
+            <p>Sometimes, due to windows permissions, postgres will not install. The installer will pause and a message will request that postgres be installed manually.</p>
+				
+				<p>7) Auditor installs as a system service, a command window should appear during this process:</p>
+			
+			<center><img src="2_0/images/installer11.png" width="400" /></center>	
+            <p>8) Once Auditor installation is complete (administrators can view the details of where files 
+				have been installed by clicking the details button) click next:</p>
+			
+				
+			
+				
+			
+				
+			<center><img src="2_0/images/installer12.png"  width="400" /></center>
+				<h2>Logging in for the first time</h2>
+			
+				<p>Users and administrators can access Rebasoft Application Auditor from a workstation with a compliant browser by opening the following address:</p>
+				<code>http://&lt;IP or DNS address of server&gt;:&lt;port&gt;</code><br /><br /><center><img src="2_0/images/Loggingin2.png"/></center>
+				<p>On the first instance of Application Auditor being run it is normal to be displayed the following message:</p>
+			<center><img src="2_0/images/Loggingin.png"/></center>
+				<p>This will clear within a couple of minutes and normal use will resume on subsequent logins. </p>
+				
+				<p>To access Rebasoft Application Auditor, at the login screen enter the default username and password of "admin" and "admin". We recommend administrators change the default installation password from "admin" via the Users Admin function.</p>
+			
+				
+			
+				
+			
+				
+			
+				<p>Until receivers &amp; devices are configured, you will be presented with a blank screen as shown below:</p>
+			<center><img src="2_0/images/Loggingin3.png"/></center><br /><br />
+				

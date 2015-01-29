@@ -1,0 +1,98 @@
+<h1><span class="purple">Active Tests</span></h1>
+<p>Active test provides the ability
+        to immediately test the presence of an IP address and availability of
+        TCP ports on that IP address or subnet in real time. With SNMP methods
+        of polling IP addresses, the data can be 5 minutes or more out of date
+        and typically just provides a record of an IP address being present on
+        the network in the past.</p>
+<center><img border="0" src="2_4/images/image278.jpg" /></center>
+<p>Active Test goes further; in
+        that an administrator can define a series of tests to verify the availability
+        of a TCP port, and the response time of those tests.</p>
+<table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+  <tr valign="middle">
+    <td width="6%" valign="top" style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+    <td width="94%" style="border: 1px solid #663399;"><i></i>
+      <p style="font-size:1em;"><i></i><i></i>Active Test is only initiated by the operator via the web browser session. Active test is activated only from IP forensics in a subnet with Active tests configured, or commanded via the “Active Test All” button when displaying a list of IP addresses in a search result.</p></td>
+  </tr>
+</table>
+<p>Active Test works by sending
+        a SYN to the target IP address and port. If the port connection is made,
+        Auditor  closes the session and records the response time. If the IP/port
+        does not respond, only the single packet is sent and no retransmission
+occurs. This way, the network overhead is negligible.</p>
+<p>Active Test provides 2 key benefits:</p>
+<ol>
+<li>In
+  the absence of any other tools, active test verifies the instant status of
+  a remote IP address, avoiding the need to deploy cable test for initial diagnosis.
+  This speeds up the process of problem solving. The port test can also verify
+  the correct services are showing as available – a possible indication of correct
+  functioning of the remote device.</li>
+<li>Active
+  test can also verify which ports at the end device are available. Active Test
+  can therefore be a security tool to identify end device ports that should not
+  be available – a possible indication of miss-configuration, presence of malware
+  or even presence of a rogue device.</li></ol>
+<p>To access Active Test administration, select from the Admin menu:</p>
+<center><img border="0" src="2_4/images/image281.jpg"  /></center>
+<p>Active Test administration
+        list tests that are available and the ability to remove them by clicking
+        the delete under action:</p>
+<center><img border="0" src="2_4/images/image283.jpg" /></center>
+<p>To add a new test select the
+        test type – the current version of Auditor  supports TCP type tests only. Complete
+        the fields and click the "Add Active Test" button.</p>
+<center><img border="0" src="2_4/images/image285.jpg" /></center>
+<p>The table below describes the
+        settings available for Active test:</p>
+<div align="center">
+  <table border="1" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="121" valign="top"><p  style='line-height:
+  normal'><b>Field</b></p></td>
+      <td width="416" valign="top"><p  style='line-height:
+  normal'><b>Description</b></p></td>
+    </tr>
+    <tr>
+      <td width="121" valign="top"><p  style='line-height:
+  normal'>Name</p></td>
+      <td width="416" valign="top"><p  style='line-height:
+  normal'>The name is
+              displayed in IP forensics – it is recommended that is be short</p></td>
+    </tr>
+    <tr>
+      <td width="121" valign="top"><p  style='line-height:
+  normal'>Description</p></td>
+      <td width="416" valign="top"><p  style='line-height:
+  normal'>A description
+              of the active test</p></td>
+    </tr>
+    <tr>
+      <td width="121" valign="top"><p  style='line-height:
+  normal'>Settings</p></td>
+      <td width="416" valign="top"><p  style='line-height:
+  normal'>The desired
+              destination TCP port of the Active test. IANA publishes a list
+              of well-known port numbers: <a
+  href="http://www.iana.org/assignments/port-numbers">http://www.iana.org/assignments/port-numbers</a></p></td>
+    </tr>
+    <tr>
+      <td width="121" valign="top"><p  style='line-height:
+  normal'>Subnet</p></td>
+      <td width="416" valign="top"><p  style='line-height:
+  normal'>If a subnet
+              is entered here, only an IP address matching the subnet number
+              and mask (below) will be tested.</p></td>
+    </tr>
+    <tr>
+      <td width="121" valign="top"><p  style='line-height:
+  normal'>Subnet Mask
+              length</p></td>
+      <td width="416" valign="top"><p  style='line-height:
+  normal'>Enter a bit
+              mask to complete the subnet definition.</p></td>
+    </tr>
+  </table>
+</div>
+ 

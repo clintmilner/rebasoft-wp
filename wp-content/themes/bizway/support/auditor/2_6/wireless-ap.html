@@ -1,0 +1,47 @@
+<h1><span class="purple">Wireless</span></h1>
+<p>Auditor Core V2.5 and later support controller based wireless devices from Juniper Networks; vendors such as Cisco and Aruba will follow in subsequent maintenance releases. </p>
+<p>Wireless Controller based WLAN networks   enable seamless integration of reliable, scalable and secure, wireless networks with existing wired infrastructures. Auditor Core can now provide the same insight into what is connecting to your wireless LAN as across your wired LAN.</p>
+<p>Auditor Core can provide <a href="#live">Live statistics</a> and collect <a href="ap">historical</a> data for controller based WLAN.</p>
+<a id="ap"></a><h2>Access Points</h2>
+<p>Access Points (AP's) are discovered by Auditor Core by polling the Controller. Connected AP's are prefaced with the letters &quot;AP&quot; and  are connected via the interfaces in the WLAN controller device
+
+      <center>
+        <img src="2_5/images/trapeze-interfaces.png" alt="" width="380" border="0"/>
+      </center>
+</p>
+<table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+  <tr valign="middle">
+    <td width="6%" valign="top" style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+    <td width="94%" style="border: 1px solid #663399;"><i></i> The WLAN controller and attached AP's are all displayed as devices;  the AP's themselves cannot be directly polled using SNMP, their status remains grey in the Sites and devices selector: <br />
+      <br />
+      <center>
+        <img src="2_5/images/trapeze-device.png" alt="" width="180" border="0"/>
+      </center>
+      <br />
+      <br />
+      Clients connected to the AP are rolled up together with other AP's on the controller and displayed in the controller device display as IP's, MAC's and VLANs</td>
+  </tr>
+</table>
+<p>Clicking on the &quot;interfaces&quot; link shows the connected AP's:</p>
+ <center>
+        <img src="2_5/images/trapeze-device-if-list.png" alt="" width="580" border="0"/>
+      </center>
+<p>Users can see connected devices &nbsp;</p>
+<a id="live"></a><h2>LiveWireless</h2>
+<p>Livewireless is a script executed at the WLAN controller device - this will show currently connected devices and other transient wireless related information.  To see AP's connected to a WLAN controller, simply click the &quot;LiveWireless&quot; link under tools:</p>
+<center><img border="0" src="2_5/images/trapeze2.jpg" width="300"/></center>
+<p>The Livewireless link is currently an integration that is set-up under <a href="help.php?version=2.5&integration">Integration</a>. To enable it, click the Device radio button, select subnet filter (if defined) and add the following statement:<br /><br />
+<code> ../static/scripts/livewireless/livewireless.html?host=REBA_DEVICE </code></p>
+<p>&nbsp;</p>
+<p>To see clients connected to a particular AP simply click on the inspect icon ( <img border="0" src="2_5/images/inspect.png" /> ). This will show the list of clients connected and, along with IP and MAC, the following information:</p>
+<ul>
+<li>UserID</li>
+<li>VLAN</li>
+<li>SSID</li>
+<li>Radio</li>
+<li>RSSI (Received Signal Strength Indicator)</li>
+<li>SNR (Signal to Noise Ratio)</li>
+</ul>
+<p>&nbsp;</p>
+<center><img border="0" src="2_5/images/trapeze4.png" width="500"/></center>
+<p>&nbsp;</p>

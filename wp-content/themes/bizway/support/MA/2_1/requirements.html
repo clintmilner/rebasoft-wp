@@ -1,0 +1,41 @@
+<h2><span class="purple">Minimum System Requirements</span></h2>
+  <p>The type of system
+    required to run MAC Auditor depends on the number of devices to be polled for
+    management reporting. The following requirements are a guideline; the only way
+    to determine requirements is by testing the software&rsquo;s performance in a
+    specific network environment. To this end Rebasoft has packaged a 7-day trial
+  download.</p>
+  <ul>
+  <li>Dual core Intel Xeon or AMD similar processor.</li>
+  <li>2Gb RAM, although performance will benefit from
+  increased RAM, as data is cached in memory prior to writing to the database.</li>
+  <li>120 Gb SATA 7200rpm+ disk (or greater depending on
+  network size and period of storage).</li>
+  <li>Windows 2003/2008 server.</li>
+  <li>Java Runtime (JRE) V1.6 (or later) installed - if not installed will be installed by installer</li>
+  <li>PostgreSQL - if not installed will be installed by installer</li>
+  <li>Internet
+      Explorer V6 or later, Mozilla V3 or later (JavaScript must enabled in the
+      browser).</li>
+  <li>1200 x 1024 pixel screen
+  resolution is recommended for client devices accessing MAC Auditor.</li>
+  </ul>
+  <p>MAC Auditor is supported in
+  a VMware environment.</p>
+  <h4>System parameters</h4>
+  <p>MAC Auditor relies on SNMP
+    polling device CAM tables as part of information collection. The software has
+    been extensively tested in large networks and against different device types
+    and vendors. System parameters are set as a result of the testing and in line
+  with system recommendations below.</p>
+  <p>Experience shows that it
+    takes around 1 minute for a device to respond to poll of the CAM table. The
+    system default is for the polling cycle to be completed every 30 minutes. The
+    objective therefore is to set the number of concurrent poller threads to be
+    sufficient to complete to information collection and processing within the
+  allotted time. </p>
+  <p>We recommend that 1 thread
+    be allowed for each 10 devices to be polled. The installation default is for 20
+    threads, this would allow support of up to 200 devices (with between 5000 and
+    8000 interfaces). The thread count can be increased subject to network and
+  server load considerations.</p>

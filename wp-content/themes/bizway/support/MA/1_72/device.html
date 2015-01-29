@@ -1,0 +1,57 @@
+  <h2><span class="purple"><a name="start"></a>Device administration</span></h2>
+  <p>Any device that has a CAM table can be a data source for MAC Auditor - this might be Layer 3 switch, Router or Firewall. MAC Auditor uses SNMP to poll device MIB parameters using RFC standards to retrieve the required information from the device. Where a device is not compliant, it is possible to use a custom MIB - Rebasoft will consider adding vendor MIBs to Mac Auditor to support customer requirements. We have also provided an over-ride to cater to devices where the MIB definitions present inconsistent results.</p>
+  <p>To <a href="#add-device">add</a> or <a href="#change-device">manage</a> existing devices, administrators should select &ldquo;Devices&rdquo; from the administration dropdown & click the arrow: </p>
+       <center><img src="../img/Usermanual_1_72/image025.jpg" border="0" /></center>
+ <h3><a name="add-device"></a>Add devices</h3>
+<p>Devices can be added either directly from their IP address or from their assigned DNS name. Administrators can add up to 10 devices via the add device button. To add more than 10 devices, it is advisable to use the <a href="#bulk">bulk loading</a> dialog. </p>
+             <center><img src="../img/Usermanual_1_72/image026.jpg" border="0" width="400"/></center>
+
+<table width="100%">
+        <tr>
+          <td class="box" style="font-size:0.8em;"><b>Note: </b><br />
+          To add a device (or devices) directly to a site, simply select from the site dropdown. If the site selector is "none", the device will be added to the "All devices" site only</td>
+        </tr>
+      </table>
+<p>TTo add multiple devices, simply separate with a comma; for example "router1, switch1, firewall8" will add 3 devices - DNS will resolve the device to the current IP address. Up to 10 devices may be added using this method using IP addresses</p> 
+<p><code>router1,switch1,firewall8</code></p><p>will add 3 devices - DNS will resolve the device to the current IP address. Up to 10 devices may be added using this method using IP addresses. </p>
+<p>To add a range of devices, simply add the start of the range and the end of the range separated with a space; for example </p>
+<code>1.1.1.1 1.1.1.50</code></p>
+<p>will scan and add fifty devices from 1.1.1.1 to 1.1.1.50. For multiple ranges, it is recommended that the bulk load facility is used:</p>
+             
+             <a id="bulk"></a>
+             <center><img src="../img/Usermanual_1_72/image027.jpg" border="0" width="400"/></center>
+             
+             
+<p>Devices can be bulk-loaded by cutting and pasting lines into the bulk load dialog. The format of the load is shown below:
+  <ul><li><code style="font-size:1.1em;">&lt;ipaddress&gt;:&lt;snmpCommunity&gt;:&lt;SiteName&gt;</code>
+  <p style="font-size:1.1em;">This loads a single IP address per line. If snmpCommunity is omitted, MAC auditor uses the system defaults in turn to contact the device. If SiteName is omitted, device is added to "All devices". The colon ( : ) is a field delimiter. If the site does not currently exist, it will be created dynamically</p></li>
+<li><code style="font-size:1.1em;">&lt;ipaddress_start&gt;  &lt;ipaddress_end&gt;:snmpCommunity:SiteName</code>
+<p style="font-size:1.1em;">In this case the space between the 2 IP addresses indicates that MAC Auditor should scan and add the range of addresses between the two. The same provisions apply for snmpCommunity & SiteName</p></li>
+<li><code style="font-size:1.1em;">&lt;ipaddress_1&gt;,&lt;ipaddress_2&gt;,&lt;ipaddress_3&gt;:&lt;snmpCommunity&gt;:&lt;SiteName&gt;</code>
+<p style="font-size:1.1em;">A set of IP addresses separated by commas constitutes a list to be processed.</p></li></ul>
+<p align="right"><a href="#start">Back to top &raquo;</a></p>
+<div id="lnor"></div>
+
+<h3><a name="change-device"></a>Change devices</h3>
+<p>Once a device has been added to the MAC Auditor database, certain  settings can be overridden.</p>
+<p>It is possible to enable or disable a device, simply tick the enable box, and then click the "Save device" button. Failure to click the save device button will cause changes to be lost if navigating away from the page:</p>
+             <center><img src="../img/Usermanual_1_72/image028.jpg" border="0" width="400"/></center>
+<p>&ldquo;<strong>Rescan</strong>&rdquo; will  cause the device to be polled using SNMP.</p>
+<p>&ldquo;<strong>Save device</strong>&rdquo; will cause the device updated information to be to be saved to the database. Navigation away from this page without saving changes causes them to be lost.</p>
+<p>&ldquo;<strong>Remove device</strong>&rdquo;  deletes the device from MAC Auditor, but does not delete the device data collected in the current month. Removing a device will stop it being polled for information. A removed device / interface will not count towards the license count, but will still appear in the sites/devices list.</p>
+<p>&ldquo;<strong>Remove device and  data</strong>&rdquo; removes all device and information collected via that device from the MAC Auditor system for the current month. Any data collected via a different device will still remain in the database. Hence MAC, IP and UserID data will still remain in the system if it has been collected via another device.</p>
+<p>It is also possible to override standard interface names and  add descriptions to aid users:</p>
+<p>&nbsp;</p>
+             <center><img src="../img/Usermanual_1_72/image029.jpg" border="0" width="400"/></center><p>&nbsp;</p>
+<p>If the interface index, or retrieved parameter does not match the desired display, administrators can override the "ifindex", name and description displayed. </p>
+             <table width="100%">
+        <tr>
+          <td class="box" style="font-size:0.8em;"><b>Note: </b><br />
+         The labels in the reports will be marked with * to differentiate the interface from polled information.</td>
+        </tr>
+      </table><p>&nbsp;</p>
+
+             <center><img src="../img/Usermanual_1_72/image030.jpg" border="0" width="400"/></center><p>&nbsp;</p>
+<p>Use of this facility should be carefully considered as reports against interfaces may not be accurately shown.</p>
+<p align="right"><a href="#start">Back to top &raquo;</a></p>
+<div id="lnor"></div>

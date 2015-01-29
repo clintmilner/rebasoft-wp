@@ -1,0 +1,30 @@
+<h1><span class="purple">License Administration</span></h1>
+				<p>Application Auditor's license is deeply embedded within the application. License information is constantly evaluated as source data is received.</p>
+			<center><img src="2_0/images/config%20and%20licencing.png"/></center>
+				<h2>Licensing rationale</h2>
+				<p>Application Auditor is licensed by the total number of sources sending information irrespective of the source IP address. This means that a single network device may act as multiple sources (for example a firewall providing both session log (for NAT information) and NetFlow would count as 2 sources).</p>
+				<p/>
+				<p>If the license expires, Application Auditor will stop processing and storing new data. If a new source sends data to Application Auditor that exceeds the number or sources licensed, the new source’s data will not be processed.</p>
+				<p/>
+				<h2>Adding a License key</h2>
+				<p>When accessing the Application Auditor web interface for the first time, it runs in trial mode – this means it will operate for a period of 14 days unless a license key is applied to the system. License administration is accessed in the ‘Licensing’ section of the Admin selector:</p>
+
+				
+
+				<center><img src="2_0/images/config%20and%20admin%20licensing%20settings.png"/></center>
+
+				<p>To add a license, simply cut and paste the license string into the "New License" box and click "load license":</p>
+<center><img src="2_0/images/config%20and%20admin%20new%20license.png"/></center>
+				<p>For information on any other facilities please refer to the Rebasoft Application Auditor Administration Guide.</p>
+
+				<p>The license will validate and confirmation of the system license will be displayed. If the license level is exceeded, Auditor will not collect information from the additional interfaces until a new key is obtained from an Auditor reseller.</p>
+
+				<table border="0" cellpadding="4" cellspacing="0" align="center" width="90%"><tr valign="middle">
+                <td style="background:#ff9900;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+                <td style="border: 1px solid #ff9900;">If the previous key has expired, the Application Auditor service must be restarted to activate the new license and re-enable data collection.</td></tr></table><br /><br />
+				
+			
+
+				
+
+<p></p>

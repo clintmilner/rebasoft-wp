@@ -1,0 +1,66 @@
+<h1><span class="purple">System Settings</span></h1>
+				<p>There are a number of system settings that can be viewed and managed within the web interface of Application Auditor. Data storage, reporting options, SNMP &amp; DNS all have variable parameters that can be set within this section.</p> 
+                <p style="text-align:center;"><a href="#storage">Storage Settings</a> | <a href="#reports">Report Settings</a> | <a href="#commnities">SNMP Communities</a> | <a href="#snmp">SNMP Settings</a> <br /> <a href="#dns"> DNS Settings</a> | <a href="#log">Log Settings</a> | <a href="#device">Device Settings</a>
+</p>                
+				<p>To access these views, select the 'System Settings' section from the Admin selector:</p>
+	<center><img src="2_0/images/config%20and%20admin%20system%20settings.png"/></center>
+				<a name="storage"></a><h2>Storage Settings</h2>
+				<p>To allow optimisation of database storage there are two configurable options within the Storage Settings section of the System Settings. These settings only impact the retention of forensic flow records, and not summarised report data. The forensic data represents the bulk of data storage required. </p>
+				<ul>
+                <li>Storage duration (default 7 days) and </li>
+				<li>Minimum packet size for forensic reporting (default 0 Bytes). </li>
+                </ul>
+                <br /><br /><center><img src="2_0/images/config%20and%20admin%20storage%20settings.png"/></center>
+				<p>If collecting full flow forensics for all flow sizes, you can set the stroage duration. Once the time limit has been reached, application auditor will begin discarding older forensic data. This prevents disk filling up and more current data being lost.</p>
+
+				<p>The second option will allow you to dramatically increase your storage capabilities through non-storage of smaller Byte flow records. If you wish to store all records within your database, leave this option set to the default value (0).</p>
+
+				<p>For example, Rebasoft has seen, on average, packet sizes of 500 bytes or less will take up 36% of storage on disk (assuming 120 bytes per ipfix flow record).  Hence on a 500Gb database, 180Gb of data can be saved.</p>
+				<p>Organisations can therefore trade packet size with time that forensics records are stored in order to meet the forensic record storage requirements and storage limitations.</p>
+
+				<p>It will take a minimum of 1 hour for application auditor to start showing information in subnet reports. IP's seen should indicate that data is being collected before graphical reports are available.</p>
+
+				<center><img src="2_0/images/config%20and%20admin%20graph.png"/></center>
+                <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>
+			
+
+				<a name="reports"></a><h2>Report Settings</h2>
+				<p>The default initial overview report timeframe displayed within Application Auditor upon install is set to 7 hours. Should you wish to increase/decrease this value you can do so here, but time taken to display reports may be increased:</p>
+<center><img src="2_0/images/config%20and%20admin%20report%20settings.png"/></center>  
+              <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>
+
+				<a name="commnities"></a><h2>SNMP Communities</h2>
+				<p>Application Auditor supports SNMP Versions 1,2 and 3. Within this section you can manage your communities at a system level; should an SNMP community not be defined with a device in <a href="help.php?version=2.0&device">device administration</a>, the system level communities will be used when SNMP polling. Once a successful response has been received, Application Auditor stores the community with the device for future polling.</p>
+				<p> To add a V1 or V2 community simply key the desired string and add. Similarly a key can be deleted by pressing the delete icon.</p>
+<center>
+  <img src="2_0/images/config%20and%20admin%20snmp%20communities.png"/></center>
+  <p>For SNMP V3, simply key the Username, Password and context. Application Auditor currently supports SHA1 and MD5 for authentication, and DES and 3DES for the privacy password encryption:</p>
+  <center><img src="2_0/images/config%20and%20admin%20snmp%20communitiesv3.png" width="350"/></center>
+
+<p>&nbsp;</p>
+                <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>
+
+
+				
+
+				<a name="snmp"></a><h2>SNMP Settings</h2>
+				<p>Manage SNMP Polling, Timeout and retry parameters. Default Installation values are as shown below:</p>
+<center><img src="2_0/images/config%20and%20admin%20snmp%20settings.png"/></center>                <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>
+
+				<a name="dns"></a><h2>DNS Settings</h2>
+				<p>Within this section you can control thread numbers (concurrent requests), cached elements criteria and DNS resolution default behaviour. NOTE: DNS Resolution is enabled by default:</p>
+<center><img src="2_0/images/config%20and%20admin%20dns%20settings.png"/></center>                <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>
+
+				<p>You can also view current count of checked and pending DNS records within Application Auditor:</p>
+<center><img src="2_0/images/config%20and%20admin%20performance.png"/></center>                <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>
+
+				<a name="log"></a><h2>Log Settings</h2>
+				<p>Specify log detail level. Installation default log detail level is 'INFO'. This should be left as default unless requested by Rebasoft technical support:</p>
+<center><img src="2_0/images/config%20and%20admin%20log%20settings.png"/></center>                <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>
+
+				<a name="device"></a><h2>Device Settings</h2>
+				<p>You can override your SFlow or JFlow source address information by changing the setting below:</p>
+				<center><img src="2_0/images/config%20and%20admin%20device%20settings2.png"/></center>                <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>
+
+                <
+

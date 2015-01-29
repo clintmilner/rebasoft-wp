@@ -1,0 +1,51 @@
+<h2>System settings administration</h2>
+  <p>One of the first actions recommended is the configuration of system
+    settings. System level settings are used throughout the application. Here
+  administrators can set-up:</p>
+  <ul><li>System SNMP Community strings</li>
+  <li>Alert defaults</li>
+  <li>MAC Vendor table</li></ul>
+  <p>System settings are accessed from the Administration dropdown in the top
+  frame (clicking the arrow):</p>
+ <center>
+      <img src="../img/Usermanual_2_0/image064.jpg" /></center>
+  <p>A summary of the
+    current system settings and directory locations are shown at the bottom of the
+  system settings page:</p>
+ <img src="../img/Usermanual_2_0/image065.jpg" width="500"/>
+  <h4>System SNMP Community strings</span></h4>
+  <p>System level SNMP community strings are used during initial device
+    polling. SNMP strings, if entered during device input, are used first. In the
+    absence of a specified SNMP community string, system level SNMP communities are
+    used in turn until a successful poll is performed. MAC Auditor then stores the
+    successful string with the device, this reduces the number of alerts that a
+    device might generate if a community is used unsuccessfully.  It is only necessary to use Read-only
+  strings. </p>
+  <p >To add a new community simply type the string into the box &amp; click
+  "Add community"</p>
+  <p>To remove a
+  community, simply click the cross next to the string to be removed:</p>
+   <center> <img src="../img/Usermanual_2_0/image066.jpg" /></center>
+
+  <h4>System Alerts</span></h4>
+  <p>The current release of MAC Auditor has provision for alerting using
+    syslog. Administrators can set multiple syslog servers depending on network
+    preferences. To enter a syslog server, simply specify a name, required level
+    and facility together with the target address. Administrators can also set the
+  syslog level and facility to suit any log processing or alert handling system.</p>
+  <p>Syslog server
+    receivers can be removed by simply clicking the cross next to the syslog to be
+  removed:</p>  
+  <img src="../img/Usermanual_2_0/image067.jpg"width="500" />
+
+  <h4>MAC Address - Company ID</h4>
+  <p>IEEE maintains an
+    index of MAC address prefixes in relation to Vendors. This index changes from
+    time-to-time, and any new release of MAC Auditor will contain the latest index.
+    If, however, you search MAC Auditor and see a MAC address without a vendor entry,
+  it may be that the index is out-of-date. </p>
+  <img src="../img/Usermanual_2_0/image068.jpg" width="500"/>
+
+  <p>Since this file is
+    a large file, a facility to download and update MAC Auditor on request if
+  available:</p>

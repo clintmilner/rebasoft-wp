@@ -1,0 +1,30 @@
+<h2><a name="start"></a><span class="purple">System settings administration</span></h2>
+  <p>System settings are used throughout MAC Auditor. This dialog allows administrators to set-up:</p>
+  <p>&bull; <a href="#snmp">System SNMP Community strings</a><br />
+  &bull; <a href="#alert">Alert defaults </a></p>
+  <p></a>System settings are accessed from the Administration
+    dropdown in the top frame (clicking the arrow):</p>
+      <center><img src="../img/Usermanual_1_72/image019.jpg" border="0" /></center>
+ <p>A summary of the current system settings and directory
+    locations are shown at the bottom of the system settings page:</p>
+      <center><img src="../img/Usermanual_1_72/image020.jpg" border="0" /></center><p>&nbsp;</p>
+      <div id="lnor"></div>
+<h3><a name="snmp"></a>SNMP Community strings</h3> <p>System level SNMP community strings are used  during initial device polling. SNMP strings, if entered during device input,  are used first. In the absence of a specified SNMP community string, system  level SNMP communities are used in turn until a successful poll is performed.  MAC Auditor then stores the successful string with the device, this reduces the  number of alerts that a device might generate if a community is used  unsuccessfully.&nbsp; It is only necessary to  use Read-only strings.</p>
+        <center><img src="../img/Usermanual_1_72/image021.jpg" border="0" /></center>
+  <p>To add a new community simply type the string into the box
+    &amp; click "Add community"</p>
+    <center><img src="../img/Usermanual_1_72/image022.jpg" border="0" /></center>
+<p>To remove a community, simply click the cross next to the
+    string to be removed:</p><p align="right"><a href="#start">Back to top &raquo;</a></p>
+          <div id="lnor"></div>
+
+<h3><a name="alert"></a>System Alerts</h3>
+  <p>The current release of MAC Auditor has provision for alerting using syslog. Administrators can set multiple syslog servers depending on network preferences. To enter a syslog server, simply specify a name, required level and facility together with the target address.</p>
+      <center><img src="../img/Usermanual_1_72/image023.jpg" border="0" /></center>
+  <p>Syslog server receivers can be removed by simply clicking
+    the cross next to the syslog to be removed:</p></p>
+      <center><img src="../img/Usermanual_1_72/image024.jpg" border="0" /></center>
+      
+
+
+  <p align="right"><a href="#start">Back to top &raquo;</a></p>

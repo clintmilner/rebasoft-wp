@@ -1,0 +1,6 @@
+# robot file
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /wp-login.php
+Sitemap: http://www.rebasoft.net/site-map

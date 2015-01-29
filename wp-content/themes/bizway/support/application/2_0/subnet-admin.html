@@ -1,0 +1,51 @@
+<h1><span class="purple">Subnet Settings</span></h1>
+				<p>Subnet administration allows you to specify which network segments you wish to monitor and report upon within Application Auditor. If subnets are overlapping, this can be addressed by the specification of devices and interfaces on which the subnet data has been collected. In addition to filtering views of both monitored and un-monitored subnets, reporting displays device and interface statistics where an available subnet has been seen on a device which is currently being monitored.</p>
+				<p>Subnets are defined and managed in the 'Subnets' section from the Admin selector:</p><center><img src="2_0/images/config%20and%20admin%20subnet%20settings.png"/></center>
+                
+                <p>To add a new monitored subnet, enter the credentials required and select the device and interface on which you wish to monitor the subnet. Once the details have been added, select the ‘Add New Subnet’ button:</p>
+				<center><img src="2_0/images/config%20and%20admin%20new%20subnet.png" width="330"/></center><br /><br />
+				<table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+                <tr valign="middle">
+                <td style="background:#ff9900;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+                <td style="border: 1px solid #ff9900;">
+				Application Auditor uses device + interface + subnet to uniquely identify subnets. This means that overlapping subnets on a single instance of application auditor is supported.</td></tr></table>
+                
+                
+                <p>
+				To view monitored or un-monitored subnets or un-monitored interfaces, either select the underlined ‘filtered ‘count or enter the details for a specific IP ranged for which you would like to query as shown below:</p>
+<center><img src="2_0/images/config%20and%20admin%20subnets.png"/></center>
+
+				<h2>Editing an existing monitored subnet:</h2>
+                
+				<p>Monitored subnets can be edited or deleted by selecting the relevant ‘Action’ button. Once a required subnet has been added to the monitored list of subnets, editing the record will allow you specify Country and domain associations for that record:</p>
+				<center><img src="2_0/images/config%20and%20admin%20monitored%20subnets.png" width="550"/></center><br /><br />
+
+
+                <table border="0" cellpadding="4" cellspacing="0" align="center" width="90%"><tr valign="middle">
+                <td style="background:#ff9900;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+                <td style="border: 1px solid #ff9900;">Depending on the source device and the type of flow export, the vlan, physical interface (logical unit of an interface) or a security zone may be required in order to correctly collect subnet statistics.</td></tr></table><br /><br />
+<center><img src="2_0/images/config%20and%20admin%20editing.png"/></center>
+				
+				
+
+				
+
+				<p>Un-Monitored subnets can be added to the monitored subnets list by selecting the ‘edit’ icon and updating the relevant fields related to that entry (including device &amp; interface):. </p>
+
+				<center><img src="2_0/images/config%20and%20admin%20unmonitored%20subnets.png" width="550"/></center>
+
+				<p>When a Geo-IP reference is found for a particular IP or subnet, the ‘Country’ &amp; domain allocation for this subnet is automatically populated:</p>
+<center><img src="2_0/images/config%20and%20admin%20editing2.png"/></center>
+				<p>When SNMP can resolve a configured IP to an interface on a device, Application Auditor will provide you the option of adding that subnet to your monitored list by checking the ‘Monitor’ box and clicking the ‘Monitor Subnets’ button:</p>
+
+				
+<center><img src="2_0/images/config%20and%20admin%20interface%20subnets.png"/></center><br /><br />
+				
+
+				
+				<table border="0" cellpadding="4" cellspacing="0" align="center" width="90%"><tr valign="middle">
+                <td style="background:#ff9900;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+                <td style="border: 1px solid #ff9900;">
+It will take a minimum of 1 hour for application auditor to start showing information in
+subnet reports. IP’s seen should indicate that data is being collected before graphical
+reports are available.</td></tr></table><br /><br />

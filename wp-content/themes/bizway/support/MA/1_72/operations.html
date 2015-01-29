@@ -1,0 +1,110 @@
+<h2><a name="start"></a><span class="purple">Using MAC Auditor</span></h2>
+<p>Once MAC Auditor is set-up and collecting information, it can be reported upon.
+  There are two main methods of viewing reports and drilling further into the information
+  collected:</p>
+  <ul><li><a href="help.php?version=1.72&operations">Reports </a></li>
+      <li><a href="#ops">Operations</a></li>
+      <li><a href="help.php?version=1.72&searching">Searching</a></li>
+      </ul>
+<p align="right">&nbsp;</p>
+<div id="lnor"></div>
+<h2><a name="ops"></a><span class="purple">Operations</span></h2>
+<p>In
+  addition to reporting, MAC Auditor provides detailed forensics to allow users
+  to logically drill down from Sites to devices to VLANs, interfaces or MACs. Users
+  can relate usernames to IP addresses, so from a site, quickly locate a user and
+  how they are connected to the network. </p>
+<p>Starting
+  from the view and month selector, navigation is simply an exercise in clicking
+  hyperlinks. Selecting a Site in the Sites frame will give a Site overview
+  report in the information frame, and list the member devices in the display
+  frame. </p>
+               <center><img src="../img/Usermanual_1_72/image042.jpg" border="0" width="400"/></center><p>&nbsp;</p>
+
+<p>Selecting
+  a device will show a device overview interface statistic and lists of the
+  interfaces and VLANs on the device: </p>
+                 <center><img src="../img/Usermanual_1_72/image043.jpg" border="0" width="400"/></center><p>&nbsp;</p>
+
+<p>Device
+  attributes provides device level information; showing the hostname, IP
+  address/DNS name, OiD type and a description. All information in the device
+  attributes area is searchable. </p>
+                 <center><img src="../img/Usermanual_1_72/image044.jpg" border="0" width="400"/></center><p>&nbsp;</p>
+
+<p>Below
+  the device attributes, is a summary of Interfaces, VLAN and MAC&rsquo;s for the
+  device: </p>
+                   <center><img src="../img/Usermanual_1_72/image045.jpg" border="0" width="400"/></center><p>&nbsp;</p>
+
+<p>The
+  Interface section provides a quick view of interfaces, real-time status, recent
+  device status, type, MAC and IP related information for each interface. Hyperlinks
+  allow drilldown to VLAN, MAC, and IP for further detailed information. </p>
+<p>Clicking
+  the current status link causes a chart to pop-up with a history of interface
+  status over the last month. Each graph shows a 7 day view: </p>
+                   <center><img src="../img/Usermanual_1_72/image045.jpg" border="0" width="400"/></center><p>&nbsp;</p>
+
+<p>Any field underlined can be selected, so
+  from the device level, users can drill to Interface and ultimately MAC, IP and
+  User forensics.</a></p>
+<p>The device view can also provide information
+  on interface status. If you need to see the free ports by Site or device, clicking
+  down interfaces will show those interfaces down and how they have been down in the
+  current month:</p>
+                   <center><img src="../img/Usermanual_1_72/image046.jpg" border="0" width="400"/></center><p>&nbsp;</p>
+<p align="right">&nbsp;</p>
+<div id="lnor"></div>
+<h3>IP
+  Forensics</h3>
+<p>From any screen it is possible to drill into
+  IP forensics, where details on DNS, UserID, ARP and interfaces are shown for
+  the IP address</p>
+                   <center><img src="../img/Usermanual_1_72/image048.jpg" border="0" width="400"/></center><p>&nbsp;</p>
+
+<table cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td class="box" style="font-size:0.8em;"><b>Note: </b><br />
+      DNS
+        resolution is performed so that if DNS entries for the IP address in
+        question exists, it is resolved &ndash; but you cannot search using DNS as DNS is
+        not currently stored in the database.</td>
+  </tr>
+</table><p align="right">&nbsp;</p>
+<div id="lnor"></div>
+
+<h3>VLAN overview</h3>
+<p>VLAN overview shows VLAN and MAC count for the VLAN.</p>
+                 <center><img src="../img/Usermanual_1_72/image049.jpg" border="0" width="400"/></center><p>&nbsp;</p>
+
+<table cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td class="box" style="font-size:0.8em;"><b>Note: </b><br />
+          Where the VLAN
+            is &ldquo;local&rdquo; there is no VLAN configured</td>
+      </tr>
+    </table>
+                 <center><img src="../img/Usermanual_1_72/image050.jpg" border="0" width="400"/></center><p>&nbsp;</p>
+                 <p align="right">&nbsp;</p>
+<div id="lnor"></div>
+
+<h3>MAC   forensics</h3>
+<p>MAC forensics allows users to review the IP and
+  connection history of a MAC address:</p>                 <center><img src="../img/Usermanual_1_72/image051.jpg" border="0" width="400"/></center><p>&nbsp;</p>
+
+<p>The IP details show the history of IP address
+  assignment to the MAC address.</p>
+<p>Connections show the interfaces (and device)
+  that the MAC address has been seen on (The MAC Count shows the total number
+  of unique MAC&rsquo;s on the interface). </p>
+<p>The Connection history shows the connections over time.</p>
+<p align="right">&nbsp;</p>
+<div id="lnor"></div><h3>User
+  forensics</h3>
+<p>User forensics can be used to find the IP
+  and hence the MAC history of a UserID. This will be non-zero if  User
+  Lookup administration  has been correctly
+  configured, and MAC Auditor has had sufficient time to start collecting user
+  data from LDAP or log sources:</p>
+<center><img src="../img/Usermanual_1_72/image052.jpg" border="0" width="400"/></center><p>&nbsp;</p>

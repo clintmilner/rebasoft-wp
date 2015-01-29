@@ -1,0 +1,40 @@
+<h1><span class="purple">Squid result codes</span></h1>
+<p>The&nbsp; <strong>TCP_</strong> codes  refer to requests on the HTTP port (usually 3128). The&nbsp; <strong>UDP_</strong> codes  refer to requests on the ICP port (usually 3130). If ICP logging was disabled  using the&nbsp;<em>log_icp_queries</em>&nbsp;option, no ICP replies will be  logged.</p>
+<p>The following result codes were taken from a Squid-2, compare with the&nbsp;<em>log_type</em>&nbsp;enum  in&nbsp;<em>src/enums.h</em>:</p>
+<div id="datatable">
+<table>
+  <tr><td valign="top">TCP_HIT</td><td>A valid copy of the  requested object was in the cache.</td></tr>
+  <tr><td valign="top">TCP_MISS</td><td>The requested object was not  in the cache.</td></tr>
+  <tr><td valign="top">TCP_REFRESH_HIT</td><td>The requested object was  cached but&nbsp;<em>STALE</em>. The IMS query for the object resulted in  &quot;304 not modified&quot;.</td></tr>
+  <tr><td valign="top">TCP_REFRESH_FAIL_HIT</td><td>The requested object was  cached but&nbsp;<em>STALE</em>. The IMS query failed and the stale object was  delivered.</td></tr>
+  <tr><td valign="top">TCP_REFRESH_MISS</td><td>The requested object was  cached but&nbsp;<em>STALE</em>. The IMS query returned the new content.</td></tr>
+  <tr><td valign="top">TCP_CLIENT_REFRESH_MISS</td><td>The client issued a  &quot;no-cache&quot; pragma, or some analogous cache control command along with  the request. Thus, the cache has to refetch the object.</td></tr>
+  <tr><td valign="top">TCP_IMS_HIT</td><td>The client issued an IMS  request for an object which was in the cache and fresh.</td></tr>
+  <tr><td valign="top">TCP_SWAPFAIL_MISS</td><td>The object was believed to  be in the cache, but could not be accessed.</td></tr>
+  <tr><td valign="top">TCP_NEGATIVE_HIT</td><td>Request for a negatively  cached object, e.g. &quot;404 not found&quot;, for which the cache believes to  know that it is inaccessible. Also refer to the explainations for&nbsp;<em>negative_ttl</em>&nbsp;in  your&nbsp;<em>squid.conf</em>&nbsp;file.</td></tr>
+  <tr><td valign="top">TCP_MEM_HIT</td><td>A valid copy of the  requested object was in the cache&nbsp;<em>and</em>&nbsp;it was in memory, thus  avoiding disk accesses.</td></tr>
+  <tr><td valign="top">TCP_DENIED</td><td>Access was denied for this  request.</td></tr>
+  <tr><td valign="top">TCP_OFFLINE_HIT</td><td>The requested object was  retrieved from the cache during offline mode. The offline mode never validates  any object, see<em>offline_mode</em>&nbsp;in&nbsp;<em>squid.conf</em>&nbsp;file.</td></tr>
+  <tr><td valign="top">TCP_STALE_HIT</td><td>The object was cached and  served stale. This is usually caused by stale-while-revalidate or  stale-if-error.</td></tr>
+  <tr><td valign="top">TCP_ASYNC_HIT</td><td>A background request (e.g.,  one started by stale-while-revalidate) resulted in a refresh hit.</td></tr>
+  <tr><td valign="top">TCP_ASYNC_MISS</td><td>A background request (e.g.,  one started by stale-while-revalidate) resulted in a miss; i.e., the cached  object (if any) was updated).</td></tr>
+  <tr><td valign="top">UDP_HIT</td><td>A valid copy of the  requested object was in the cache.</td></tr>
+  <tr><td valign="top">UDP_MISS</td><td>The requested object is not  in this cache.</td></tr>
+  <tr><td valign="top">UDP_DENIED</td><td>Access was denied for this  request.</td></tr>
+  <tr><td valign="top">UDP_INVALID</td><td>An invalid request was  received.</td></tr>
+  <tr><td valign="top">UDP_MISS_NOFETCH</td><td>During &quot;-Y&quot; startup,  or during frequent failures, a cache in hit only mode will return either  UDP_HIT or this code. Neighbours will thus only fetch hits.</td></tr>
+  <tr><td valign="top">NONE</td><td>Seen with cachemgr requests  and errors, usually when the transaction fails before being classified into one  of the above outcomes.</td></tr></table>
+  <p>The following code  suffixes are specific to Squid3:</p>
+<table>
+  <tr><td valign="top">_ABORTED</td><td>suffix means that the  connection with HTTP&nbsp;<em>client</em>&nbsp;was closed or otherwise failed  prematurely. This includes half-closed client sockets when<em>half_closed_clients</em>&nbsp;in  squid.conf is off.</td></tr>
+  <tr><td valign="top">_TIMEDOUT</td><td>suffix means that the  transaction timed out while writing the response to the HTTP&nbsp;<em>client</em>&nbsp;(i.e.,  the client was not reading or stopped reading Squid's response).</td></tr></table>
+<p>  The following codes  are no longer available in Squid-2:</p>
+ 
+<table>
+ <tr><td valign="top">ERR_</td><td>* Errors are now contained in the  status code.</td></tr>
+  <tr><td valign="top">TCP_CLIENT_REFRESH</td><td>See:  TCP_CLIENT_REFRESH_MISS.</td></tr>
+  <tr><td valign="top">TCP_SWAPFAIL</td><td>See: TCP_SWAPFAIL_MISS.</td></tr>
+  <tr><td valign="top">TCP_IMS_MISS</td><td>Deleted, now replaced with  TCP_IMS_HIT.</td></tr>
+  <tr><td valign="top">UDP_HIT_OBJ</td><td>Refers to an old version  that would send cache hits in ICP replies. No longer implemented.</td></tr>
+  <tr><td valign="top">UDP_RELOADING</td><td>See: UDP_MISS_NOFETCH.</td></tr></table>
+</div>

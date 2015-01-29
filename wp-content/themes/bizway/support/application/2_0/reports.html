@@ -1,0 +1,59 @@
+<h1><span class="purple">Overview Reports</span></h1>
+
+<p>Once Application Auditor starts receiving data from source devices, it may take a few minutes for report data to appear. Each flow datagram received is automatically processed and stored in both the summarised reporting database and forensic database (although this is the same database instance). Data management in the two databases is handled separately, and operates independently.</p>
+
+				<p>After 5 minutes of data processing, reports should be visible.</p>
+                <p>Reports available area:<br />
+                <a href="#Device dashboard">All devices dashboard</a><br />
+				<a href="#All interfaces dashboard">All Interfaces</a><br />			
+                <a href="#all monitored subnets">All monitored subnets</a><br />
+				<a href="#All monitored countries">All monitored countries</a><br />
+				<a href="#All monitored domains">All monitored domains</a><br />
+                <a href="#All Device Overview">All Device Overview</a>              
+                </p>
+                
+                <h2>Overview Reports</h2>
+				<p>A dashboard report shows for all data sources on the network. The default is an overview report which is an aggregated report rolling up all reported interfaces for all collecting devices. </p>
+				<p>Other reporting options available are:<br /><br />
+                <center><img src="2_0/images/reports-menu.png" alt="reports-menu.png"/></center>
+                </p>
+				<a id="Device dashboard"></a><h3>All devices dashboard</h3>
+                
+                
+                <p>The report comprises a TopN graphical report and a tabular list of devices in order by volume (Mb/s)
+& view over time:<br /><center><img src="2_0/images/reports-all%20devices.png" alt="reports-all%20devices.png"/></center>
+
+                <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>
+                				<a id="All interfaces dashboard"></a><h3>All Interfaces</h3>
+				<p>The report comprises a TopN graphical report and a tabular list of devices in order by volume (Mb/s) &amp; view over time:<br /><br />
+				
+				<center><img src="2_0/images/reports-graphical%20ribbon.png" alt="reports-graphical%20ribbon.png"/></center></p>
+
+				<p>The interface list will show a graphical ribbon if SNMP can poll the interface speed set on the monitored interface:</p>
+                <center><img src="2_0/images/reports-all%20interfaces.png" width="500" alt="reports-all%20interfaces.png"/></center></p>
+				<p>The ribbon is colour coded to indicate the load the interface is under:</p>
+                <ul>
+                <li>Green: up to 70%,</li>
+				<li>Yellow: 70-90%</li>
+				<li>Red: above 90%</li>
+				</ul>
+				
+                <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>
+			     <a id="all monitored subnets"></a><h3>All monitored subnets</h3>
+				<p>TopN – graph of monitored subnet sources by volume (Mb/s) &amp; view over time:</p>
+					<center><img src="2_0/images/reports-all%20subnets.png" width="443"/></center>	
+                 <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>
+	
+				<a id="All monitored countries"></a><h3>All monitored countries</h3>
+				<p>TopN - List of country destinations by volume (Mb/s) &amp; view over time:</p>
+				
+
+				<p/><center><img src="2_0/images/reports-all%20countries.png"/></center>
+                 <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>
+				<a id="All monitored domains"></a><h3>All monitored domains</h3>
+				<p>TopN - List of domain destinations by volume (Mb/s) &amp; view over time:</p>
+				<center><img src="2_0/images/reports-all%20domains.png"/></center>
+                 <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>
+                <a id="All Device Overview"></a><h3>All Device Overview</h3>
+				<center><img src="2_0/images/reports-all%20device%20overview.png"/></center>
+                 <p style="text-align:right;"><a href="#top-of-page">Back to top &raquo;</a><br /><br /></p>

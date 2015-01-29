@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+		<title>App Auditor Installation and Configuration.html</title>
+	</head>
+	<body>
+		<div id="App-Auditor-Installation-and-Configuration.html" xml:lang="en-US">
+			<div class="story">
+				<p>Installation and Configuration</p>
+			</div>
+			<div class="story">
+				<p>Application Auditor is provisioned using a simple installer that can be run on Windows Server operating systems. The installer can be used for initial installation, software version upgrades and changes in system parameters. </p>
+				<p/>
+			</div>
+			<div class="story">
+				<p>Hardware Requirements</p>
+			</div>
+			<div class="story">
+				<p>The type of system required to run Auditor depends on the number of source devices collected from and length of data storage. The following requirements are a guideline; the only way to determine requirements is by testing the software’s performance in a specific network environment. To this end Rebasoft has packaged a 7-day trial download.</p>
+				<p/>
+				<p>CPU</p>
+				<p>• Minimum CPU should be a dual core 2.4GHz processor.</p>
+				<p>• For every additional 50 data sources, add an additional core/CPU</p>
+				<p/>
+				<p>Memory</p>
+				<p>• Allow for base system of 2GB RAM and 100MB for each data source sending data</p>
+				<p/>
+				<p>Disk</p>
+				<p>Each IPFix Record require 120Bytes of disk space for every 1 Million of stored flow records require allow 120MB of disk space</p>
+				<p>• SATA II (1.5GB/s+) disks are preferred on small to medium systems</p>
+				<p>• SAS (3GB/s+) for larger systems (more than 100 devices)</p>
+			</div>
+			<div class="story">
+				<p>Software Requirements</p>
+			</div>
+			<div class="story">
+				<p>•	Windows 2003+ English Server</p>
+				<p>•	Application Auditor should be installed as a local administrator</p>
+				<p>•	For systems requiring more than 4GB of RAM a 64bit OS (JRE) is required</p>
+			</div>
+			<div class="story">
+				<p>Installing Application Auditor</p>
+			</div>
+			<div class="story">
+				<p>Installation is achieved by executing the Application Auditor installation wizard. This wizard guides administrators through the installation or updating process and allows the specification of a number of parameters – it should only take a few minutes to install the system. </p>
+				<p>The installer can be run whether performing a new installation or updating an existing system. In the case of an upgrade, data is preserved; Rebasoft does, however, advise administrators to perform a data back-up regularly using pgAdmin (see appendix) and especially prior to system upgrade.</p>
+			</div>
+			<div class="story">
+				<p>Note</p>
+			</div>
+			<div class="story">
+				<p>Due to windows security, we recommend that the installer be run as the Local Administrator</p>
+			</div>
+			<div class="story">
+				<p>Installation and Configuration</p>
+			</div>
+			<div class="story">
+				<p>To start installation, simply execute the installer </p>
+				<p>1) Click next:</p>
+			</div>
+			<div class="story">
+				<p>2) Click “I Agree” to accept the licence agreement:</p>
+			</div>
+			<div class="story">
+				<p>3) Select components to install and click next:</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="168" height="132" src="installer1..jpg" alt="installer1.PNG"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="168" height="131" src="installer2..jpg" alt="installer2.PNG"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="168" height="131" src="installer3..jpg" alt="installer3.PNG"/>
+			</div>
+			<div class="story">
+				<p>Installation and Configuration</p>
+			</div>
+			<div class="story">
+				<p>4) Enter desired http/https port together Threads and RAM settings desired:</p>
+			</div>
+			<div class="story">
+				<p>The number of threads is a measure of the number of parallel pollers Auditor should use. The larger the network, the more pollers should be set. Larger numbers of threads requires more RAM. RAM can also be set.</p>
+				<p/>
+				<p>5) Specify installation directory for installation and click next:</p>
+			</div>
+			<div class="story">
+				<p>Note</p>
+			</div>
+			<div class="story">
+				<p>If Auditor is already installed, the installer will now stop the MACAuditor service in preparation for the upgrade of files.</p>
+			</div>
+			<div class="story">
+				<p>The Java installer does not permit spaces in the specification of the destination folder</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="177" height="138" src="installer5..jpg" alt="installer5.PNG"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="168" height="131" src="installer4..jpg" alt="installer4.PNG"/>
+			</div>
+			<div class="story">
+				<p>Installation and Configuration</p>
+			</div>
+			<div class="story">
+				<p>5) If not installed Auditor  will install PostgreSQL and JRE:</p>
+			</div>
+			<div class="story">
+				<p>And install the necessary components:</p>
+			</div>
+			<div class="story">
+				<p>Sometimes, due to windows permissions, postgres will not install. The installer will pause and a message will request that postgres be installed manually.</p>
+				<p/>
+				<p>7) Auditor installs as a system service, a command window should appear during this process:</p>
+			</div>
+			<div class="story">
+				<p>8) Once Auditor installation is complete (administrators can view the details of where files </p>
+				<p>have been installed by clicking the details button) click next:</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="168" height="131" src="installer6..jpg" alt="installer6.PNG"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="168" height="128" src="installer7..jpg" alt="installer7.PNG"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="168" height="85" src="installer11..jpg" alt="installer11.png"/>
+			</div>
+			<div class="story">
+				<p>Installation and Configuration</p>
+			</div>
+			<div class="story">
+				<p>Logging in for the first time</p>
+			</div>
+			<div class="story">
+				<p>Users and administrators can access Rebasoft Application Auditor from a workstation with a compliant browser by opening the following address:</p>
+				<p/>
+				<p>http://&lt;IP or DNS address of server&gt;:&lt;port&gt;</p>
+				<p/>
+				<p>On the first instance of Application Auditor being run it is normal to be displayed the following message:</p>
+			</div>
+			<div class="story">
+				<p>This will clear within a couple of minutes and normal use will resume on subsequent logins. </p>
+				<p/>
+				<p>To access Rebasoft Application Auditor, at the login screen enter the default username and password of “admin” and “admin”. We recommend administrators change the default installation password from “admin” via the Users Admin function.</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="168" height="131" src="installer12..jpg" alt="installer12.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="168" height="66" src="Loggingin..jpg" alt="Loggingin.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="121" height="111" src="Loggingin2..jpg" alt="Loggingin2.png"/>
+			</div>
+			<div class="story">
+				<p>Installation and Configuration</p>
+			</div>
+			<div class="story">
+				<p>Until receivers &amp; devices are configured, you will be presented with a blank screen as shown below:</p>
+			</div>
+			<div class="story">
+				<p>Application Structure</p>
+			</div>
+			<div class="story">
+				<p>Application Auditor has been designed with ease of use in mind. </p>
+				<p>The screen shot below shows the main areas for interacting with Application Auditor:</p>
+			</div>
+			<div class="story">
+				<p>The Admin selector is only shown to “admin” class users and provides the navigation to the Admin &amp; configuration functions in Application Auditor.</p>
+				<p/>
+				<p>The Navigator lists the browse structure depending on the view and Tags implemented. </p>
+				<p/>
+				<p>Reports and forensic selections are displayed in the Display frame.</p>
+				<p>Tool bar</p>
+				<p>The Application Auditor tool bar is designed to be similar to Auditor Core. It implements an updated time-line manipulation function to enable users to more accurately select reporting spans.</p>
+				<p>The Admin selector is only shown to “admin” class users and provides the navigation to the Admin &amp; configuration functions in Application Auditor.</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="218" height="114" src="Loggingin3..jpg" alt="Loggingin3.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="358" height="201" src="AppStructure..jpg" alt="AppStructure.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="358" height="244" src="AppStructure..jpg" alt="AppStructure.png"/>
+			</div>
+			<div class="story">
+				<p>Installation and Configuration</p>
+			</div>
+			<div class="story">
+				<p>Key</p>
+			</div>
+			<div class="story">
+				<p>A date picker allows users to set a start and end range by date, month and year. Time is selected using the hour and minute slider</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="376" height="62" src="toolbar..jpg" alt="toolbar.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="30" height="26" src="Icon-Arrow..jpg" alt="Icon-Arrow.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="30" height="26" src="Icon-Circle Arrow..jpg" alt="Icon-Circle%20Arrow.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="30" height="31" src="Icon-Print..jpg" alt="Icon-Print.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="30" height="25" src="Icon-Help..jpg" alt="Icon-Help.png"/>
+			</div>
+			<div class="story">
+				<p>Allows users to go back to the previous screen or report</p>
+			</div>
+			<div class="story">
+				<p>Reloads the display frame</p>
+			</div>
+			<div class="story">
+				<p>Prints the display frame</p>
+			</div>
+			<div class="story">
+				<p>Access on-line help at www.rebasoft.net/support</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="121" height="165" src="calendar..jpg" alt="calendar.png"/>
+			</div>
+			<div class="story">
+				<p>Installation and Configuration</p>
+			</div>
+			<div class="story">
+				<p>Once report, format and dates have been selected you must press the OK button to execute the report:</p>
+			</div>
+			<div class="story">
+				<p>Navigating reports</p>
+				<p>A fast zoom function is enabled by a “click and drag function on any graph” – once the mouse button is released, Application Auditor automatically presents data for the required time slice:</p>
+			</div>
+			<div class="story">
+				<p>The small white menu icon also allows for additional navigation and zoom functions, this is accessed by clicking on the chart:</p>
+			</div>
+			<div class="story">
+				<p>To aid comprehension, some large lists are paginated. To navigate around a list, the table modifier is displayed at the head of the table:</p>
+			</div>
+			<div class="story">
+				<p>The default number of listed items displayed, can be increased/decreased by changing the “Show:” value from the dropdown.</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="78" height="40" src="ok..jpg" alt="ok.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="110" height="15" src="tab_modify..jpg" alt="tab_modify.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="11" height="11" src="nav_top..jpg" alt="nav_top.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="11" height="11" src="nav_bot..jpg" alt="nav_bot.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="11" height="11" src="nav_fwd..jpg" alt="nav_fwd.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="11" height="11" src="nav_rwd..jpg" alt="nav_rwd.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="154" height="113" src="nav_report1..jpg" alt="nav_report1.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="102" height="91" src="nav_report2..jpg" alt="nav_report2.png"/>
+			</div>
+			<div class="story">
+				<p>Click to display the first page of the list </p>
+			</div>
+			<div class="story">
+				<p>Click to display the last page of the list</p>
+			</div>
+			<div class="story">
+				<p>Click to display the previous page of the list</p>
+			</div>
+			<div class="story">
+				<p>Click to display the next page of the list</p>
+			</div>
+			<div class="story">
+				<p>Installation and Configuration</p>
+			</div>
+		</div>
+	</body>
+</html>

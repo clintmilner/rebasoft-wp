@@ -1,0 +1,168 @@
+<h1><span class="purple">Integration</span></h1>
+<p>Rebasoft Auditor is an open
+  application and has been designed with powerful integration facilities. Integration
+  differs from tagging in that information is only displayed within Auditor not
+  stored within the database. Integration can also be both ways; namely using
+  Auditor to access information from an external system, and/or providing
+mechanisms for external systems to access Auditor data/reports</p>
+<h2>Crafted URL</h2>
+<p>This productivity mechanism
+  allows users to quickly display relevant information without needing to learn
+  or login to external systems. So, for example, from an IP address, you might
+  click to show the NetFlow conversations for that address. This is done from
+  calling the desired NetFlow report with the currently displayed IP address
+within Auditor. </p>
+<p>Any system that can be
+  accessed via a URL, or has a web-start via a URL call can be accessed. The
+crafted URL could be called and passed one of four main variables:</p>
+<ul><li>REBA_MAC - passes the current MAC address to the URL</li>
+  <li>REBA_IP - passes the current IP address to the URL</li>
+  <li>REBA_DEVICE - passes the device IP address to URL</li>
+  <li>REBA_INTERFACE - passes the interface index to the URL</li></ul>
+<p>Once called, the
+  application is then shown in the display frame. A Crafted URL represents the
+fastest and easiest method of integration:</p>
+<p>To set-up crafted URL integration
+select integration from the Admin dropdown:</p>      
+  <center><img src="2_2/images/image075.png" /></center>
+
+<p>To enable integration,
+  select the "Type" required and provide a name (This name will be displayed on the
+  appropriate page under tools). Optionally a filter (set in </span>Subnet filters) can be set to restrict the
+  integration URL; so you may have server tools just available to server subnet/vlans,
+and PC tools to various DHCP scopes:</p>
+    <center><img src="2_2/images/image076.png"  width="500"/></center>
+
+<p>Integrations can be added
+  or deleted, or if the same name is inputted for an existing device, MAC, IP or
+interface integration, overwritten.</p>
+<p>Once added, the integration appears as a "tool" at the IP, MAC, Device
+or interface level:</p>
+      <center><img src="2_2/images/image077.png"  width="500"/></center>
+
+<p>While there are no limits to the number or types of integrations
+  available, Rebasoft recommend no more than 4 or 5 per level be configured to
+  maintain clarity during application use.</p>
+<h2>Auditor Crafted URLs</h2>
+<p>In order to comply with the design goal of being open, all reports and links
+  within Rebasoft Auditor are accessible via a URL. Hence it is possible to call Rebasoft
+  Auditor from any web application (to get the actual URL for the Auditor screen
+  right click the link you are interested in and copy the link). For example, a
+  search with a search parameter can be called via a URL from any web
+  application:</p>
+<code class="prettyprint">http://&lt;server_IP&gt;:&lt;port&gt;/?action=Seach&amp;SearchValue=&lt;any
+  argument&gt; </code>
+<p>To aid security, and prevent users accessing Auditor from a
+  system which they have already authenticated to, there is now the ability to
+  embed portal user's credentials into the url of a link called by the external application.
+  The portal user settings are set within User administration
+by simply adding a user name and IP address to the portal users dialog.</p>
+        <center><img src="2_2/images/image078.png" width="200"/></center>
+
+<p>The url called must include the "portalUser=&lt;User
+  Name&gt;" parameter within the string. Where the &lt;user name&gt; is
+  configured as above. Security is also provided by the addition of the source IP
+address from which the portal user is calling. </p>
+<p>Below is an example of URL access:</p>
+<p>Site Overview (passing username and password in url)</p>
+<code class="prettyprint">http://server_address/?action=siteOverview&amp;siteSelection=Cell2&amp;userName=admin&amp;userPass=admin </code>
+<p>More examples can be found on-line in our Knowledgebase (<a
+href="http://www.rebasoft.net/support">www.rebasoft.net/support</a>) </p>
+<h2>Direct access to Data</h2>
+<p>In addition to Crafted URL, Auditor has also implemented
+  REST. This way programmatic access to Auditor data can be built. The data is
+  returned using JSON, though optionally XML can be specified as the output
+  format during the call. The general format of REST calls to Auditor is shown below:</p>
+<code class="prettyprint">http://serverAddress:[port]/rest/&lt;parameters&gt;</code>
+<p>The arguments permissible include:</p>
+<table width="95%" border="1" cellspacing="0" cellpadding="4" align="center">
+  <tr>
+    <td><strong>REST Parameters</strong></td>
+    <td><strong>Purpose</strong></td>
+  </tr>
+  <tr>
+    <td><code class="prettyprint">ips/</code></td>
+    <td>Returns an IP address range Permissible arguments include: </td>
+  </tr>
+  <tr>
+    <td colspan="2" scope="row">
+    Parameters:<br /><table border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td ><code class="prettyprint">search=&lt;argument&gt;</code></td>
+        <td >Returns a list of IP's matching the search argument</td>
+      </tr>
+      <tr>
+        <td><code class="prettyprint">?count=&lt;argument&gt;</code></td>
+        <td>Returns a count of the number of hits to the search argument</td>
+      </tr>
+      <tr>
+        <td colspan="2">&lt;argument&gt;
+          is simply a string that will search MAC, IP, DNS, User, Device, Interface
+          and tags for an IP match</td>
+      </tr>
+      <tr>
+        <td><code class="prettyprint">&amp;format=xml</code></td>
+        <td >Returns the result in xml format</td>
+      </tr>
+    </table>
+    </tr>
+  <tr>
+    <td><code class="prettyprint">/rest/ips/ipaddress</code></td>
+    <td>returns all elements of an IP address</td>
+  </tr>
+  <tr>
+    <td><code class="prettyprint">/rest/ips/hostname</code></td>
+    <td>resolves to current IP and returns same as IP address</td>
+  </tr>
+  <tr>
+    <td><code class="prettyprint">/rest/ips/?search=<br />[partialip,partialhostname,lastmac,
+    lastuser,firstseenbefore,lastseenbefore,<br />firstseenafter,lastseenafter]</code></td>
+    <td>returns matching ip address lists</td>
+  </tr>
+</table>
+<p>In addition, there are REST access requests for MAC, Device,
+interface and system information:</p>
+<p><code class="prettyprint">http://serverAddress:[port]/rest/macs/[?search=|?count=]<br />
+  http://serverAddress:[port]/rest/mac/[macaddress]<br />
+  http://serverAddress:[port]/rest/users/[?search=|?count=]<br />
+http://serverAddress:[port]/rest/user/[user____domain]</code></p>
+<p><i>(Four &quot;_&quot; are used as a delimiter between username and domain)</i></p>
+<p><code class="prettyprint">http://serverAddress:[port]/rest/system/<br />
+http://serverAddress:[port]/rest/devices/[?search=|?count=]<br />
+http://serverAddress:[port]/rest/device/[ipaddress]<br />
+http://serverAddress:[port]/rest/interfaces/[?search=|?count=]<br />
+http://serverAddress:[port]/rest/interface/deviceIP/[ifindex]</code>
+<p>For example calling <code class="prettyprint">http://server_address/rest/ips/?search=172.21.40.19</code></p>
+<p>Returns a short form result for matching list of addresses:</p>
+<p><code class="prettyprint">{&quot;ips&quot;:[<br />
+{&quot;id&quot;:-1407899450,&quot;address&quot;:&quot;172.21.40.198&quot;,&quot;hostname&quot;:&quot;my.system.com&quot;,&quot;type&quot;:&quot;ip&quot;,<br />&quot;href&quot;:&quot;http://127.0.0.1:8082/rest/ip/172.21.40.198&quot;},<br />
+{&quot;id&quot;:-1407899451,&quot;address&quot;:&quot;172.21.40.197&quot;,&quot;hostname&quot;:&quot;ITUNES&quot;,&quot;type&quot;:&quot;ip&quot;,<br />&quot;href&quot;:&quot;http://127.0.0.1:8082/rest/ip/172.21.40.197&quot;}<br />
+]}</code></p>
+<p>Example calling <code class="prettyprint">http://server_address/rest/ip/172.21.40.198</code></p>
+<p>Returns a long form result for the specific IP address</p>
+<p><code class="prettyprint">{&quot;ip&quot;:<br />
+{&quot;lastSeen&quot;:1303126954486,<br />
+&quot;firstSeen&quot;:1290430785352,<br />
+&quot;hostname&quot;:&quot;&quot;,<br />
+&quot;latestARPDevice&quot;:&quot;172.21.40.254&quot;,<br />
+&quot;type&quot;:&quot;ip&quot;,<br />
+&quot;latestMACHref&quot;:&quot;http://172.21.40.198:8082/rest/mac/00:19:d1:e3:c2:ce&quot;,<br />
+&quot;latestMAC&quot;:&quot;00:19:d1:e3:c2:ce&quot;,<br />
+&quot;id&quot;:-1407899450,<br />
+&quot;lastSeenH&quot;:&quot;Apr
+  18, 2011 12:42:34 PM&quot;,<br />
+&quot;address&quot;:&quot;172.21.40.198&quot;,<br />
+&quot;latestARPIfIndex&quot;:14,<br />
+&quot;firstSeenH&quot;:&quot;Nov<br />
+  22, 2010 12:59:45 PM&quot;,<br />
+&quot;href&quot;:&quot;http://172.21.40.198:8082/rest/ip/172.21.40.198&quot;<br />
+}}</code></p>
+ <table cellpadding="0" cellspacing="0" width="90%" align="center">
+   <tr>
+     <td class="box"><i><span class="purple">Note:</span></i><p style="font-size:1em;">
+      When searching
+        using these commands, any search that is specific to a single address will
+        provide the long form result, any search term which could provide multiple
+     results will provide the short form.</p></td>
+  </tr>
+</table>

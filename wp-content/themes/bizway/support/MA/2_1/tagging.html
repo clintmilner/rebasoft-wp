@@ -1,0 +1,77 @@
+<h2><span class="purple">Tagging</span></h2>
+<p>To a non-technical user, a network can be a difficult thing
+to decipher and understand. Rebasoft Auditor can help with this via the ability
+to "Tag" an item with additional information. This information may be something
+as simple as the ability for a note to be manually entered - for example a MAC
+Address with "Mike's desktop pc" - through to the same MAC address being
+associated with data imported or updated from an asset management system. With
+the right information, It is possible to answer a question like "how many dell
+pc's running Windows XP service pack 3 do I have on my network?"</p>
+<p>Administrators can set any number of "extra dimensions"
+available for tagging. There are three methods of tagging within Rebasoft
+Auditor:</p>
+<ol>
+<li>Manually - set via the Tagging administration dialog</li>
+<li>CSV import from, for example, excel spread sheet, also set via Tagging
+administration</li></ol>
+
+<p>As soon as a tag has been stored in Rebasoft Auditor it is
+searchable and available for reporting. In the same way tags can also be
+deleted (permanently) from the database. As tagged information is available
+from external sources, Rebasoft Auditor also has a way to make that information
+permanent or transient depending on how the data is imported.</p>
+
+<p>Tagging is accessed via the Admin dropdown:</p>
+    <center><img src="../img/Usermanual_2_1/image047.png" /></center>
+
+<h4>Manual tag building and data entry</h4>
+
+<p>Manual tagging allows administrators to add a category to
+data types within Rebasoft Auditor. The tagging administration screen allows
+administrators to add tag categories that can be used within the application.
+The image below shows the available manual tag types and categories.</p>
+<center>
+<img src="../img/Usermanual_2_1/image048.png" width="200"/>
+</center>
+
+<p>So for instance, you might want to record the Operating
+system for a MAC Address (Say "Windows 7"). To build this, you simply key the desired name into the field next to
+the tag type and hit the green "plus" button.</p>
+<center>
+<img src="../img/Usermanual_2_1/image049.png" width="85%" /></center>
+<p>The moment the tag category is added, it is available for
+use by users:</p>
+
+<p>To add information via Auditor, simply click the "plus" button
+- in this case to add OS details to this Dell MAC Address:</p>
+<center>
+<img src="../img/Usermanual_2_1/image050.png" width="500"  /></center>
+<p>If there is more than one category, simply select from the
+drop-down, key in the information and click "add"</p>
+<center>
+<img src="../img/Usermanual_2_1/image051.png" /></center>
+<p>Once the information is added, it is available for search.
+Information can be deleted by "mousing" over the tag, and clicking the small
+red cross to delete:</p>
+<center>
+<img src="../img/Usermanual_2_1/image052.png" /></center>
+<h4>CSV</h4>
+<p>Clearly manual tagging has somewhat limited scope,
+especially when there are thousands of devices, users and IP's connected to the
+network.</p>
+
+<p>In the case where larger quantities of data need to be
+added, an import method is needed. If data is available in "csv" format, the
+information can be imported into Auditor:</p>
+<center><img src="../img/Usermanual_2_1/csv-tag-1.png" width="300"/></center>
+
+<p>Simply browse to the spreadsheet (in csv format) and upload to Auditor. Once successfully uploaded, administrators can click on the filename and complete the import process.</p>
+<p>The workflow confirms:
+<ol>
+<li>the file-type; CSV (Commas Separated Values) or TSV (Tab Separated Values)</li>
+<li>whether you wish to include the header line as a value or not.<br />
+<i>(After pressing the Test button, the data is displayed)</i></li>
+<li>Simply select the Tag type – where you want the data displayed</li>
+<li>Enter the category name, and which columns represent the item reference column and the Value column – this case, what is the MAC address we wish to associate the data with, and the data column we wish to insert.</li></ol></p>
+<center><img src="../img/Usermanual_2_1/tagging-csv-import.png" width="400"/></center>
+<p>A future version of Rebasoft Auditor will include the ability to use XML to reference external applications (such as HR or an Asset management system) as the source to replicate the data from.</p>

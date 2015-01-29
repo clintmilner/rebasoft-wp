@@ -1,0 +1,97 @@
+<h1><span class="purple">Tagging</span></h1>
+<p>To a non-technical user, a network
+        can be a difficult thing to decipher and understand. Auditor can help
+        with this via the ability to "Tag" an item with additional information.
+        This information may be something as simple as the ability for a note
+        to be manually entered – for example a MAC Address with "Mike’s desktop
+        pc" - through to the same MAC address being associated with data imported
+        or updated from an asset management system. With the right information,
+        It is possible to answer a question like "how many dell pc’s running
+        Windows XP service pack 3 do I have on my network?"</p>
+<p>Administrators can set any number
+        of "extra dimensions" available for tagging. There are two methods of
+        tagging within Auditor :</p>
+<ol><li><a href="#manual">Manually</a> – set via the Tagging administration dialog</li>
+<li><a href="#csv">CSV import</a> from, for example,  excel spread sheet, also set via Tagging administration</li></ol>
+<p>As soon as a tag has been stored
+        in Auditor  it is searchable and available for reporting. In the same
+        way tags can also be deleted (permanently) from the database. As tagged
+        information is available from external sources, Auditor  also has a way
+        to make that information permanent or transient depending on how the
+        data is imported.</p>
+<p>Tagging is accessed via the
+        Admin dropdown:</p>
+<center><img border="0" width="130" height="206"
+src="2_4/images/image168.jpg" /></center>
+<h2><a id="manual"></a>Manual tag building and data entry</h2>
+<p>Manual tagging allows administrators
+        to add a category to data types within Auditor . The tagging administration
+        screen allows administrators to add tag categories that can be used within
+        the application. </p>
+<p>From V2.4, Auditor allows administrators
+        to define a tag and:</p>
+<ol>
+<li>State
+  whether the values in the tag are unique (so within an element you could have
+  a department with either a single allowable entry, or multiple entries)</li>
+<p>Set
+  an expiry lifetime for the tag</p>
+<li>Set
+  a url and pass the tag contents as part of the url. In the example below, Auditor
+  is passing the phone extension number to a VoIP monitoring module.</li></ol>
+<center><img border="0" width="510" height="132"
+src="2_4/images/image170.jpg" /></center>
+<p>So for instance, you might want
+        to record the "Operating system for a MAC Address (Say "Windows 7").  To
+        build this, you simply key the desired name into the field next to the
+        tag type and hit the green "plus" button.</p>
+<center><img border="0" width="244" height="139"
+src="2_4/images/image172.jpg" /></center>
+<p>The moment the tag category
+        is added, it is available for use by users:</p>
+<p>To add information via Auditor,
+        simply click the "plus" button – in this case to add OS details to this
+        Dell MAC Address:</p>
+<center><img border="0" width="627" height="130"
+src="2_4/images/image174.png" /></center>
+<p>If there is more than one category,
+        simply select from the drop-down, key in the information and click "add"</p>
+<center><img border="0" width="282" height="122"
+src="2_4/images/image176.png" /></center>
+<p>Once the information is added,
+        it is available for search. Information can be deleted by "moussing"
+        over the tag, and clicking the small red cross to delete:</p>
+<center><img border="0" width="216" height="73"
+src="2_4/images/image178.png" /></center>
+<h2><a id="csv"></a>CSV import </h2>
+<p>Clearly manual tagging has somewhat
+        limited scope, especially when there are thousands of devices, users
+        and IP’s connected to the network.</p>
+<p>In the case where larger quantities
+        of data need to be added, an import method is needed. If data is available
+        in "csv" format, the information can be imported into Auditor tags:</p>
+<center><img border="0" width="303" height="131"
+src="2_4/images/image180.png" /></center>
+<p>Simply browse to the spread
+        sheet (in csv format) and upload to Auditor. Once successfully uploaded,
+        administrators can click on the filename and complete the import process.</p>
+<p>The workflow confirms:</p>
+<ol>
+<li>the file-type; CSV (Commas Separated Values) or TSV (Tab Separated Values), </li>
+<li>whether
+  you wish to include the header line as a value or not.</li>
+<li>(After
+  pressing the Test button, the data is displayed)</li>
+<li>Simply
+  select the Tag type – where you want the data displayed</li>
+<li>Enter
+  the category name, and which columns represent the item reference column and
+  the Value column – this case, what is the MAC address we wish to associate
+  the data with, and the data column we wish to insert.</li>
+  </ol>
+<center><img border="0" width="553" height="273"
+src="2_4/images/image182.png" /></center>
+<p>A future version of Auditor  will
+        include the ability to use XML to reference external applications (such
+        as HR or an Asset management system) as the source to replicate the data
+        from.</p>

@@ -1,0 +1,97 @@
+<h2><span class="purple">Device administration</span></h2>
+  <p >Any device that has a CAM table can be a data source for MAC Auditor -
+    this might be Layer 3 switch, Router or Firewall. MAC Auditor uses SNMP to poll
+    device MIB parameters using RFC standards to retrieve the required information
+    from the device. Where a device is not compliant, it is possible to use a
+    custom MIB - Rebasoft will consider adding vendor MIBs to Mac Auditor to
+    support customer requirements. We have also provided an over-ride to cater to
+  devices where the MIB definitions present inconsistent results.</p>
+  <p >To add, delete or manage existing devices, administrators should select
+  "Devices" from the administration dropdown &amp; click the arrow: </p>
+  <center><img src="../img/Usermanual_2_0/image069.jpg" /></center>
+  <h4>Add a device</h4>
+  <p >Devices can be added either directly from their IP address or from their
+    assigned DNS name. Administrators can add up to 10 devices via the add device
+    button. To add more than 10 devices, it is advisable to use the bulk loading
+  dialog. </p>
+  <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+      <td class="box" style="font-size:0.8em;"><b><i><span
+    style='color:red'>Note:</span></i></b><br />
+        To add a device
+          (or devices) directly to a site, simply select from the site dropdown. If
+          the site selector is "none", the device will be added to the "All devices"
+          site only.</td>
+    </tr>
+  </table>
+  <br /><br />
+    <center><img src="../img/Usermanual_2_0/image070.jpg" /></center>
+
+  <p >To add multiple devices, simply separate with a comma; for example
+    "router1, switch1, firewall8" will add 3 devices – DNS will resolve the device
+    to the current IP address. Up to 10 devices may be added using this method
+  using IP addresses. </p>
+  <p >To add a range of devices, simply add the start of the range and the end
+    of the range separated with a space; for example "1.1.1.1 1.1.1.50" will add and
+  scan fifty devices from 1.1.1.1 to 1.1.1.50. </p>
+  <p >For multiple ranges, it is recommended that the bulk load facility is
+  used.</p>
+    <center><img src="../img/Usermanual_2_0/image071.jpg" width="550"/></center>
+
+  <p >Devices can be bulk loaded by cutting and pasting lines into the Bulk
+  load dialog. The format of the load is shown below:</p>
+  <p> &lt;ipaddress&gt;:&lt;snmpCommunity&gt;:&lt;SiteName&gt;</p>
+  <p>This loads a single IP address per line. If snmpCommunity
+    is omitted, MAC auditor uses the system defaults in turn to contact the device.
+    If SiteName is omitted, device is added to "All devices". The colon ( : ) is a
+    field delimiter. If the site does not currently exist, it will be created
+  dynamically</p>
+  <p> &lt;ipaddress_start&gt;
+  &lt;ipaddress_end&gt;:snmpCommunity:SiteName</p>
+  <p >In this case the space between the 2 IP
+    addresses indicates that MAC Auditor should add the range of addresses between
+  the two. The same provisions apply for snmpCommunity &amp; SiteName</p>
+  <p> &lt;ipaddress_1&gt;,&lt;ipaddress_2&gt;,&lt;ipaddress_3&gt;:&lt;snmpCommunity&gt;:&lt;SiteName&gt;</p>
+  <p >A set of IP addresses separated by commas
+    constitutes a list to be processed.<br>
+    <br>
+  </p>
+  <h4>Changing device settings</h4>
+  <p >Once a device has been added to the MAC Auditor database, certain
+  settings can be overridden. </p>
+  <p >It is possible to enable or disable a device, simply tick the enable
+    box, and then click the ”<b>Save device”</b> button. Failure to click the save device button will cause changes to be lost
+  if navigating away from the page:</p>
+    <center><img src="../img/Usermanual_2_0/image072.jpg" width="550" /></center>
+
+  <p><b>"Rescan"</b> will cause the device to be polled using SNMP.</p>
+  <p><b>"Save device"</b> will cause the device updated information
+    to be to be saved to the database. Navigation away from this page without
+  saving changes causes them to be lost.</p>
+  <p ><b>"Remove device"</b> deletes the device from MAC Auditor, but
+    does not delete the device data collected in the current month. Removing a
+    device will stop it being polled for information. A removed device / interface
+    will not count towards the license count, but will still appear in the
+  sites/devices list.</p>
+  <p ><b>"Remove device and data"</b> removes all device and information
+    collected via that device from the MAC Auditor system for the current month.
+    Any data collected via a different device will still remain in the database.
+    Hence MAC, IP and UserID data will still remain in the system if it has been
+  collected via another device.</p>
+  <p ><b>"Test device"</b> immediately contacts the device using the configured SNMP community. If successful, the pop-up will show device and interface details.</p>
+  <p >It is also possible to override standard interface names and add
+  descriptions to aid users:</p>
+  <p>If the interface
+    index, or retrieved parameter does not match the desired display,
+  administrators can override the "ifindex", name and description displayed. </p>
+  <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+      <td class="box"><b><i><span style='color:red; font-size:0.8em;' >Note:</span></i></b><br />
+        <p>The
+          labels in the reports will be marked with * to differentiate the interface
+          from polled information.</td>
+    </tr>
+  </table>
+  <p>Use of this
+    facility should be carefully considered as reports against interfaces may not
+  be accurately shown.</p>

@@ -1,0 +1,159 @@
+<h1><span class="purple">Tagging</span></h1>
+<p>To a non-technical user, a network
+        can be a difficult thing to decipher and understand. Auditor can help
+        with this via the ability to "Tag" an item with additional information.
+        This information may be something as simple as the ability for a note
+        to be manually entered – for example a MAC Address with "Mike’s desktop
+        pc" - through to the same MAC address being associated with data imported
+        or updated from an asset management system. With the right information,
+        It is possible to answer a question like "how many dell pc’s running
+        Windows XP service pack 3 do I have on my network&quot;?</p>
+<p>Administrators can set any number
+        of "extra dimensions" available for tagging. There are three methods of
+        tagging within Auditor :</p>
+<ol>
+  <li><a href="#manual">Manual</a> – manually set  tag categories within elements via the administration dialog and manually input the data</li>
+<li><a href="#csv">CSV</a>- manually set tag categories within elements via the administration dialog and manually input the data from a CSV/TSV file</li>
+<li><a href="#xml">XML API</a> - programmatically import data to MAC entities via XML post, automatically creating categories within elements and importing data</li>
+</ol>
+<p>As soon as a tag has been stored
+        in Auditor it is searchable and available for reporting. In the same
+        way tags can also be deleted (permanently) from the database. As tagged
+        information is available from external sources, Auditor  also has a way
+        to make that information permanent or transient depending on how the
+        data is imported.</p>
+<p>Tagging is accessed via the
+        Admin drop down:</p>
+<center><img border="0" width="130" height="206"
+src="2_4/images/image168.jpg" /></center>
+<h2><a id="manual"></a>Manual tag building and data entry</h2>
+<p>Manual tagging allows administrators
+        to create or delete a category within to data types within Auditor . The tagging administration
+        screen allows administrators to add tag categories that can be used within
+        the application. </p>
+<p>From V2.4, Auditor allows administrators
+        to define a tag and:</p>
+<ol>
+<li>State
+  whether the values in the tag are unique (so within an element you could have
+  a department with either a single allowable entry, or multiple entries)</li>
+<p>Set
+  an expiry lifetime for the tag</p>
+<li>Set
+  a url and pass the tag contents as part of the url. In the example below, Auditor
+  is passing the phone extension number to a VoIP monitoring module.</li></ol>
+<center><img border="0" width="510" height="132"
+src="2_4/images/image170.jpg" /></center>
+<p>So for instance, you might want
+        to record the "Operating system for a MAC Address (Say "Windows 7").  To
+        build this, you simply key the desired name into the field next to the
+        tag type and hit the green "plus" button.</p>
+<center><img border="0" width="244" height="139"
+src="2_4/images/image172.jpg" /></center>
+<p>The moment the tag category
+        is added, it is available for use by users:</p>
+<p>To add information via Auditor,
+        simply click the "plus" button – in this case to add OS details to this
+        Dell MAC Address:</p>
+<center><img border="0" width="627" height="130"
+src="2_4/images/image174.png" /></center>
+<p>If there is more than one category,
+        simply select from the drop-down, key in the information and click "add"</p>
+<center><img border="0" width="282" height="122"
+src="2_4/images/image176.png" /></center>
+<p>Once the information is added,
+        it is available for search. Information can be deleted by "mousing"
+        over the tag, and clicking the small red cross to delete:</p>
+<center><img border="0" width="216" height="73"
+src="2_4/images/image178.png" /></center>
+<h2><a id="csv"></a>CSV import </h2>
+<p>Clearly manual tagging has somewhat
+        limited scope, especially when there are thousands of devices, users
+        and IP’s connected to the network.</p>
+<p>In the case where larger quantities
+        of data need to be added, an import method is needed. If data is available
+        in "csv" format, the information can be imported into Auditor tags:</p>
+<center><img border="0" width="303" height="131"
+src="2_4/images/image180.png" /></center>
+<p>Simply browse to the spread
+        sheet (in csv format) and upload to Auditor. Once successfully uploaded,
+        administrators can click on the filename and complete the import process.</p>
+<p>The workflow confirms:</p>
+<ol>
+<li>the file-type; CSV (Commas Separated Values) or TSV (Tab Separated Values), </li>
+<li>whether
+  you wish to include the header line as a value or not.</li>
+<li>(After
+  pressing the Test button, the data is displayed)</li>
+<li>Simply
+  select the Tag type – where you want the data displayed</li>
+<li>Enter
+  the category name, and which columns represent the item reference column and
+  the Value column – this case, what is the MAC address we wish to associate
+  the data with, and the data column we wish to insert.</li>
+  </ol>
+<center><img border="0" width="553" height="273"
+src="2_4/images/image182.png" /></center>
+<h2><a id="xml"></a>XML API </h2>
+<p> An XML API is provided to enable administrators to regularly, automatically tag MAC elements with external data (such as from an asset database or other external source). The data is should be formatted as an XML file and posted to Auditor Core for processing. </p>
+<table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+  <tr valign="middle">
+    <td width="6%" valign="top" style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+    <td width="94%" style="border: 1px solid #663399;"><i></i>
+      <p style="font-size:1em;"><i></i><i></i>V2.6 Build 64 or later provides for MAC tagging only</p></td>
+  </tr>
+</table>
+<p> An example is provided below using the &quot;curl&quot; mechanism to post the XML file:</p>
+<p style="font-family:'Courier New', Courier, monospace; font-size:12px;"> curl -X POST -H &quot;Content-Type: application/xml; charset=utf-8&quot; -d @/root/test.xml 'http://admin:admin@172.21.40.14:8082/upload'</p>
+<p>In this case the file is called &quot;test.xml&quot;, and it is posted to an a directory called &quot;/upload&quot; which is provided in Auditor Core 2.6 and later. The &quot;admin:admin&quot; portion of the destination is required to pass the login credentials of the user with authorisation to create tags.</p>
+<p>The XML file should be formatted as below:</p>
+<p style="font-family:'Courier New', Courier, monospace; font-size:12px;">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt; <br />
+&lt;Root xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt; <br />
+  &nbsp;&lt;Tags&gt; <br />
+  &nbsp;&nbsp;&lt;Tag type=&quot;MAC&quot; id=&quot;001EC9B8B831&quot; category=&quot;Asset ID&quot; value=&quot;1234511&quot; life=&quot;10000010&quot; unique=&quot;true&quot;/&gt; <br />
+  &nbsp;&nbsp;&lt;Tag type=&quot;MAC&quot; id=&quot;001EC9B8B832&quot; category=&quot;Asset ID&quot; value=&quot;1234521&quot; life=&quot;10000011&quot; unique=&quot;true&quot;/&gt; <br />
+  &nbsp;&nbsp;&lt;Tag type=&quot;MAC&quot; id=&quot;001EC9B8B833&quot; category=&quot;Asset ID&quot; value=&quot;1234531&quot; life=&quot;10000012&quot; unique=&quot;false&quot;/&gt; <br />
+  &nbsp;&nbsp;&lt;Tag type=&quot;MAC&quot; id=&quot;001EC9B8B834&quot; category=&quot;Asset ID&quot; value=&quot;1234541&quot; life=&quot;10000013&quot; unique=&quot;false&quot;/&gt; <br />
+  &nbsp;&lt;/Tags&gt; <br />
+&lt;/Root&gt;</p>
+<p><strong>Usage guide:</strong></p>
+<table border="0" cellspacing="0" cellpadding="4" style="border:1px solid #333" align="center">
+  <tr>
+    <td width="132" valign="top" style="border-bottom:1px solid #333; border-right:1px solid #333;"><p><strong>XML tag </strong></p></td>
+    <td width="444" valign="top" style="border-bottom:1px solid #333;"><p><strong>Valid data</strong></p></td>
+  </tr>
+  <tr>
+    <td valign="top"style="border-bottom:1px solid #333; border-right:1px solid #333;">&lt; Tag    &gt;</td>
+    <td valign="top" style="border-bottom:1px solid #333;"><strong>TAG</strong>: User defined tag to be assigned    to element.</td>
+  </tr>
+  <tr>
+    <td width="132" valign="top" style="border-bottom:1px solid #333; border-right:1px solid #333;"><p>&lt;Type&gt;</p></td>
+    <td width="444" valign="top" style="border-bottom:1px solid #333;"><p><strong>TYPE</strong>: The element that the data    should be tagged to – valid options are:</p>
+      <ul>
+        <li>MAC (V2.6 only)</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td width="132" valign="top" style="border-bottom:1px solid #333; border-right:1px solid #333;"><p>&lt;id&gt;</p></td>
+    <td width="444" valign="top" style="border-bottom:1px solid #333;"><p><strong>ID</strong>: The ID of the item being tagged. <br />
+      MAC: Hexadecimal, 12 characters (001EC9B8B831)without delimiters<br />
+    </p></td>
+  </tr>
+  <tr>
+    <td width="132" valign="top" style="border-bottom:1px solid #333; border-right:1px solid #333;"><p>&lt; Category    &gt;</p></td>
+    <td width="444" valign="top" style="border-bottom:1px solid #333;"><p><strong>CATEGORY</strong>: User defined category for    tag. If the category does not exist, it will be created</p></td>
+  </tr>
+  <tr>
+    <td width="132" valign="top" style="border-bottom:1px solid #333; border-right:1px solid #333;"><p>&lt; Life    &gt;</p></td>
+    <td width="444" valign="top" style="border-bottom:1px solid #333;"><p><strong>LIFETIME</strong>: How long the tag is active    for: Time should be in milliseconds. If the value is set to 0, the tag has an unlimited lifetime.</p></td>
+  </tr>
+  <tr>
+    <td width="132" valign="top" style="border-right:1px solid #333;"><p>&lt; Unique    &gt;</p></td>
+    <td width="444" valign="top"><p><strong>ISUNIQUE</strong>: Boolean (true/false).    Should this tag be unique for this category with in an element? </p>
+      <ul type="disc">
+        <li>If unique then existing elements will be         replaced</li>
+        <li>If not unique then multiple tags will be         generated within an element</li>
+      </ul></td>
+  </tr>
+</table>
+<p>&nbsp;</p>

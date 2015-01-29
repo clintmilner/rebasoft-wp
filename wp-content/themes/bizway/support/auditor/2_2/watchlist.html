@@ -1,0 +1,50 @@
+<h1><span class="purple">Watch list</span></h1>
+  <p>Rebasoft Auditor is able to  help track devices on the network. Whether users require alerts about a rogue  access point, or a stolen Laptop, as soon as it is seen on the network, a Watch  list alert is displayed and a syslog alert is optionally generated. Clicking on  the hyperlink shows a list of watched devices and when seen on the network: </p>
+    <center><img src="2_2/images/image055.jpg" width="500" /></center>
+
+  <p>Users can click manage the alert  or click on the MAC address link to see further details on the device and why  it is on the watch list. </p>
+  <p>Watch lists can be added via 2  methods.</p>
+  
+  <ol>
+  <li>From the MAC forensics screen by clicking the &ldquo;Add Watch entry&rdquo; link:<br /><br />
+    <center><img src="2_2/images/image056.png" width="500" /></center></li>
+
+ <li>Or via the Watch list
+  admin drop down: <br /><br />
+    <center><img src="2_2/images/image057.png" /></center></li>
+</li></ol>
+  <br /><br />
+<table cellpadding="0" cellspacing="0" width="90%" align="center">
+  <tr>
+    <td class="box"><i><span class="purple">Note:</span></i><p style="font-size:1em;">Only administrators can add a watch entry
+</p></td>
+        </tr>
+      </table>
+  <p>Watch lists are configured in the following screen:</p>
+<center><img src="2_2/images/image058.jpg" width="500"/></center><br /><br />
+ <ol>
+      <li>Add  device (plus a description) to the watch list.</li>
+      <li>Once  the watch list device is added, decide on a syslog alerter setting if required.</li>
+      <li>Alerts  for watch lists can be multiple and can be deleted without the Watch list entry  being deleted.</li>
+</ol>
+    <p>Alerts are only sent when a MAC address is first  seen by Rebasoft Auditor</p>
+<p>&nbsp;</p>
+<table cellpadding="0" cellspacing="0" width="90%" align="center">
+  <tr>
+    <td class="box"><i><span class="purple">Note:</span></i><p style="font-size:1em;">
+        Restarting Rebasoft Auditor
+          does not cause generation of new alerts as the system retains Watchlist
+      status information in the database.</p></td>
+    </tr>
+  </table>
+  <p >If a previously seen MAC
+    address leaves the network (for the CAM hold down period) and Rebasoft Auditor is
+    then restarted you will, of course, generate an alert as this would be classed
+    as a new Watchlist hit.
+</p>
+  <p >The syslog message will be
+  sent as:<BR /><BR />
+  <code class="prettyprint">messages.2:Sep&nbsp; 1 17:32:42 172.21.40.199 Rebasoft Auditor Watch Entry Seen:<br />00:1f:c5:ed:ae:23 on
+  Device:172.21.40.254 ifIndex:3 Reason:Wii</code>
+  <p >The MAC Forensics screen shows the first and last  times this device was seen on the network and also alerts users as to whether  the particular device is being watched. </p>
+<center><img src="2_2/images/image059.png" width="400" /></center></li>

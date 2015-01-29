@@ -1,0 +1,25 @@
+<h1><span class="purple">Device Settings</span></h1>
+				<p>Once a device has been configured to export flow information to Application Auditor, it is automatically  registered by the system. Device settings allows administrators to fine-tune  and  configure  settings on a per device basis as needed. To access device settings, select 'Devices' from the Admin drop down</p><center><img src="2_0/images/config%20and%20admin%20device%20settings.png"/></center>
+			
+				<p>In Device settings, Application Auditor displays the list of automatically discovered devices together with other pertinent information. Application Auditor shows this summary in a table showing the type of data being received (and the number of packets received) together with SNMP polling statistics (if any): </p>
+                <table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+                <tr valign="middle">
+                <td style="background:#ff9900;" valign="top" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+                <td style="border: 1px solid #ff9900;">A device can export more than one source of application flow data (for example a Juniper Networks SRX can export jFLow, AppSecure and Firewall session logs - this single devoice would count as 3 sources for licensing purposes)</td></tr></table><p>&nbsp;</p>
+                <center><img src="2_0/images/config%20and%20admin%20device-settings.png" width="500"/></center>
+				<p>To edit a device, simply select from the list. Administrators can configure the following elements:</p>
+				<ul>
+                <li>Override the Display Name</li>
+				<li>Set SNMP Version (1, 2 or 3)</li>
+				<li>Device specific SNMP Community</li>
+				<li>Sampling rate override (if required)</li>
+				</ul>
+                <br /><br />
+                <center><img src="2_0/images/config%20and%20admin%20Settings%20results.png" width="300"/></center>
+                <p>Administrators can also override interface details – Alias, Speed &amp; Monitored Subnets (when successful SNMP communication has been established Application Auditor will display the results gathered from the device):
+				<center><img src="2_0/images/config%20and%20admin%20subnets%20netmask.png" width="550"/></center>
+				
+				<p>In addition to the interface you will be presented with a list of discovered subnets &amp; Netmask against the Interface that has seen them, this allows fast specification of subnets for reporting purposes:</p>
+				
+				
+                <center><img src="2_0/images/config and admin unmonitored subnets.png" width="500"/></center><p>You can add this subnet to the monitored subnet list by clicking on the 'Monitor Subnet' button relative to this interface. You can also choose to monitor multiple subnets by selecting the Interface Monitor checkbox and selecting 'Monitor Subnets' as shown:</p>

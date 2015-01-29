@@ -1,0 +1,88 @@
+<h1><span class="purple">User
+                Lookup administration</span></h1>
+<p>A powerful feature of Auditor  is the associating of
+        user login information. This allows organisations to search on UserID
+        as well as IP address and MAC. The association of this information makes
+        it easy to find users on the network for help desk and audit purposes.</p>
+<center><img border="0" src="2_4/images/image262.jpg" /></center>
+<p>Auditor  supports user lookup via LDAP systems, such
+        as Novell eDirectory, and Windows 2003 &amp; 2008 Active Directory. Since
+        Active Directory does not store user login requests in the directory;
+        rather Microsoft records user logon/logoff information in the system
+        security log, the log must be accessible to the user configured in the
+        User lookup settings. </p>
+<p>User details are fully searchable once stored in the
+        database. Please note that Auditor  polls the directory service configured
+        once per hour, and looks for login records. Hence it may be some time
+        before UserID information appears in the system.</p>
+<p>To access user lookup, select from the Admin menu:</p>
+<center><img border="0" src="2_4/images/image264.jpg" /></center>
+<p>The TAG used in setting up LDAP and Active Directory
+        look up is a label used in reporting. If you have multiple LDAP or PDC/BDC
+        servers, you could tag them with one or more names. For example you have
+        an internal domain of &quot;abccompany.local&quot;, but use multiple
+        authentication servers on your network, using
+  &quot;abccompany.local&quot; as a tag for each server being polled will allow
+  Auditor  to group all user entries for that group of DC's into a single report.</p>
+<h2>User lookup with LDAP</h2>
+<p>Auditor  supports user lookup via LDAP. To add LDAP
+        lookup, administrators should complete the LDAP form below, providing
+        credentials and LDAP parameters. </p>
+ <table cellpadding="0" cellspacing="0" width="90%" align="center">
+      <tr>
+        <td class="box"><i><span class="purple">Note:</span></i><p style="font-size:1em;">
+          Rebasoft recommends the polling period of 3600000 milliseconds be left as default, and that a filter of loginDisabled=FALSE be applied</p></td>
+      </tr>
+    </table>
+    <br />
+<p>Following configuration, an
+        entry similar to below should be saved:</p>
+<p>java.naming.provider.url:ldap://x.x.x.x:389<br />
+  java.naming.factory.initial:com.sun.jndi.ldap.LdapCtxFactory<br />
+  java.naming.security.principal:cn=company,ou=servers,o=ldap-servers<br />
+  java.naming.security.authentication:None<br />
+  java.naming.security.credentials:********<br />
+  java.naming.ldap.attributes.binary:networkAddress<br />
+  Polling Period:3600000<br />
+  Filter:loginDisabled=FALSE</p>
+<h2>User lookup with Active Directory</h2>
+<p>User lookup for Active Directory login information is
+        available for both Windows 2003 and 2008 platforms. Windows authentication
+        lookup allows you to specify a UTC offset for the logs. This is dues
+        to the fact that Windows stores the timestamp in UTC, and an offset may
+        need to be manually set in order for the correct time period to be collected
+        (this being due to the Auditor clock being local server time).</p>
+<center><img border="0" width="421" height="412"
+src="2_4/images/image269.jpg"  /></center>
+<p>To add a lookup, simply specify a tag – this identifies
+        which server Auditor  has used for the look-up. Specify the server address,
+        domain name and user ID &amp; password. If a polling period different
+        from 10 minutes is required, this can be overridden. It is not recommended
+        to change the UserExcludeFilter period.</p>
+
+    <table cellpadding="0" cellspacing="0" width="90%" align="center">
+      <tr>
+        <td class="box"><i><span class="purple">Note:</span></i>
+          <p>Windows Authentication 2003/2008 lookup uses the System Security Log as  the data source. Rebasoft recommend creation of a new user with access  privileges to the system security event logs. <br /><br />
+            More information on "Manage  auditing and security log properties" can be found at <a href="http://technet.microsoft.com/en-us/library/cc957161.aspx" target="_blank">Microsoft.com</a> <br /><br />
+        There are also some direct links  to the Rebasoft website with specific information related to Windows 2008 R2  security</p></td>
+      </tr>
+    </table>
+    <br />
+
+
+
+<p>To verify that a user lookup
+        is working correctly, you can press the test button next to the user
+        lookup entry:</p>
+<center><img border="0" width="301" height="89"
+src="2_4/images/image272.png"
+ /></center>
+<p>The output of the test will
+        be shown in the status area:</p>
+<center><img border="0" width="382" height="151"
+src="2_4/images/image274.jpg" /></center>
+<p>If required, an existing user
+        lookup configuration can be edited:</p>
+<center><img border="0" width="346" height="129"
+src="2_4/images/image276.png" /></center>

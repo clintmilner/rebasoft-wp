@@ -1,0 +1,168 @@
+<h1><span class="purple">System settings administration</span></h1>
+
+<p>One of the first actions recommended is the configuration of system
+settings. System level settings are used throughout the application. Here
+administrators can set-up:</p>
+
+<ul>
+<li><a href="#snmpsettings">SNMP Settings</a></li>
+<li><a href="#syslog">Syslog settings</a> for alert output</li>
+<li><a href="#settings">Systems settings</a> (these settings are reserved for future use)</li>
+<li><a href="#networkdiscovery">Network Discovery</a></li>
+<li><a href="#database">Database settings</a></li>
+<li><a href="#macvendor">MAC Vendor table</a></li>
+<li><a href="#oid-db">OID Vendor database</a></li>
+<li><a href="#vendoroid">Vendor OID</a></li>
+<li><a href="#logging">Log level settings</a></li>
+</ul>
+<p>System settings are accessed from the Administration dropdown in the top
+frame (clicking the arrow):</p>
+        <center><img src="2_2/images/image086.png" /></center>
+<p>A summary of the
+current system settings and directory locations are shown at the bottom of the
+system settings page:</p>
+        <center><img src="2_2/images/image087.png" width="550" /></center>
+<h2><a id="snmpsettings"></a>SNMP Settings</h2>
+<p>SNMP settings allow administrators to control Auditor SNMP settings.
+System wide community strings can be set (these can be overridden during device
+discovery) as well as enabling overrides for SNMP discovered information. </p>
+<p>Auditor can change
+device name cases. Administrators can select UPPER or lower cases for storage
+and display; in which case following each SNMP poll, Auditor stores the device
+name in the required case. "Do nothing" simply accepts the device name
+(hostname) as configured from the polled device.</p>
+        <center><img src="2_2/images/image088.jpg" width="250" /></center>
+
+<p>Sometimes, for
+legibility in Auditor, it is desirable to remove text from the device name.
+This may be useful if the device (hostname) is a FQDN format (such as
+cat3750-rm104.abcompany.com), you can then remove any desired element (for
+example ".abcompany.com") from the device name. This setting is also persistent
+even when the device is re-polled by SNMP.</p>
+        <center><img src="2_2/images/image089.jpg" width="250"/></center>
+<p>SNMP Community strings, if entered during device input, are used first.
+In the absence of a specified SNMP community string, system level SNMP
+communities are used in turn until a successful poll is performed. Rebasoft
+Auditor then stores the successful string with the device, this reduces the
+number of alerts that a device might generate if a community is used
+unsuccessfully. It is only necessary to
+use Read-only strings. </p>
+
+<p>To add a new community simply type the string into the box &amp; click
+"Add community"</p>
+        <center><img src="2_2/images/image090.jpg" width="300" /></center>
+
+<p>To remove a
+community, simply click the cross next to the string to be removed</p>
+
+<h2><a id="networkdiscovery"></a>Network Discovery</h2>
+
+<p>Auditor (V2.2 or later) provides the ability to
+automatically discover network devices using Cisco Discovery Protocol (CDP)
+and/or Link Layer Discovery Protocol
+(LLDP). These protocols rely
+upon the network devices to be discovered having CDP or LLDP enabled. The
+configuration guides of the various vendors can advise on how CDP/LLDP can be
+enabled. </p>
+        <center><img src="2_2/images/image091.png" width="300"/></center>
+<p>CDP and LLDP have two operating modes. CDP and LLDP can be
+used to add devices to Auditors polling list, and this collects ARP, CAM and
+other information from the MIB. In addition CDP and LLDP can be used to resolve
+hostnames, such as the phone ID for Cisco IP phones.</p>
+
+<p><a href="help.php?version=2.2&subnets">Subnet filters</a> can be applied to CDP and LLDP settings to limit the bounds of CDP and LLDP
+discovery, to reduce traffic and prevent devices inadvertently being added to
+Auditor's device list.</p>
+
+<h2><a id="syslog"></a>Syslog settings for Alert</h2>
+
+<p>Rebasoft Auditor currently alerts on screen and using syslog.
+Administrators can set multiple syslog servers depending on network
+preferences. To enter a syslog server, simply specify a name, required level
+and facility together with the target address. Administrators can also set the
+syslog level and facility to suit any log processing or alert handling system.
+        <center><img src="2_2/images/image092.jpg" width="550"/></center>
+
+<p>Syslog server
+receivers can be removed by simply clicking the cross next to the syslog to be
+removed</p>
+
+<h2><a id="settings"></a>System Settings</h2>
+
+<p>This shows the current settings as configured during the
+installation process:</p>
+        <center><img src="2_2/images/image093.png" width="550" /></center>
+<p>If it is necessary to amend the no. of threads used or the
+RAM allocated to Auditor, simply re-run the installer and plug in the new values.</p>
+
+<h2><a id="database"></a>Database Settings</h2>
+
+<p>Database settings allow administrators to refine and set
+controls for the amount of data stored by Auditor. The system comes with a
+series of defaults, but depending on organization policy and the amount of disk
+available on the Auditor server these settings can be overridden.</p>
+
+    <table cellpadding="0" cellspacing="0" width="90%" align="center">
+      <tr>
+        <td class="box"><i><span class="purple">Note:</span></i><p style="font-size:1em;">
+    From Auditor
+    2.2 onwards, it is possible to install the Auditor database on a separate
+    database server or NAS from the polling engine.
+    </td>
+   </tr>
+  </table>
+  <br /><br />
+        <center><img src="2_2/images/image094.png" width="550"/></center>
+
+<p>Auditor shows a
+list of the largest tables on the system, if space is an issue and these have a
+red X beside them, they can be safely removed from the system. They can also be
+removed if they are old and no longer required, ( MAC Address - Company ID).</p>
+<h2><a id="macvendor"></a>MAC Vendor table</h2>
+<p>IEEE maintains an
+index of MAC address prefixes in relation to Vendors. This index changes from
+time-to-time, and any new release of Rebasoft Auditor will contain the latest
+index. If, however, you search Rebasoft Auditor and see a MAC address without a
+vendor entry, it may be that the index is out-of-date.</p>
+
+<p>Since this file is
+a large file, a facility to download and update Rebasoft Auditor on request if
+available:</p>
+        <center><img src="2_2/images/image095.jpg" width="550"/></center>
+
+<h2><a id="oid-db"></a>OID Vendor database</h2>
+<p>The OID Vendor
+database is used for vendors where Auditor needs to create a specific polling
+scheme, This dialog allows the Rebasoft development team to rapidly deliver a
+specific polling type for new types of vendor hardware.</p>
+
+        <center><img src="2_2/images/image096.png" width="350" /></center>
+
+<h2><a id="vendoroid"></a>Vendor OID</h2>
+<p>If a device type is
+displaying the OID string as numbers in the device overview page, it is
+possible to override this and put a description that may be of more value to
+users.</p>
+        <center><img src="2_2/images/image097.png" width="300" /></center>
+
+<p>In this case putting "1.3.6.1.4.1.2636.1.1.1.2.36" together
+with a vendor and device description would allow administrators to display a
+consistent name for the device. </p>
+
+        <center><img src="2_2/images/image098.png" width="300"  /></center>
+
+
+<p>To change a description, simply input the OID with a new
+device and vendor name</p>
+
+<h2><a name="logging"></a>Log settings</h2>
+
+<p>Auditor writes
+system and event information to its system log located in %\windows\system32\ -
+called RebasoftAuditor.log. The default level is info (and it is recommended it
+is left as such unless requested to change it by Rebasoft support). From time
+to time it may be necessary to collect and log more information, this can be
+set via Log settings, once the log settings have been changed, the Auditor
+service needs to be restarted to take effect</p>
+        <center><img src="2_2/images/image099.png" /></center>
+

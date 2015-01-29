@@ -1,0 +1,65 @@
+<h1><span class="purple">License Administration</span></h1>
+  <p>Auditor's
+    license is deeply embedded within the application. License information is
+    constantly evaluated as devices are polled for SNMP information. The active
+    interfaces for a device are updated and added to the total count for all
+    devices polled; so from hour to hour and day to day, the number of active
+    interfaces will vary.</p>
+  <p>When
+    the number of active interfaces polled exceeds the licensed number of interfaces,
+    the data for interfaces in excess of the license maximum are not stored in
+    the database for that polling period. If, subsequently, the total number
+    (including the extra ones) falls below the license level, data will once
+    again be written to the database). Polling of interfaces from a device happens
+    in the order the device presents the data to Auditor, this varies by vendor.
+    Devices are polled in sequence, typically every 30 minutes. </p>
+  <p>If
+    switches or other devices are no longer required the license can be recycled
+    by pressing <img border="0" width="16" height="16" src="2_4/images/image032.gif" /> next
+    to the device in question.</p>
+  <center><img border="0" src="2_4/images/image034.jpg" /></center>
+  <h2>Licensing rational</h2>
+  <p>Auditor
+    core is licensed by the total number of up interfaces. The total is calculated
+    by adding all the up interfaces on devices polled by Auditor. </p>
+  
+    <table cellpadding="0" cellspacing="0" width="90%" align="center">
+      <tr>
+        <td class="box"><i><span class="purple">Note:</span></i><p style="font-size:1em;">
+           Once an interface is seen up it is counted in the total until the device
+    licenses are recycled.</td>
+        </tr>
+      </table>
+  <p>Capacity
+    planning module is a separate license option based on the number of Auditor
+    core interface license level.</p>
+  <h2>Adding
+    a License key</h2>
+  <p>When
+    accessing the Auditor web interface for the first time, it runs in trial
+    mode – this means it will operate for a period of 7 days unless a license
+    key is applied to the system. License administration is accessed from the
+    Admin dropdown in the top frame, by clicking the arrow:</p>
+  <center><img border="0" src="2_4/images/image036.jpg" /></center>
+  <p>To
+    view license information simply click on the relevant link </p>
+  <center><img border="0" src="2_4/images/image038.jpg" /></center>
+  <p>Irrespective
+    of the modules licensed, Rebasoft issues a single license key that contains
+    all the desired elements. To add a license, simply cut and paste the license
+    string into the "New License" box and click "load license". </p>
+<center><img border="0" src="2_4/images/image040.jpg" /></center>
+<p>The
+    license will validate and confirmation of the system license will be displayed.
+    If the license level is exceeded, Auditor will not collect information from
+    the additional interfaces until a new key is obtained from an Auditor reseller.</p>
+
+
+    <table cellpadding="0" cellspacing="0" width="90%" align="center">
+      <tr>
+        <td class="box"><i><span class="purple">Note:</span></i><p style="font-size:1em;">
+           After applying the license key, the Auditor <span> service
+              must be restarted to activate the new license level and re-enable
+              device polling.</td>
+        </tr>
+      </table>

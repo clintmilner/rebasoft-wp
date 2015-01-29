@@ -1,0 +1,148 @@
+<h1><span class="purple">System settings administration</span></h1>
+<p>One of the first actions recommended is the configuration
+        of system settings. System level settings are used throughout the application.
+        Here administrators can set-up:</p>
+        <br />
+<center><a href="#snmp">SNMP Settings</a> | <a href="#cdp">Network discovery</a> | <a href="#syslog">Syslog settings</a> | <a href="#sys">Systems settings</a> | <a href="#db">Database settings</a><br />
+ <a href="#mac">MAC Vendor table</a> | <a href="#oid">OID Vendor database</a> | <a href="#vendor">Vendor OID</a> | <a href="#log">Log level settings</a></center><br />
+<p>System settings are accessed from the Administration
+        drop down in the top frame (clicking the arrow):</p>
+<center><img border="0" width="133" height="213"
+src="2_4/images/image207.jpg" /></center>
+<p>A summary of the current system
+        settings and directory locations are shown at the bottom of the system
+        settings page:</p>
+<center><img border="0" width="538" height="54"
+src="2_4/images/image209.jpg" /></center>
+<h2><a id="snmp"></a>SNMP Settings</h2
+>
+<p>SNMP settings allow administrators to control Auditor
+        SNMP settings. System wide community strings can be set (these can be
+        overridden during device discovery) as well as enabling overrides for
+        SNMP discovered information. Auditor supports SNMP V1, V2 and V3.</p>
+<h3>SNMP V2</h3>
+<p>SNMP V2 Community strings, if entered during device input,
+        are used first. In the absence of a specified SNMP community string,
+        system level SNMP communities are used in turn until a successful poll
+        is performed. Auditor  then stores the successful string with the device,
+        this reduces the number of alerts that a device might generate if a community
+is used unsuccessfully.  It is only necessary to use Read-only strings. </p>
+<p>To add a new community simply type the string into the
+        box &amp; click "Add community"</p>
+<center><img border="0" width="305" height="138"
+src="2_4/images/image211.jpg" /></center>
+<p>To remove a community, simply
+        click the cross next to the string to be removed</p>
+<p>Auditor also has two new facilities
+        requested by our customers, namely to change device name cases. Administrators
+        can select UPPER or lower cases for storage and display; in which case
+        following each SNMP poll, Auditor stores the device name in the required
+        case. "Do nothing" simply accepts the device name (hostname) as configured
+        from the polled device.</p>
+<center><img border="0" width="280" height="116"
+src="2_4/images/image213.jpg" /></center>
+<p>Sometimes, for legibility in
+        Auditor, it is desirable to remove text from the device name. This may
+        be useful if the device (hostname) is a FQDN format (such as cat3750-rm104.abcompany.com),
+        you can then remove any desired element (for example ".abcompany.com")
+        from the device name. This setting is also persistent even when the device
+        is re-polled by SNMP.</p>
+<center><img border="0" width="290" height="121"
+src="2_4/images/image215.jpg" /></center>
+ 
+</center> 
+<h3>SNMP V3</h3>
+<p>With version 2.5 of Auditor, SNMP V3 communities are supported. SNMP v3 adds message integrity, authentication and encryption, and thus requires a few extra parameters to be added. SNMP V3 can also be configured on a per device basis.</p>
+<center><img src="2_4/images/snmpv31.png" alt="" width="300" border="0" /></center>
+<p>&nbsp;</p>
+Rebasoft's implementation of SNMP V3 supports DES &amp; 3DES for privacy and authentication settings.
+<h2><a id="cdp"></a>Network Discovery</h2>
+<p>Auditor (V2.2 or later) provides
+        the ability to automatically discover network devices using Cisco Discovery
+        Protocol (CDP) and/or Link Layer Discovery Protocol (LLDP). These protocols
+        rely upon the network devices to be discovered having CDP or LLDP enabled.
+        The configuration guides of the various vendors can advise on how CDP/LLDP
+        can be enabled. </p>
+<center><img border="0" width="259" height="102"
+src="2_4/images/image217.jpg" /></center>
+<p>CDP and LLDP have two operating
+        modes. CDP and LLDP can be used to add devices to Auditors polling list,
+        and this collect ARP, CAM and other information from the MIB. In addition
+        CDP and LLDP can be used to resolve hostnames, such as the phone ID for
+        Cisco IP phones.</p>
+<p>Subnet filters can be applied to CDP and LLDP settings to
+  limit the bounds of CDP and LLDP discovery, to reduce traffic and prevent devices
+  inadvertently being added to Auditor’s device list.</p>
+<h2><a id="syslog"></a>Syslog settings for Alert output</h2>
+<p>The current release of Auditor  has provision for alerting
+        using syslog. Administrators can set multiple syslog servers depending
+        on network preferences. To enter a syslog server, simply specify a name,
+        required level and facility together with the target address. Administrators
+        can also set the syslog level and facility to suit any log processing
+        or alert handling system.</p>
+<center><img border="0" width="546" height="242"
+src="2_4/images/image219.jpg" /></center>
+<p>Syslog server receivers can
+        be removed by simply clicking the cross next to the syslog to be removed</p>
+<h2><a id="sys"></a>System Settings</h2>
+<p>This shows the current settings
+        as configured during the installation process:</p>
+<center><img border="0" width="477" height="157"
+src="2_4/images/image221.jpg" /></center>
+<h2><a id="db"></a>Database Settings</h2>
+<p>Database settings allow administrators
+        to refine and set controls for the amount of data stored by Auditor.
+        The system comes with a series of defaults, but depending on organization
+        policy and the amount of disk available on the Auditor server these settings
+        can be overridden.</p>
+<table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+  <tr valign="middle">
+    <td style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+    <td style="border: 1px solid #663399;"><span style="font-size:1em;">From Auditor 2.2 onwards, it is possible to install the Auditor database on a separate database server or NAS from the polling engine.</span></td>
+  </tr>
+</table>
+<p><br />
+Auditor shows a list of the
+        largest tables on the system, if these are no-longer required they can
+be deleted:</p>
+<center><img border="0" width="499" height="358"
+src="2_4/images/image224.jpg" /></center>
+<h2><a id="mac"></a>MAC Address - Company ID</h2>
+<p>IEEE maintains an index of
+        MAC address prefixes in relation to Vendors. This index changes from
+        time-to-time, and any new release of Auditor  will contain the latest
+        index. If, however, you search Auditor  and see a MAC address without
+        a vendor entry, it may be that the index is out-of-date. </p>
+<p>Since this file is a large
+        file, a facility to download and update Auditor  on request if available:</p>
+<center><img border="0" width="565" height="110"
+src="2_4/images/image226.jpg" /></center>
+<h2><a id="oid"></a>OID Vendor database</h2>
+<p>The OID Vendor database is
+        used for vendors where Auditor needs to create a specific polling scheme,
+        this dialog allows the Rebasoft development team to rapidly deliver a
+        specific polling type for new types of vendor hardware.</p>
+<center><img border="0" width="274" height="161"
+src="2_4/images/image228.jpg" /></center>
+<h2><a id="vendor"></a>Vendor OID</h2>
+<p>If a device type is displaying
+        the OID string as numbers in the device overview page, it is possible
+        to override this and put a description that may be of more value to users.</p>
+<center><img border="0" width="237" height="73"
+src="2_4/images/image230.jpg" /></center>
+<p>In this case putting "1.3.6.1.4.1.2636.1.1.1.2.36"
+        together with a vendor and device description would allow administrators
+        to display a consistent name for the device. </p>
+<center><img border="0" width="284" height="169"
+src="2_4/images/image232.jpg" /></center>
+<p>To change a description, simply
+        input the OID with a new device and vendor name</p>
+<h2><a id="log"></a>Log settings</h2>
+<p>Auditor writes system and event
+        information to its system log located in %\windows\system32\ - called
+        MACAuditor.log. The default level is info. From time to time it may be
+        necessary to collect and log more information. This can be set via Log
+        settings – the default level is "Info". Once the log settings have been
+        changed, the Auditor service needs to be restarted to take effect</p>
+<center><img border="0" width="167" height="108"
+src="2_4/images/image234.jpg" /></center>

@@ -1,0 +1,65 @@
+<h1><span class="purple">Operations  View</span></h1>
+  <p>The operations view is the Core of Auditor. It provides the capability to
+    report and support for operational requirements. Access to data and reports
+    is via the Navigator or searches. Browsing reports is hierarchal starting
+    at a Site and drilling down to child sites or devices.</p>
+  <p>At the top of the site overview report, there are quick-links to reports
+    on IP addresses, end-devices and interfaces.</p>
+  <center><img border="0" src="2_4/images/image079.jpg" /></center>
+  <p>If there are any Whitelist alerts, these are also shown as quick-links</p>
+  <p>The default is to hide visuals and display a simple dashboard of connected
+    devices, however in the visual it is also possible for users to position
+    sites and devices on the visuals and save them for the next user using the "save" icon
+    next to the Site visual.</p>
+<center><img border="0" src="2_4/images/image081.jpg" /></center>
+  <p>Within the Site overview, a series of time based summary reports for the
+    site are display:</p>
+  <ul>
+   <li>MAC Addresses seen</li>
+   <li>Top 5 Devices over time</li>
+   <li>IP Addresses seen</li>
+   <li>Devices seen in use</li>
+   <li>Interfaces seen in use</li>
+   <li>Interfaces by MAC count</li>
+   <li>Interfaces by IP count</li>
+  </ul>
+  <p>It is also possible to report on "Down interface", (this can be used as
+    the basis of a free ports report), MAC's by Vendor, MAC's by IP count, MAC's
+    by Interface count and IP's by MAC count. </p>
+  <p>Auditor will, during initial device discovery, poll the interface clock
+    for last used status and use this as a start point for last used information.
+    Where interface last used status is unavailable, Auditor will use the polling
+    information. Subsequent polling for interface status will update Auditor
+    down interface reports.</p>
+  <p>From the Sites and devices menu, selecting a device will show a device overview,
+    key reports, interface statistics and lists of the interfaces and VLANs on
+    the device:</p>
+  <center><img border="0" src="2_4/images/image083.jpg" /></center>
+  <p>Clicking a device provides an overview with a summary of key information
+    and quick links to reports. Auditor shows the hostname, IP address/DNS name,
+    type and the SNMP retrieved description. The device up-time is also displayed.
+    All information in the device details area is searchable within the database.
+    For each device, below the device details, users can view reports for the
+    device.</p>
+  <p>Please note the "Tools" line – this is where Integration for
+    devices appears. We have shown a few examples. </p>
+  <p>To the right of the device details are the stored tags for the device. These
+    tags can be updated or deleted as required.</p>
+  <p>Auditor also shows the up and down
+    interfaces on a device, this information can feed into capacity plans – the
+    image below shows areas of interest:</p>
+ <center><img border="0" src="2_4/images/image085.jpg" /></center>
+ 
+<ol>
+<li>To filter on an interface, simply click the interface name for the Interface
+      overview – this will report on MAC address seen over time on that interface,
+      IP's seen, and MAC Address vendors.</li>
+<li>To directly list the MAC addresses on the interface click on the number under
+    the MAC's column</li>
+<li>If you move the cursor over the Last Changed column, Auditor will
+    display the MAC, IP/Netmask (if any) configured for the interface</li>
+    </ol>
+    <p>Recent
+    shows the last 30 minutes of the interface status – in the image above, you
+    can see FastEthernet0/3 has been "going up and down", possibly indicating
+    an issue.</p>

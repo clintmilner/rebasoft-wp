@@ -1,0 +1,80 @@
+<h1><span class="purple">License
+Administration</span></h1>
+<p>Rebasoft
+  Auditor's license is deeply embedded within the application. License
+  information is constantly evaluated as devices are polled for SNMP information.
+  The active interfaces for a device are updated and added to the total count for
+  all devices polled; so from hour to hour and day to day, the number of active
+  interfaces will vary.</p>
+<p>When the
+  number of active interfaces polled exceeds the licensed number of interfaces,
+  the data for interfaces in excess of the license maximum are not stored in the
+  database for that polling period. If, subsequently, the total number (including
+  the extra ones fall below the license level, data will once again be written
+    to the database) Polling of interfaces from a device happens in the order the
+    device presents the data to Auditor, this varies by vendor. Devices are polled
+    in sequence, typically every 30 minutes. </p>
+<h2>Adding a License key</h2>
+<p>When
+  accessing the Rebasoft Auditor web interface for the first time, it runs in
+  trial mode &ndash; this means it will operate for a period of 7 days unless a license
+  key is applied to the system. License administration is accessed from the Admin
+  dropdown in the top frame, by clicking the arrow:</p>
+  <center><img src="2_2/images/image016.png" /></center>
+<p>To add a license, simply cut and paste the license
+  string into the &ldquo;New License&rdquo; box and click &ldquo;load license&rdquo;. </p>
+    <center><img src="2_2/images/image017.jpg" /></center>
+
+<p>The license will validate and confirmation of the
+  system license will be displayed. If the license level is exceeded, Rebasoft
+  Auditor will not collect information from the additional interfaces until a new
+  key is obtained from a Rebasoft Auditor reseller.</p>
+
+    <table cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td class="box"><i><span class="purple">Note:</span></i>
+          <p>After
+            applying the license key, the MACAuditor service must be restarted to activate
+            the new license level and re-enable device polling.</p></td>
+      </tr>
+    </table>
+    <center><img src="2_2/images/image018.jpg" vspace="8" width="400" /></center>
+    <table cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td class="box"><i><span class="purple">Note:</span></i>
+          <p>If an invalid license is applied, or a version mismatch
+            is detected, Rebasoft Auditor will write a message to the Rebasoft Auditor
+            log, located in SYSTEM32 directory and will not perform any further polling
+            until a valid license is loaded</p></td>
+      </tr>
+    </table>
+  
+<h2>Licensing</h2>
+<p>Rebasoft license
+  Rebasoft Auditor on the number of interfaces counted on the devices that are
+  polled by it to collect information. For an interface to be counted for license
+  purposes it must conform to the following:</p>
+  
+<ol>
+<li>The
+  interface must be up (down interfaces do not count towards the license)</li>
+  <li>The
+  interface must have a MAC address (virtual interfaces which do not have a MAC
+  address assigned by the device do not count)</li>
+  <li>The
+  MAC address must be unique (MAC addresses that are used across a number of
+  interfaces are only counted once)</li></ol>
+<p>Rebasoft Auditor
+  shows, for each device configured in Device administration how many interfaces are counted. The license evaluation is
+    re-calculated each time the device is polled:</p>
+        <center><img src="2_2/images/image019.jpg" vspace="8" width="400"/></center>
+
+<p>You can check the
+  license count for each device on the license count link against each device
+  polled:</p>
+      <center><img src="2_2/images/image020.jpg" vspace="8" width="400" /></center>
+
+<p>This shows each
+  interface that has been used since the Rebasoft Auditor service was started and
+  the number of MAC addresses recently seen by it, this gives a visual indication
+  of where interfaces are uplinks. </p>

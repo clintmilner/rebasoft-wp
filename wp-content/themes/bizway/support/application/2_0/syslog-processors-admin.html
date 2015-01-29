@@ -1,0 +1,24 @@
+<h1><span class="purple">Syslog processors</span></h1>
+  <p>Application Auditor can receive application usage data from source devices exporting log messages via the syslog protocol. Supported source devices fall into two categories - proxy servers and firewall/access control devices.</p>
+  <p>Syslog Listeners are configured via <a href="help.php?version=2.0&receivers">Receivers administration</a>.  Application Auditor V2.0 provides the ability to accommodate variations in proxy server messages via the Syslog processors administration dialog:</p>
+  <p>To access Syslog processors, select "Syslog processors" from the administration drop down in the top right hand of Application Auditor:</p>
+
+  <p><center><img src="2_0/images/syslog_processors_admin.png" width="200" /></center></p>
+
+  <p>Current syslog processing is shown next to the receiver:</p>
+  <p><center><img src="2_0/images/current_syslog_patterns.png" width="500" /></center></p>
+  <p>Any messages received, and unprocessed, are shown to administrators. These messages can be analysed and added to the Application Auditor database using a  <a href="http://www.regular-expressions.info/" target="_blank" title="Link to external regex tutorial site">regex</a> as a powerful way of manipulating incoming data.</p>
+<center>
+  <img src="2_0/images/unprocessed_syslog.png" width="380" />
+</center>
+  <p>To add an unprocessed message to Application Auditor, simply select Add pattern match:</p>
+  <center>
+  <img src="2_0/images/unprocessed_syslog_action.png" />
+</center>
+  <p>It is then simply an exercise in applying the regex to the message and testing</p>
+  <center>
+  <img src="2_0/images/new_syslog_pattern.png" width="600" />
+</center>
+  <p>The "test pattern" button can be used to verify the pattern match before adding to the database.</p>
+<p>&nbsp;</p>
+

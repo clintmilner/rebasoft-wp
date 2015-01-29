@@ -1,0 +1,170 @@
+<h1><span class="purple">Installation and Configuration</span></h1>
+    <ul style="list-style:none">
+    <li><a href="#windows">Windows</a></li>
+    <li><a href="#linux">Linux</a></li>
+    </ul>
+<h2><a id="windows"></a>Installing Auditor – Windows platforms</h2>
+    <p>Installation
+      is achieved by executing the Auditor installation wizard. This wizard guides
+      administrators through the installation or updating process and allows the
+      specification of a number of parameters – it should only take a few minutes
+      to install the system. </p>
+    <p>The
+      installer can be run whether performing a new installation or updating an
+      existing system. In the case of an upgrade, data is preserved; Rebasoft does,
+      however, advise administrators to perform a data back-up regularly and especially
+      prior to system upgrade.</p>
+    <table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+      <tr valign="middle">
+        <td width="6%" style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+        <td width="94%" style="border: 1px solid #663399;"><i></i>
+          <p style="font-size:1em;"> Due to windows security, we recommend that
+        the installer be run as the Local Administrator</p></td>
+      </tr>
+    </table>
+    <p><br />
+  To start installation, simply execute the installer</p>
+    <ol>
+    <li>Click next...<br /><br />
+    <center>
+      <img width="275" src="2_4/images/image007.jpg"  />
+      <p>&nbsp;</p>
+    </center>
+    </li>
+    <li>Click "I Agree" to accept the licence agreement...<br /><br />
+    <center>
+      <img width="275" src="2_4/images/image009.jpg" />
+      <p>&nbsp;</p>
+    </center>
+    </li>
+    <li>Select components to install and click next...<br /><br />
+    <center>
+      <img width="275" src="2_4/images/image011.jpg" />
+      <p>&nbsp;</p>
+    </center>
+    </li>
+    <li>Enter
+      desired http/https port together Threads and RAM settings desired<br /><br />
+    <center><img width="275" src="2_4/images/image013.jpg" /></center>
+    <p>If
+      the http or https ports entered are already in use by another application,
+      the installation will prompt you to select an alternative port</p><br /><br />
+    <center><img width="275" src="2_4/images/image015.jpg" /></center>
+    <p> The
+      number of threads is a measure of the number of parallel pollers Auditor
+      should use. The larger the network, the more pollers should be set. Larger
+      numbers of threads requires more RAM. RAM can also be set.</p></li>
+    <li>Specify installation directory for installation and click next...<br /><br />
+    <center>
+      <img width="275" src="2_4/images/image017.jpg" />
+      <p>&nbsp;</p>
+      <table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+        <tr valign="middle">
+          <td width="6%" style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+          <td width="94%" style="border: 1px solid #663399;"><i></i>
+            <p style="font-size:1em;">The Java installer does not permit spaces in the specification of the
+            destination folder</p></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+    </center>
+    <p>If Auditor is already installed, the installer will now stop the MACAuditor
+      service in preparation for the upgrade of files</p>
+  <li>If not installed Auditor will install PostgreSQL and JRE
+<center>
+  <img width="275" src="2_4/images/image020.jpg" />
+    
+  <br /><br />
+  <img width="275" src="2_4/images/image022.jpg" /></center>
+  </li>
+<p>
+Sometimes,
+    due to windows permissions, postgres will not install. The installer will
+    terminate and a message will request that postgres be installed manually.</p>
+</li>
+<li> Auditor
+    installs as a system service, a command window should appear during this
+    process<br /><br />
+<center><img width="275" src="2_4/images/image024.jpg" /></center></li>
+<li>&nbsp;<br /><br />
+  <center><img width="275" src="2_4/images/image026.jpg" /></center>
+</li>
+
+<p>Once
+    Auditor installation is complete (administrators can view the details of
+    where files have been installed by clicking the details button) click next...</p>
+<center><img width="275" src="2_4/images/image028.jpg" /></center>
+</ol>
+  <h2><a id="linux"></a>Installing Rebasoft Auditor on Linux</h2>
+<p>Auditor requires PostgreSQL V9.x or later and Java (JRE) 6
+  or above. These should be installed in the normal way using the package
+  administration utility supplied with the Linux distribution. Auditor has been
+  tested on SUSE and Red Hat Linux distributions.</p>
+<p>The following instructions assume installation
+  on a SUSE Linux system.</p>
+<span>
+    <table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+      <tr valign="middle">
+        <td width="6%" style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+        <td width="94%" style="border: 1px solid #663399;"><i></i>
+          <p style="font-size:1em;">P0stgr3s_2ME should be used for the default PostgreSQL password</p></td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+<ol>
+  <li>Install libpq5
+<p><a
+href="http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Flibpq5-9.0.4-54.1.x86_64.rpm&amp;query=libpq"><span>Download libpq5-9.0.4-54.1.x86_64.rpm</span></a></p>
+ <code class="prettyprint">rpm
+  -i libpq5-9.0.4-54.1.x86_64.rpm</code></li>
+<li>Install libecpg6
+<p><a
+href="http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Flibecpg6-9.0.4-54.1.x86_64.rpm&amp;query=libecpg6"><span>Download libecpg6-9.0.4-54.1.x86_64.rpm</span></a></p>
+<code class="prettyprint">rpm -i libecpg6-9.0.4-54.1.x86_64.rpm</code></li>
+<li>Install PostgreSQL server
+<p><a
+href="http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Fpostgresql-server-9.0.4-54.2.x86_64.rpm&amp;query=postgresql">Download postgresql-server-9.0.4-54.2.x86_64.rpm</a></p>
+<code class="prettyprint">rpm -i postgresql-server-9.0.4-54.2.x86_64.rpm</code></li>
+<li>Install PostgreSQL
+<p><a
+href="http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Fpostgresql-9.0.4-54.2.x86_64.rpm&amp;query=postgresql">Download postgresql-9.0.4-54.2.x86_64.rpm</a></p>
+<code class="prettyprint">rpm -i postgresql-9.0.4-54.2.x86_64.rpm<br />
+ /etc/init.d/postgresql start<br />
+  su - postgres<br />
+  psql<br />
+ create user rebasoft PASSWORD 'rebasoft';<br />
+ create database rebasoft owner = rebasoft;<br />
+ \c rebasoft<br />
+ create language 'plpgsql';</code>
+<p>To exit the terminal, type <code class="prettyprint">\q</code></p></li>
+<li>Install JRE
+<p><a
+href="http://www.oracle.com/technetwork/java/javase/downloads/jre-6u25-download-346243.html">Download from oracle.com</a></p>
+<code class="prettyprint">chmod 755 jre-6u25-linux-x64-rpm.bin<br />
+./jre-6u25-linux-x64-rpm.bin<br />
+ln -s /usr/java/jre1.6.0_25/ /opt/java </code></li>
+<li>Install Auditor
+<code class="prettyprint">tar -vxf rebasoft_auditor_unix_1078.tgz -C /<br />
+cp /opt/Rebasoft/MACAuditor/resources/unix/start.template /opt/Rebasoft/MACAuditor/resources/start<br />
+cp /opt/Rebasoft/MACAuditor/resources/unix/macauditord /etc/init.d/macauditord<br />
+chkconfig&nbsp; --add macauditord<br />
+/etc/init.d/macauditord start</code></li></ol>
+<p>If the server fails to start due to ident issues, edit the <code class="prettyprint">pg_hba.conf</code> file: 
+<code class="prettyprint"> /var/lib/pgsql/data/pg_hba.conf<br />
+Append &quot;host rebasoft 127.0.0.1/32 md5</code>
+<p>and restart postgresql <code class="prettyprint">/etc/init.d/postgresql restart<br />
+/etc/init.d/macauditor restart</code></p>
+<p>Log into Auditor, set logging to INFO from
+  the system settings page</p>
+</p>
+  <h2>Logging in for the first time</h2>
+  <p>Users
+    and administrators can access Auditor from a workstation with a compliant
+    browser by opening the following address:</p>
+  <p>http://&lt;IP or DNS address of server&gt;:&lt;port&gt;</p>
+<center><img border="0" width="195" src="2_4/images/image031.jpg" /></center>
+<p>To
+    access Auditor, at the login screen enter the default username and password
+    of "admin" and "admin". We recommend administrators change the default installation
+    password from "admin"
+  via the User administration<span></p>

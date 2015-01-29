@@ -1,0 +1,134 @@
+<h1><span class="purple">Installing Auditor</span></h1>
+<p>Rebasoft Auditor is supported on <a href="#windows">Windows</a> and <a href="#linux">Linux</a> (see <a href="help.php?version=2.2&requirements">System requirements</a> for more details)</p>
+<h2>System parameters</h2>
+<p>Rebasoft Auditor relies on SNMP polling device CAM tables as part of information
+  collection. The software has been extensively tested in large networks and
+  against different device types and vendors. System parameters are set as a
+  result of the testing and in line with system recommendations below.</p>
+<p>Experience
+  shows that it takes around 1 minute for a device to respond to poll of the CAM
+  table. The system default is for the polling cycle to be completed every 30
+  minutes. The objective therefore is to set the number of concurrent poller
+  threads to be sufficient to complete to information collection and processing
+  within the allotted time. </p>
+<p>We recommend that 1 thread be allowed for each 10 devices to be polled. The
+  installation default is for 20 threads, this would allow support of up to 200
+  devices (with between 5000 and 8000 interfaces). The thread count can be
+  increased subject to network and server load considerations.</p>
+<h2><a id="windows"></a>Installing Rebasoft Auditor on Windows</h2>
+<p>Auditor is provisioned using a simple <a href="http://www.rebasoft.net/download.php">installer</a> that can be run on Windows
+  Server operating systems. This installer can be used for initial installation,
+  software version upgrades and changes in system parameters. The installation wizard guides administrators through the installation or updating process and allows   the specification of a number of parameters &ndash; it should only take a few minutes
+  to install the system.</p><br />
+    <table cellpadding="0" cellspacing="0" width="90%" align="center">
+      <tr>
+        <td class="box"><i><span class="purple">Note:</span></i><p style="font-size:1em;">
+          Due to windows security, we recommend that
+            the installer be run as the Local Administrator</p></td>
+      </tr>
+    </table>
+    <br />
+<p>To start installation, simply execute the installer:</p><br />
+<ol>
+<li><center><img src="2_2/images/image003.png" width="400" /></center><p style="font-size:1em;" >Click next&hellip;</p></li>
+<li><center><img src="2_2/images/image004.png" width="400" /></center><p style="font-size:1em;" >Click &ldquo;I Agree&rdquo; to accept the licence agreement &hellip;</p></li>
+<li><center><img src="2_2/images/image005.png" width="400" /></center><p style="font-size:1em;" >Select components to install and
+  click next &hellip;</p></li>
+<li><center><img src="2_2/images/image006.png" width="400" /></center><p style="font-size:1em;" >Enter desired http/https port together Threads and RAM
+  settings desired (the RAM setting dictates the amount of the RAM allocated to
+  Auditor to run, if you are polling a large number you will need to increase &nbsp;this value)</p>
+<p style="font-size:1em;" >The number of
+  threads is a setting for enabling parallel SNMP polling of your network this
+  value should be increased if the devices increase the number of parallel
+  pollers Auditor should use. The larger the number of devices polled, the more threads
+  should be set (as a guide 1 thread per 20 devices polled, up to a maximum of 50).
+  Larger numbers of threads requires more
+  RAM.</p>
+<p style="font-size:1em;" >If it becomes necessary to amend the number of threads or the RAM simply rerun the
+  installer and change them.</p>
+  <p><center><img src="2_2/images/image007.png" width="300" /></center><p style="font-size:1em;" align="right">If the http or
+  https ports entered are already in use by another application, the installation
+  will prompt you to select an alternative port</p></li>
+<li><center><img src="2_2/images/image008.png" width="400" /></center><p style="font-size:1em;">Specify installation
+  directory for installation and click next &hellip;</p>
+
+    <table cellpadding="0" cellspacing="0" width="90%" align="center">
+      <tr>
+        <td class="box"><span class="purple"><i>Note:</i></span>
+          <p style="font-size:1em;">The Java installer does not permit spaces
+            in the specification of the destination folder</p></td>
+      </tr>
+    </table></li>
+ 
+<li><center><img src="2_2/images/image009.jpg" width="400" /></center><p style="font-size:1em;"> If Auditor is already installed, the
+  installer will now stop the MACAuditor service in preparation for the upgrade
+  of files</span></p>
+<li><center><img src="2_2/images/image010.jpg" width="400" /></center><p style="font-size:1em;">If not installed Rebasoft Auditor will install PostgreSQL and
+  JRE</p>
+<p style="font-size:1em;">Sometimes, due to
+  windows permissions, postgres will not install. The installer will terminate
+  and a message will request that postgreSQL be installed manually.</p>
+<li><center><img src="2_2/images/image011.png" width="400" /></center><p style="font-size:1em;">Rebasoft Auditor installs as a
+  system service, a command window should appear during this process</span></p>
+<li><center><img src="2_2/images/image012.png" width="400" /></center><p style="font-size:1em;"><center><img src="2_2/images/image013.png" width="400" /></center>Once
+  Rebasoft Auditor installation is complete (administrators can view the details
+  of where files have been installed by clicking the details button) click
+  next&hellip;</p></li></ol>
+<h2><a id="linux"></a>Installing Rebasoft Auditor on Linux</h2>
+<p>Auditor requires PostgreSQL V9.x or later and Java (JRE) 6
+  or above. These should be installed in the normal way using the package
+  administration utility supplied with the Linux distribution. Auditor has been
+  tested on SUSE and Red Hat Linux distributions.</p>
+<p>The following instructions assume installation
+  on a SUSE Linux system.</p>
+<span>
+    <table cellpadding="0" cellspacing="0" width="90%" align="center">
+      <tr>
+        <td class="box"><b><i><span class="purple">Note:</span></i></b>
+          <p style="font-size:1em;">P0stgr3s_2ME should be used for the default PostgreSQL password</p></td>
+      </tr>
+    </table>
+<ol><li>Install libpq5
+<p><a
+href="http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Flibpq5-9.0.4-54.1.x86_64.rpm&amp;query=libpq"><span>Download libpq5-9.0.4-54.1.x86_64.rpm</span></a></p>
+ <code class="prettyprint">rpm
+  -i libpq5-9.0.4-54.1.x86_64.rpm</code></li>
+<li>Install libecpg6
+<p><a
+href="http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Flibecpg6-9.0.4-54.1.x86_64.rpm&amp;query=libecpg6"><span>Download libecpg6-9.0.4-54.1.x86_64.rpm</span></a></p>
+<code class="prettyprint">rpm -i libecpg6-9.0.4-54.1.x86_64.rpm</code></li>
+<li>Install PostgreSQL server
+<p><a
+href="http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Fpostgresql-server-9.0.4-54.2.x86_64.rpm&amp;query=postgresql">Download postgresql-server-9.0.4-54.2.x86_64.rpm</a></p>
+<code class="prettyprint">rpm -i postgresql-server-9.0.4-54.2.x86_64.rpm</code></li>
+<li>Install PostgreSQL
+<p><a
+href="http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Fpostgresql-9.0.4-54.2.x86_64.rpm&amp;query=postgresql">Download postgresql-9.0.4-54.2.x86_64.rpm</a></p>
+<code class="prettyprint">rpm -i postgresql-9.0.4-54.2.x86_64.rpm<br />
+ /etc/init.d/postgresql start<br />
+  su - postgres<br />
+  psql<br />
+ create user rebasoft PASSWORD 'rebasoft';<br />
+ create database rebasoft owner = rebasoft;<br />
+ \c rebasoft<br />
+ create language 'plpgsql';</code>
+<p>To exit the terminal, type <code class="prettyprint">\q</code></p></li>
+<li>Install JRE
+<p><a
+href="http://www.oracle.com/technetwork/java/javase/downloads/jre-6u25-download-346243.html">Download from oracle.com</a></p>
+<code class="prettyprint">chmod 755 jre-6u25-linux-x64-rpm.bin<br />
+./jre-6u25-linux-x64-rpm.bin<br />
+ln -s /usr/java/jre1.6.0_25/ /opt/java </code></li>
+<li>Install Auditor
+<code class="prettyprint">tar -vxf rebasoft_auditor_unix_1078.tgz -C /<br />
+cp /opt/Rebasoft/MACAuditor/resources/unix/start.template /opt/Rebasoft/MACAuditor/resources/start<br />
+cp /opt/Rebasoft/MACAuditor/resources/unix/macauditord /etc/init.d/macauditord<br />
+chkconfig&nbsp; --add macauditord<br />
+/etc/init.d/macauditord start</code></li></ol>
+<p>If the server fails to start due to ident issues, edit the <code class="prettyprint">pg_hba.conf</code> file: 
+<code class="prettyprint"> /var/lib/pgsql/data/pg_hba.conf<br />
+Append &quot;host rebasoft 127.0.0.1/32 md5</code>
+<p>and restart postgresql <code class="prettyprint">/etc/init.d/postgresql restart<br />
+/etc/init.d/macauditor restart</code></p>
+<p>Log into Auditor, set logging to INFO from
+  the system settings page</p>

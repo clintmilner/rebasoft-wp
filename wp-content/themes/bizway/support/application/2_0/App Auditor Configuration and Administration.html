@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+		<title>App Auditor Configuration and Administration.html</title>
+	</head>
+	<body>
+		<div id="App-Auditor-Configuration-and-Administration.html" xml:lang="en-US">
+			<div class="story">
+				<p>Configuration and Administration</p>
+			</div>
+			<div class="story">
+				<p>All administration functions are accessed from the admin selector drop down menu in the top right hand corner of the screen:</p>
+			</div>
+			<div class="story">
+				<p>Receiver Settings</p>
+			</div>
+			<div class="story">
+				<p>Receivers are the mechanism for which listening ports on your Application Auditor server are created. Receiver settings are found within Receivers Admin section. To add a new Receiver, enter the Name of your Receiver and specify both the listening port and data type from the drop-down list. Either Netflow/IPFix or Syslog are currently accepted data formats.</p>
+			</div>
+			<div class="story">
+				<p>Select ‘Add Receiver’ and a new Receiver is created, ready to accept inbound communications from your external sources. When you are happy with your configuration you can start your receiver by selecting the green ‘start’ arrow shown under the ‘Action’ column. When sources are seen within the parameters of your configured receivers they will be automatically displayed within this page.</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="277" height="169" src="config and admin menu..jpg" alt="config%20and%20admin%20menu.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="120" height="83" src="config and admin receiver setting2..jpg" alt="config%20and%20admin%20receiver%20setting2.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="120" height="60" src="config and admin receiver setting..jpg" alt="config%20and%20admin%20receiver%20setting.png"/>
+			</div>
+			<div class="story">
+				<p>Configuration and Administration</p>
+			</div>
+			<div class="story">
+				<p>Device Settings</p>
+				<p>Once a device has been registered via a configured receiver, you can configure its settings by selecting the device within the Receivers list or by viewing the device list from within the ‘Devices’ Admin section</p>
+				<p/>
+			</div>
+			<div class="story">
+				<p>When editing a device you are able to configure the following elements:</p>
+				<p>•	Display Name</p>
+				<p>•	Community</p>
+				<p>•	SNMP Version</p>
+				<p>•	Sampling rate</p>
+				<p>•	Interface Details – Alias, Speed &amp; Monitored Subnets</p>
+				<p>When successful SNMP communication has been established Application Auditor will display the results gathered from the device:</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="296" height="104" src="config and admin current receiver..jpg" alt="config%20and%20admin%20current%20receiver.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="204" height="145" src="config and admin Settings results..jpg" alt="config%20and%20admin%20Settings%20results.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="128" height="79" src="config and admin device settings..jpg" alt="config%20and%20admin%20device%20settings.png"/>
+			</div>
+			<div class="story">
+				<p>Configuration and Administration</p>
+			</div>
+			<div class="story">
+				<p>In addition to the above you will be presented with a list of subnets &amp; Netmask against the Interface that has seen them:</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="409" height="89" src="config and admin subnets netmask..jpg" alt="config%20and%20admin%20subnets%20netmask.png"/>
+			</div>
+			<div class="story">
+				<p>You can add this subnet to the monitored subnet list by clicking on the ‘Monitor Subnet’ button relative to this interface. You can also choose to monitor multiple subnets by selecting the Interface Monitor checkbox and selecting ‘Monitor Subnets’ as shown:</p>
+			</div>
+			<div class="story">
+				<p>Application Settings</p>
+				<p>Application Auditor supports custom definitions of Applications across all data sources including by IP address or range, port and URL. Custom Protocol &amp; port support is also provided allowing for customised application definitions to be supported.</p>
+				<p/>
+				<p>To Access Application management, select the ‘Applications’ section from the Admin selector:</p>
+			</div>
+			<div class="story">
+				<p>To create a custom port, enter the protocol type and port number, as well as name and description:</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="255" height="54" src="config and admin monitor subnets..jpg" alt="config%20and%20admin%20monitor%20subnets.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="238" height="95" src="config and admin custom port..jpg" alt="config%20and%20admin%20custom%20port.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="128" height="80" src="config and admin application settings..jpg" alt="config%20and%20admin%20application%20settings.png"/>
+			</div>
+			<div class="story">
+				<p>Configuration and Administration</p>
+			</div>
+			<div class="story">
+				<p>To define an Application via the management interface, enter the required values into the bottom row of your application entries and select the “   “ add button. You can also edit existing application definitions by changing the registered values and selecting the “   “ icon. Custom applications can also be deleted by selecting the “   ” icon.</p>
+			</div>
+			<div class="story">
+				<p>Custom applications can be allocated to either individual data sources or across all reported data sources. Once created, defined applications will automatically be displayed within the Application Auditor interface.</p>
+				<p/>
+				<p>Subnet Settings</p>
+				<p>Subnet administration allows you to specify which network segments you wish to monitor and report upon within Application Auditor. If subnets are overlapping, this can be addressed by the specification of devices and interfaces on which the subnet data has been collected. In addition to filtering views of both monitored and un-monitored subnets, reporting displays device and interface statistics where an available subnet has been seen on a device which is currently being monitored.</p>
+				<p/>
+				<p>Subnets are defined and managed in the ‘Subnets’ section from the Admin selector:</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="347" height="120" src="config and admin define applications..jpg" alt="config%20and%20admin%20define%20applications.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="10" height="12" src="Icon-Delete..jpg" alt="Icon-Delete.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="124" height="77" src="config and admin subnet settings..jpg" alt="config%20and%20admin%20subnet%20settings.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="10" height="9" src="Icon-plus..jpg" alt="Icon-plus.png"/>
+			</div>
+			<div class="story">
+				<p>Configuration and Administration</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="11" height="11" src="Icon-Save..jpg" alt="Icon-Save.png"/>
+			</div>
+			<div class="story">
+				<p>To add a new monitored subnet, enter the credentials required and select the device and interface on which you wish to monitor the subnet. Once the details have been added, select the ‘Add New Subnet’ button:</p>
+			</div>
+			<div class="story">
+				<p>Note</p>
+			</div>
+			<div class="story">
+				<p>To view monitored or un-monitored subnets or un-monitored interfaces, either select the underlined ‘filtered ‘count or enter the details for a specific IP ranged for which you would like to query as shown below:</p>
+			</div>
+			<div class="story">
+				<p>Editing an existing monitored subnet:</p>
+				<p>Monitored subnets can be edited or deleted by selecting the relevant ‘Action’ button. Once a required subnet has been added to the monitored list of subnets, editing the record will allow you specify Country and domain associations for that record:</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="410" height="40" src="config and admin monitored subnets..jpg" alt="config%20and%20admin%20monitored%20subnets.png"/>
+			</div>
+			<div class="story">
+				<p>Note</p>
+			</div>
+			<div class="story">
+				<p>Application Auditor uses device + interface + subnet to uniquely identify subnets. This means that overlapping subnets on a single instance of application auditor is supported.</p>
+			</div>
+			<div class="story">
+				<p>Depending on the source device and the type of flow export, the vlan, physical interface (logical unit of an interface) or a security zone may be required in order to correctly collect subnet statistics.</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="315" height="68" src="config and admin subnets..jpg" alt="config%20and%20admin%20subnets.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="264" height="122" src="config and admin new subnet..jpg" alt="config%20and%20admin%20new%20subnet.png"/>
+			</div>
+			<div class="story">
+				<p>Configuration and Administration</p>
+			</div>
+			<div class="story">
+				<p>Un-Monitored subnets can be added to the monitored subnets list by selecting the ‘edit’ icon and updating the relevant fields related to that entry (including device &amp; interface):. </p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="409" height="46" src="config and admin unmonitored subnets..jpg" alt="config%20and%20admin%20unmonitored%20subnets.png"/>
+			</div>
+			<div class="story">
+				<p>When a Geo-IP reference is found for a particular IP or subnet, the ‘Country’ &amp; domain allocation for this subnet is automatically populated:</p>
+			</div>
+			<div class="story">
+				<p>When SNMP can resolve a configured IP to an interface on a device, Application Auditor will provide you the option of adding that subnet to your monitored list by checking the ‘Monitor’ box and clicking the ‘Monitor Subnets’ button:</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="370" height="59" src="config and admin interface subnets..jpg" alt="config%20and%20admin%20interface%20subnets.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="229" height="124" src="config and admin editing..jpg" alt="config%20and%20admin%20editing.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="229" height="121" src="config and admin editing2..jpg" alt="config%20and%20admin%20editing2.png"/>
+			</div>
+			<div class="story">
+				<p>Configuration and Administration</p>
+			</div>
+			<div class="story">
+				<p>Note</p>
+			</div>
+			<div class="story">
+				<p>System Settings</p>
+				<p>There are a number of system settings that can be viewed and managed within the web interface of Application Auditor. Data storage, reporting options, SNMP &amp; DNS all have variable parameters that can be set within this section.</p>
+				<p>To access these views, select the ‘System Settings’ section from the Admin selector:</p>
+			</div>
+			<div class="story">
+				<p>Storage Settings</p>
+				<p>To allow optimisation of database storage there are two configurable options within the Storage Settings section of the System Settings. These settings only impact the retention of forensic flow records, and not summarised report data. The forensic data represents the bulk of data storage required. </p>
+				<p>• Storage duration (default 7 days) and </p>
+				<p>• Minimum packet size for forensic reporting (default 0 Bytes). </p>
+			</div>
+			<div class="story">
+				<p>If collecting full flow forensics for all flow sizes, you can set the stroage duration. Once the time limit has been reached, application auditor will begin discarding older forensic data. This prevents disk filling up and more current data being lost.</p>
+				<p/>
+				<p>The second option will allow you to dramatically increase your storage capabilities through non-storage of smaller Byte flow records. If you wish to store all records within your database, leave this option set to the default value (0).</p>
+				<p>. </p>
+				<p>For example, Rebasoft has seen, on average, packet sizes of 500 bytes or less will take up 36% of storage on disk (assuming 120 bytes per ipfix flow record).  Hence on a 500Gb database, 180Gb of data can be saved.</p>
+				<p>Organisations can therefore trade packet size with time that forensics records are stored in order to meet the forensic record storage requirements and storage limitations.</p>
+			</div>
+			<div class="story">
+				<p>It will take a minimum of 1 hour for application auditor to start showing information in subnet reports. IP’s seen should indicate that data is being collected before graphical reports are available.</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="182" height="75" src="config and admin storage settings..jpg" alt="config%20and%20admin%20storage%20settings.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="111" height="70" src="config and admin system settings..jpg" alt="config%20and%20admin%20system%20settings.png"/>
+			</div>
+			<div class="story">
+				<p>Configuration and Administration</p>
+			</div>
+			<div class="story">
+				<p>Report Settings</p>
+				<p>The default initial overview report timeframe displayed within Application Auditor upon install is set to 7 hours. Should you wish to increase/decrease this value you can do so here, but time taken to display reports may be increased:</p>
+			</div>
+			<div class="story">
+				<p>SNMP Communities</p>
+				<p>Within this section you can manage your communities at an organisational level. Should an SNMP not be defined within a device setting, these values will be tried against that device:</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="314" height="175" src="config and admin graph..jpg" alt="config%20and%20admin%20graph.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="281" height="76" src="config and admin snmp communities..jpg" alt="config%20and%20admin%20snmp%20communities.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="164" height="57" src="config and admin report settings..jpg" alt="config%20and%20admin%20report%20settings.png"/>
+			</div>
+			<div class="story">
+				<p>Configuration and Administration</p>
+			</div>
+			<div class="story">
+				<p>SNMP Settings</p>
+				<p>Manage SNMP Polling, Timeout and retry parameters. Default Installation values are as shown below:</p>
+			</div>
+			<div class="story">
+				<p>DNS Settings</p>
+				<p>Within this section you can control thread numbers (concurrent requests), cached elements criteria and DNS resolution default behaviour. NOTE: DNS Resolution is enabled by default:.</p>
+			</div>
+			<div class="story">
+				<p>You can also view current count of checked and pending DNS records within Application Auditor:</p>
+			</div>
+			<div class="story">
+				<p>Log Settings</p>
+				<p>Specify log detail level. Installation default log detail level is ’INFO’. This should be left as default unless requested by Rebasoft technical support:</p>
+			</div>
+			<div class="story">
+				<p>Device Settings</p>
+				<p>You can override your SFlow or JFlow source address information by changing the setting below:</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="119" height="67" src="config and admin snmp settings..jpg" alt="config%20and%20admin%20snmp%20settings.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="123" height="96" src="config and admin dns settings..jpg" alt="config%20and%20admin%20dns%20settings.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="111" height="52" src="config and admin performance..jpg" alt="config%20and%20admin%20performance.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="105" height="58" src="config and admin log settings..jpg" alt="config%20and%20admin%20log%20settings.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="105" height="40" src="config and admin device settings2..jpg" alt="config%20and%20admin%20device%20settings2.png"/>
+			</div>
+			<div class="story">
+				<p>Configuration and Administration</p>
+			</div>
+			<div class="story">
+				<p>User Settings</p>
+				<p>Rebasoft Auditor offers two levels of security – normal user or admin user. Admin users have the ability to create and manage subnets, users, devices, receivers and communities. Normal users are just able to view reports and information captured by Rebasoft Application Auditor. To manage account settings, select the ‘Users’ section from the Admin selector:</p>
+			</div>
+			<div class="story">
+				<p>Administrators are then presented with Users administration in the information frame:</p>
+				<p>To add a user, simply type a name and password and select whether this user is an admin user via the ‘Admin’ tick box and then click “Add user”:</p>
+			</div>
+			<div class="story">
+				<p>To reset a password or delete a user, click on the username from the list (administrators can also promote or demote a user from admin privileges at this stage):</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="133" height="160" src="config and admin user settings dialog..jpg" alt="config%20and%20admin%20user%20settings%20dialog.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="133" height="131" src="config and admin user settings dialog2..jpg" alt="config%20and%20admin%20user%20settings%20dialog2.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="111" height="72" src="config and admin user settings..jpg" alt="config%20and%20admin%20user%20settings.png"/>
+			</div>
+			<div class="story">
+				<p>Configuration and Administration</p>
+			</div>
+			<div class="story">
+				<p>License Administration</p>
+				<p>Application Auditor’s license is deeply embedded within the application. License information is constantly evaluated as source data is received.</p>
+			</div>
+			<div class="story">
+				<p>Licensing rationale</p>
+				<p>Application Auditor is licensed by the total number of sources sending information irrespective of the source IP address. This means that a single network device may act as multiple sources (for example a firewall providing both session log (for NAT information) and NetFlow would count as 2 sources).</p>
+				<p/>
+				<p>If the license expires, Application Auditor will stop processing and storing new data. If a new source sends data to Application Auditor that exceeds the number or sources licensed, the new source’s data will not be processed.</p>
+				<p/>
+				<p>Adding a License key</p>
+				<p>When accessing the Application Auditor web interface for the first time, it runs in trial mode – this means it will operate for a period of 14 days unless a license key is applied to the system. License administration is accessed in the ‘Licensing’ section of the Admin selector:</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="249" height="226" src="config and licencing..jpg" alt="config%20and%20licencing.png"/>
+			</div>
+			<div class="image">
+				<img class="media-1" width="101" height="92" src="config and admin licensing settings..jpg" alt="config%20and%20admin%20licensing%20settings.png"/>
+			</div>
+			<div class="story">
+				<p>Configuration and Administration</p>
+			</div>
+			<div class="story">
+				<p>To add a license, simply cut and paste the license string into the “New License” box and click “load license”:</p>
+			</div>
+			<div class="story">
+				<p>For information on any other facilities please refer to the Rebasoft Application Auditor Administration Guide.</p>
+			</div>
+			<div class="story">
+				<p>The license will validate and confirmation of the system license will be displayed. If the license level is exceeded, Auditor will not collect information from the additional interfaces until a new key is obtained from an Auditor reseller.</p>
+			</div>
+			<div class="story">
+				<p>Note</p>
+			</div>
+			<div class="story">
+				<p>If the previous key has expired, the Application Auditor service must be restarted to activate the new license and re-enable data collection.</p>
+			</div>
+			<div class="image">
+				<img class="media-1" width="256" height="55" src="config and admin new license..jpg" alt="config%20and%20admin%20new%20license.png"/>
+			</div>
+			<div class="story">
+				<p>Configuration and Administration</p>
+			</div>
+		</div>
+	</body>
+</html>

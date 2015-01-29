@@ -1,0 +1,179 @@
+<h1><span class="purple">Auditor for Risk Management</span></h1>
+<p>Auditor provides a security solution
+  for organisations by supporting IT risk management. Auditor V2.6 does this in
+  three main ways:</p>
+<ol>
+<li>Ensuring that organisations are aware of the extent of the
+  infrastructure. This is the foundation of any risk management exercise, as it
+  defines the risk domain. If the domain does not contain the whole
+  infrastructure, then any risk management exercise may have security gaps<br /><br />
+<center>
+  <img
+width=464 height=239 id="Picture 1"
+src="2_6/images/security_image004.jpg"></p>
+  <p>&nbsp;</p>
+</center></li>
+<li>Classification and approval of all connected devices. Starting with
+  discovered MAC addresses, Auditor allows security administrators to classify
+  and approve devices. This enables organisations to ensure all devices can have
+  appropriate security controls applied
+<center>
+  <img
+width=472 height=269 id="Picture 45"
+src="2_6/images/security_image005.jpg"></p>
+  <p>&nbsp;</p>
+</center></li>
+<li>Alerting. Auditor
+  provides three main security alert capabilities that enable organisations to
+  respond to potential threats in real time.
+  <ul>
+<li>Locate and
+  tracking potential rogue devices </li>
+<li>Locate and alert
+  on new / unknown devices </li>
+<li>Locate and
+  alert new infrastructure uplinks - enabling organisations to spot potential
+  rogue access points/ hubs as they try to bypass network security controls
+  </li></ul>
+  <br /><br />
+<center><img
+width=473 height=192 id="Picture 46"
+src="2_6/images/security_image006.jpg"></center>
+</li>
+</ol>
+ <a name="#edge"></a><h2>Network Edge</h2>
+  <p>Understanding the boundary or edges of the infrastructure is
+    a key part in defining the risk domain and, thus, being sure that all devices
+    connected to the infrastructure can be seen. Network edges exist in many forms,
+    but all essentially provide access to or from different parts of the network. Network
+  edges can be either wired or wireless. </p>
+  <p>Rebasoft helps with Risk Management by locating and
+    classifying network edges. A simple workflow allows administrators to identify
+    and approve all edges. By classifying and approving all edges, administrators
+    can ensure that all major ingress and egress points are under control, and that
+    no unauthorised network infrastructure device or uplink can be used for network
+  access.</p>
+  <p>Network Edge Interface reports, therefore, starts by focussing
+    on differentiating network device interconnections (edges) from network interfaces
+  used for end-device connections (access ports).</p>
+  <table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+      <tr valign="middle">
+        <td width="6%" valign="top" style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">Note:</span></td>
+        <td width="94%" style="border: 1px solid #663399;">
+          Administrators define an edge through the &quot;Uplink Threshold MAC Count&quot;
+        setting in System Settings. The default setting is 3, thus any interface with
+        more than 3 MAC addresses connected is classified as an uplink or network
+        edge</td>
+      </tr>
+    </table>
+  
+  <p>&nbsp;</p>
+  <p>Once a list of edge interfaces has been identified the
+    system classifies them by type. Rebasoft, by default, uses the IANA interface
+    definitions (see <a href="http://www.iana.org/assignments/ianaiftype-mib">http://www.iana.org/assignments/ianaiftype-mib</a> for more details) These definitions can be amended in system settings to suit
+    an organisations reporting requirements. Security administrators can then
+    correlate this list and approve. Each uplink can be investigated to see the
+    connected devices. Auditor shows the connected devices in the navigator to help
+    see where the most devices are connected and thus provide a cue as to where the
+  largest risk edges are.</p>
+  <center><img border=0
+width=236 height=65
+src="2_6/images/security_image024.jpg"></center>
+  <p>Network Edge is a real-time process that is constantly
+  updated:</p>
+  <ol><li>Auditor
+  profiles all edge interfaces based on the MAC threshold settings</li>
+  <li>Alerts are
+    generated each time a new network uplink is discovered - this alert may be
+  optionally syslogged to a SIEM or other centralised alert/log management system</li>
+  <li>Alerts are
+    also generated each time a network uplink is classified or approved for audit
+  purposes</li></ol>
+  <p>In order to process Edge interfaces:</p>
+<ol>
+<li>Select the desired status &amp; type:</p>
+<center><img border=0
+width=245 height=266 id="Picture 15"
+src="2_6/images/security_image025.jpg"></center>
+<p>In this case we have selected "Pending Approval" and the
+  Ethernet edge type.</p>
+<p align=center style='text-align:center'><img border=0
+width=624 height=253 id="Picture 16"
+src="2_6/images/security_image026.jpg"></p>
+<p>To select for approval, simple select individual uplinks, or
+  multi select using the check box in the title:</p>
+<p align=center style='text-align:center'><img border=0
+width=177 height=93 id="Picture 21"
+src="2_6/images/security_image027.jpg"></p>
+<p>The process is then simply a matter of selecting the desired
+  edge state and type and click update:</p>
+<p align=center style='text-align:center'><img border=0
+width=328 height=78 id="Picture 23"
+src="2_6/images/security_image028.jpg"></p>
+  <table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+      <tr valign="middle">
+        <td width="6%" valign="top" style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">Note:</span></td>
+        <td width="94%" style="border: 1px solid #663399;">
+          If State or Type is not selected, the existing settings are retained</td>
+      </tr>
+    </table>
+
+<a name="device"></a> <h2>End device coverage</h2>
+<p>Once the extent of the risk domain has been defined, Auditor
+  will be seeing all the connected devices. At the lowest level, a device must
+  have a MAC address in order to communicate. Auditor tracks MAC addresses in
+  real-time. </p>
+<p>By default MAC addresses are separated into Infrastructure
+  and non-infrastructure categories. Auditor knows which MAC addresses are part
+  of the devices being managed by it, thus these are automatically classified as
+  type Infrastructure.</p>
+<p>Auditor also categorises devices by Vendor (MAC Vendor) in
+  the absence of any other data. MAC Addresses seen on the network will also show
+  IP address, user or host name if available:</p>
+<p><img border=0 width=624 height=50 id="Picture 31"
+src="2_6/images/security_image029.jpg"></p>
+<p>Auditor also reports on the last seen network device that
+  the MAC address was connected to</p>
+   <table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+      <tr valign="middle">
+        <td width="6%" valign="top" style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">Note:</span></td>
+        <td width="94%" style="border: 1px solid #663399;">
+          If the Security license is applied to an existing system, and the MAC
+        address in question has not been present on the system for some time, the
+        default of "Server" for the Last seen connection, and interface "0" is set:</p>
+      <p align=center style='
+  text-align:center;line-height:normal'><img border=0 width=178 height=45
+  id="Picture 24"
+  src="2_6/images/security_image030.jpg"></td>
+      </tr>
+    </table>
+<p>&nbsp;</p>
+<p>Users can drill into the MAC address to see the forensics,
+  which includes further detail on the device:</p>
+<p align=center style='text-align:center'><img border=0
+width=579 height=602 id="Picture 33"
+src="2_6/images/security_image031.jpg"></p>
+<p>MAC addresses can be manually classified and approved either through the MAC forensics screen - this is useful if investigating a specific
+  device - or via the MAC coverage list:</p>
+<p><img border=0 width=624 height=229 id="Picture 35"
+src="2_6/images/security_image032.jpg"></p>
+<p>In the same way as edge reports, MAC addresses can be
+  re-classified and approved via the selector:</p>
+<p align=center style='text-align:center'><img border=0
+width=253 height=69 id="Picture 38"
+src="2_6/images/security_image033.jpg"></p>
+<p>While the manual process of classifying and approving
+  devices is possible, Rebasoft recommends using the XML API to load additional
+  information about end-devices that cannot be learned directly from the
+  infrastructure. Using this feature, passive collection of data about device, OS
+  and other useful information can be added to the reporting, making
+  classification and approval much easier. For example PC's and servers may have
+  an antivirus system such as McAfee. In this case it is possible to regularly
+  load ePO data in order to better understand devices:</p>
+<p align=center style='text-align:center'><img border=0
+width=229 height=363 id="Picture 4"
+src="2_6/images/security_image034.jpg"></p>
+<p>ePO information is tagged to each MAC for example:</p>
+<p><img border=0 width=624 height=319 id="Picture 5"
+src="2_6/images/security_image035.jpg"></p>
+<p>&nbsp;</p>

@@ -1,0 +1,89 @@
+<h2><span class="purple"><a name="start"></a>Active Tests</span></h2>
+  <p>Active test provides the ability to immediately test the
+    presence of an IP address and availability of TCP ports on that IP address or
+    subnet in real time. With SNMP methods of polling IP addresses, the data can be
+    5 minutes or more out of date and typically just provides a record of an IP
+  address being present on the network in the past.</p>
+  <img src="../img/Usermanual_2_0/image082.jpg" />
+  <p>Active Test goes further; in that an administrator can
+    define a series of tests to verify the availability of a TCP port, and the
+  response time of those tests.</p>
+  <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+      <td class="box" style="font-size:0.8em;"><b><i><span style='color:red'>Note:</span></i></b>
+        <br />Active Test is only initiated by the operator via the web browser
+          session. Active test is activated only from IP forensics in a subnet with
+          Active tests configured, or commanded via the "Active Test All" button when
+          displaying a list of IP addresses in a search result.</td>
+    </tr>
+  </table>
+  <p>Active Test works by sending a SYN to the target IP address
+    and port. If the port connection is made, MAC Auditor closes the session and
+    records the response time. If the IP/port does not respond, only the single
+    packet is sent and no retransmission occurs. This way, the network overhead is
+  negligible.</p>
+  <p>Active Test provides 2 key benefits:
+  <ol>
+  <li>In the absence of any other tools, active test
+    verifies the instant status of a remote IP address, avoiding the need to deploy
+    cable test for initial diagnosis. This speeds up the process of problem
+    solving. The port test can also verify the correct services are showing as
+  available - a possible indication of correct functioning of the remote device.</li>
+  <li>Active
+    test can also verify which ports at the end device are available. Active Test
+    can therefore be a security tool to identify end device ports that should not
+    be available - a possible indication of miss-configuration, presence of malware
+  or even presence of a rogue device.</li></ol>
+  <p>To access Active Test
+  administration, select from the Admin menu:</p>
+    <center><img src="../img/Usermanual_2_0/image083.jpg" /></center>
+
+  <p>Active Test administration
+    list tests that are available and the ability to remove them by clicking the
+  delete under action:</p>
+      <center><img src="../img/Usermanual_2_0/image084.jpg" /></center>
+
+  <p>To add a new test
+    select the test type - the current version of MAC Auditor supports TCP type
+  tests only. Complete the fields and click the "Add Active Test" button.</p>
+  <p>The table below describes the settings available for Active
+  test:</p>
+<div align=center>
+    <img src="../img/Usermanual_2_0/image085.jpg" /><br /><br />
+
+    <table border=1 cellspacing=0 cellpadding=0>
+      <tr>
+        <td width=121 valign=top><b>Field</b></td>
+        <td width=416 valign=top><b>Description</b></td>
+      </tr>
+      <tr>
+        <td width=121 valign=top>Name</td>
+        <td width=416 valign=top>The
+            name is displayed in IP forensics – it is recommended that is be short</td>
+      </tr>
+      <tr>
+        <td width=121 valign=top>Description</td>
+        <td width=416 valign=top>A
+            description of the active test</td>
+      </tr>
+      <tr>
+        <td width=121 valign=top>Settings</td>
+        <td width=416 valign=top>The
+            desired destination TCP port of the Active test. IANA publishes a list of
+            well known port numbers: <a
+  href="http://www.iana.org/assignments/port-numbers" target="_blank">http://www.iana.org/assignments/port-numbers</a></td>
+      </tr>
+      <tr>
+        <td width=121 valign=top>Subnet</td>
+        <td width=416 valign=top>If
+            a subnet is entered here, only an IP address matching the subnet number and
+            mask (below) will be tested.</td>
+      </tr>
+      <tr>
+        <td width=121 valign=top>Subnet
+            Mask length</td>
+        <td width=416 valign=top>Enter
+            a bit mask to complete the subnet definition.</td>
+      </tr>
+    </table>
+</div>

@@ -1,0 +1,58 @@
+<h1><span class="purple">Browsing sites and devices</span></h1>
+  <p>Rebasoft Auditor allows users to
+    logically drill down from Sites to Devices to VLANs, Interfaces or MACs within
+    a few clicks. Navigation is simply an exercise in expanding or collapsing sites
+    that you have defined, clicking hyperlinks or through the Site visuals. An
+    expanded view of all sites/devices can be seen using the collapse/expand all
+  controls at the top of the list:</p>
+<center><img src="2_2/images/image036.png" width="150"/></center>
+  <h2>Filtering the list of sites & devices</h2>
+<p>To help with getting rapidly to the right device use the filter. To access the Sites & Devices filter, click the icon next to the heading:</p>
+
+    <center>
+      <img src="2_2/images/image037.png" width="350" /></center>
+<p>To find the device of interest, simply  place the cursor in the box and start keying the device name, Rebasoft Auditor will dynamically Filter the list.</p>
+<center>
+      <img src="2_2/images/image038.png" /></center>
+<p>Device names are colour coded:
+<ul>
+<li>White = OK</li>
+<li>Red  = SNMP not OK or has failed the latest poll</li>
+<li>Blue = Device hasn't been polled yet (start-up or after a rescan)</li>
+<li>Grey = Device is unmanaged</li></ul>
+<p>A site summary is displayed above the map including any White list (if set up) alerts that have been seen. Note: the figures shown are the maximum no. seen concurrently. It is also possible for users to position sites and devices on the visuals and save them for the next user using the "save" icon next to the Site visual. </p>
+<center>
+      <img src="2_2/images/image039.png" width="550"  /></center>
+<p>Within the Site overview, a
+series of time based summary reports for the site are display:</p>
+ <ul>
+ <li>MAC Addresses seen</li>
+  <li>Top 5 Devices over time</li>
+  <li>IP Addresses seen</li>
+  <li>Devices seen in use</li>
+  <li>Interfaces seen in use</li>
+  <li>Interfaces by MAC count</li>
+  <li>Interfaces by IP count</li></ul>
+  <p>It is also possible to  report on &ldquo;Down interface&rdquo;, (this can be used as the basis to find available  ports), MAC&rsquo;s by Vendor, MAC&rsquo;s by IP count, MAC&rsquo;s by Interface count and IP&rsquo;s  by MAC count. </p>
+  <p>Rebasoft Auditor will,  during initial device discovery, poll the interface clock for last used status  and use this as a start point for last used information. Where interface last  used status is unavailable, Rebasoft Auditor will use the polling information.  Subsequent polling for interface status will update Rebasoft Auditor down  interface reports.</p>
+  <p>    From the Sites and devices  menu, selecting a device will show a device overview, key reports, interface  statistics and lists of the interfaces and VLANs on the device:</p>
+      <center><img src="2_2/images/image040.png"  width="400"/></center>
+
+  <p>&ldquo;Device Details&rdquo; provides  device level information; showing the hostname, IP address/DNS name (Hostname),  OiD type (this can be customised see Vendor OID ) and a description.&nbsp; It is also possible to add user defined Tags,  these can be added manually or imported from static databases (eg audit data  giving location, user, owner etc.) to give other information which would be  useful when following up an issue. All information in the device details area  is searchable within the database. For each device, below the device details,  users can view statistics for the device.</p>
+  <p>Please note the &ldquo;Tools&rdquo;  line &ndash; this is where Integration  for devices appears. We have  shown a java SSH/Telnet in the image as an example</p>
+  <p>Below the device details are  a series of reports and a list of the active (with MAC addresses seen) and  inactive (without any MAC addresses seen) interfaces for the device. In  the same way as with Site overview, the reports can be zoomed and selected for  additional detailed reporting </p>
+  <p>The  image below shows areas of interest in the list of active interfaces on a  device (the inactive list follows the same format): </p>
+        <center><img src="2_2/images/image041.png"  width="500"/></center>
+<br /><br />
+  <ol>
+  <li>To filter on an interface, simply click the
+    interface name for the Inteface overview - this will report on MAC address seen
+  over time on that interface, IP's seen, MAC Address vendors.</li>
+  <li>To directly list the MAC addresses on the interface click on the number under the
+  MAC's column</li>
+  <li>If you
+    move the cursor over the Last Changed column, Rebasoft Auditor will display the MAC,
+  IP/Netmask (if any) configured for the interface</li>
+  <li>Recent
+    shows the last 30 minutes of the interface status - in the image above, you can
+  see FastEthernet0/3 has been "going up and down", possibly indicating an issue.</li></ol>

@@ -1,0 +1,3421 @@
+<h1>Introduction</h1>
+<p></p>
+<p>Auditor is designed for use in network and security operations within enterprises
+  and service providers. Its core capability is to report on network assets,
+  providing the ability to locate users and devices as they connect to the network.
+  The use of this core information enables Rebasoft to deliver significant benefits
+  beyond being a repository of information. </p>
+<p>With the network as the index, Auditor enables:</p>
+<ul>
+  <li>faster mean-time-to-fix problems</li>
+  <li>improved capacity and change management </li>
+  <li>improved security asset management</li>
+  <li>platform for managing VoIP</li>
+  <li>and more</li>
+</ul>
+<p>Auditor goes beyond port / device tracking utilities in relating real-world
+  information to the network. After all it is not an IP address that rings a
+  helpdesk complaining of a problem.</p>
+<p>The system uses your network switches, routers and firewalls as the primary
+  data source, regularly collecting information using SNMP and DNS. We call this
+  the "network index". </p>
+<p>Depending on the role of the individual using Auditor, the indexed information
+  can be presented in different ways depending on how the user wants to use the
+  system</p>
+<p>Auditor's data can be used to help in problem management, reducing the time
+  spend in fixing user issues by getting to the root of a problem faster, empowering
+  the helpdesk</p>
+<p>Auditor's data can be used to reduce time and effort in changing the network.
+  Building change plans based on real-time information on available resources
+  and where users are connected.</p>
+<p>Auditor's real-time support for user connections to the network allows fast
+  isolation of devices, and supports quick evaluation of end device threat</p>
+<p>One of the most powerful functions is to tag network elements with real-world
+  information automatically. So, a userid could have a real person (firstname,
+  surname), a contact phone/ email address, a manager, a department. </p>
+<p>Reporting can now be not just about the network, but who's using it and the
+  impact they are having on it. Organizations can start to understand where the
+  threats/miss-usage actually occur, and record over time for Audit purposes.
+  This leads to less downtime, better return on infrastructure investment, improved
+  productivity and hence reduced costs.</p>
+<p>Key features of Auditor include:</p>
+<li>Automatically build a complete index of the network including infrastructure
+  and connected devices
+  </p>
+<li>Relate real-world information to discovered elements
+  </p>
+<li>Keep a history of resources by user over time
+  </p>
+<li>Track asset utilization
+  </p>
+<li>Build capacity / change plans
+  </p>
+<li>Instant Active Tests to verify remote IP and ports
+  </p>
+<li>Watch list alerting for specific devices accessing the network
+  </p>
+<li>White list alerting about new devices accessing the network in real-time
+  </p>
+<li>Powerful, fast searches for information
+  </p>
+<li>Extensive integration to external applications
+  </p>
+<li>Open application with full URL control
+  </p>
+<li>Low system resource and overhead – with extensive configuration options
+  </p>
+<li>Simple and fast deployment
+  </p>
+  <p><a name="_Toc241663408" id="_Toc241663408"></a></p>
+  <h2>New features for V2.4</i></b></a></h2>
+  <p>Rebasoft
+    is continually refining and developing Auditor V2.2 continues to build upon
+    performance and features sees the introduction of new features built upon
+    the previous releases and based upon customer requests and requirements:</p>
+  <p>New
+  Capacity planning module
+  </p>
+  
+  <p >Enhancements
+    to Auditor core:</p>
+  <p></p>
+  <p>Integration
+  on tagging
+  </p>
+  <p>Tagging
+  retention enhancements
+  </p>
+  <p>Support
+  for real-time Watchlist/whitelist via mac-notification
+  </p>
+  <p>Global
+  whitelist
+  </p>
+  <p>Reporting
+  enhancements
+  </p>
+  <p></p>
+  <p >Auditor
+    capacity planning is a licensable module that requires Auditor core – please
+    contact your reseller for prices.</p>
+  <h1><a name="_Toc310517978" id="_Toc310517978"></a><a
+name="_Toc241663409" id="_Toc241663409"><b
+style='mso-bidi-font-weight:normal'>Installation
+      and Configuration</b></a></h1>
+  <p>Auditor
+    is provisioned using a simple installer that can be run on Windows Server
+    operating systems. This installer can be used for initial installation, software
+    version upgrades and changes in system parameters. Auditor is also supported
+    on other OS types.</p>
+  <h2>Hardware
+        Requirements</h2>
+  <p>The
+    type of system required to run Auditor depends on the number of devices to
+    be polled for management reporting. The following requirements are a guideline;
+    the only way to determine requirements is by testing the software's performance
+    in a specific network environment. To this end Rebasoft has packaged a 7-day
+    trial download.</p>
+  <p></p>
+  <p>CPU</p>
+  <p>Minimum
+    CPU should be a dual core 2.4GHz processor.</p>
+  <p style='mso-list:l8 level1 lfo21'>For
+    every additional 200 devices add an additional core/CPU</p>
+  <p style='margin-bottom:.0001pt'><span
+style='><span lang=EN-IE
+style='line-height:115%;mso-ansi-language:EN-IE'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>RAM</p>
+  <p>Base
+    system of 2GB RAM</p>
+  <p class="MsoListParagraphCxSpMiddle" style='mso-list:l8 level1 lfo21'>For
+    each device (Switch/Router) allow 2MB of RAM</p>
+  <p style='mso-list:l8 level1 lfo21'>For
+    a blade based Switch (i.e. Cisco 6500) allow 2MB of RAM for each blade</p>
+  <p style='margin-bottom:.0001pt'><span
+style='><span lang=EN-IE
+style='line-height:115%;mso-ansi-language:EN-IE'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>Disk</p>
+  <p class="MsoListParagraphCxSpFirst" style='mso-list:l3 level1 lfo22'>10MB
+    of disk space per device per month</p>
+  <p class="MsoListParagraphCxSpMiddle" style='mso-list:l3 level1 lfo22'>SATA
+    II (1.5GB/s+) drives for small to medium systems (up to 500 network devices
+    polled)</p>
+  <p style='mso-list:l3 level1 lfo22'>SAS
+    (3GB/s+) drives recommended for larger systems (greater than 500 devices)</p>
+  <h2><a name="_Toc310517980" id="_Toc310517980"><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><font
+size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;line-height:
+115%'><span style='mso-bidi-line-height:115%'>Software
+      Requirements</i></b></a></h2>
+  <p></p>
+  <p class="MsoListParagraphCxSpFirst" style='
+mso-add-space:auto;text-align:justify;
+mso-list:l14 level1 lfo2;mso-layout-grid-align:none;text-autospace:none'><span
+style='><span style='mso-bidi-font-family:
+Symbol;mso-bidi-font-family:Symbol'>
+<li><span style='mso-bidi-font-size:
+10.0pt;mso-bidi-font-family:Arial'>Windows
+  2003/2008 server or later
+  </p>
+  <p class="MsoListParagraphCxSpMiddle" style='margin-bottom:
+.0001pt;mso-add-space:auto;text-align:justify;line-height:
+normal;mso-list:l14 level1 lfo2;mso-layout-grid-align:none;text-autospace:none'><span
+style='><span style='mso-bidi-font-family:
+Symbol;mso-bidi-font-family:Symbol'>
+<li><span style='mso-bidi-font-size:
+10.0pt;mso-bidi-font-family:Arial'>Linux
+  (Suse, Red Hat tested)
+  </p>
+  <p class="MsoListParagraphCxSpMiddle" style='margin-bottom:
+.0001pt;mso-add-space:auto;text-align:justify;line-height:
+normal;mso-list:l14 level1 lfo2;mso-layout-grid-align:none;text-autospace:none'><span
+style='><span style='mso-bidi-font-family:
+Symbol;mso-bidi-font-family:Symbol'>
+<li><span style='mso-bidi-font-size:
+10.0pt;mso-bidi-font-family:Arial'>Solaris
+  </p>
+  <p style='
+mso-add-space:auto;text-align:justify;
+mso-list:l14 level1 lfo2;mso-layout-grid-align:none;text-autospace:none'><span
+style='><span style='mso-bidi-font-family:
+Symbol;mso-bidi-font-family:Symbol'>
+<li><span style='mso-bidi-font-size:
+10.0pt;mso-bidi-font-family:Arial'>VMware
+  is a supported environment
+  </p>
+  <ul type="disc">
+    <li style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     text-align:justify;mso-list:l14 level1 lfo2'><span
+     style='><span
+     style='mso-bidi-mso-bidi-font-family:
+     Arial'>Internet
+      Explorer V6 or later, Mozilla V3 or later (JavaScript must enabled in the
+      browser).</li>
+  </ul>
+  <p style='text-align:justify;
+mso-list:l14 level1 lfo2'>
+<li>1200 x 1024 pixel screen resolution is recommended for client devices accessing
+  Auditor.
+  </p>
+  <p>Java
+    Runtime (JRE) V1.6 and PostgreSQL are required for the application to function.
+    If not installed, these will be installed by the installer on Windows platforms.
+    Linux and Solaris may require these components to be manually.</p>
+  <p></p>
+  <p><span lang=EN-IE style='line-height:115%;
+mso-ansi-language:EN-IE'><span style='mso-bidi-font-size:11.0pt;line-height:
+115%'>For
+    systems requiring more than 3GB of RAM, 64bit os (JRE) is required</p>
+  <h3><a name="_Toc310517981" id="_Toc310517981"></a><a
+name="_Toc241663412" id="_Toc241663412"></a><a name="_Ref239243732" id="_Ref239243732"><span style='mso-bookmark:
+_Toc241663412'><span style='mso-bookmark:_Toc310517981'><b style='mso-bidi-font-weight:
+normal'><font size="2" color="#f79646" face="Arial"><span style='
+line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>System
+      parameters</b></a></h3>
+  <p>Auditor
+    relies on SNMP polling device CAM tables as part of information collection.
+    The software has been extensively tested in large networks and against different
+    device types and vendors. System parameters are set as a result of the testing
+    and in line with system recommendations below.</p>
+  <p>Experience
+    shows that it takes around 1 minute for a device to respond to poll of the
+    CAM table. The system default is for the polling cycle to be completed every
+    30 minutes. The objective therefore is to set the number of concurrent poller
+    threads to be sufficient to complete to information collection and processing
+    within the allotted time. </p>
+  <p>We
+    recommend that 1 thread be allowed for each 10 devices to be polled. The
+    installation default is for 20 threads, this would allow support of up to
+    200 devices (with between 5000 and 8000 interfaces). The thread count can
+    be increased subject to network and server load considerations.</p>
+  <h2><a name="_Toc310517982" id="_Toc310517982"></a><a
+name="_Toc241663413" id="_Toc241663413"><span style='mso-bookmark:_Toc310517982'><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><font
+size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;line-height:
+115%'><span style='mso-bidi-line-height:115%'>Installing </i></b></a><span
+style='mso-bookmark:_Toc310517982'>Auditor
+    – Windows platforms</h2>
+  <p>Installation
+    is achieved by executing the Auditor installation wizard. This wizard guides
+    administrators through the installation or updating process and allows the
+    specification of a number of parameters – it should only take a few minutes
+    to install the system. </p>
+  <p>The
+    installer can be run whether performing a new installation or updating an
+    existing system. In the case of an upgrade, data is preserved; Rebasoft does,
+    however, advise administrators to perform a data back-up regularly and especially
+    prior to system upgrade.</p>
+  <p>
+  
+    <!--[if mso & !supportInlineShapes & supportFields]><span
+style='><span style='mso-element:field-begin;
+mso-field-lock:yes'><span
+style='mso-spacerun:yes'> SHAPE <span
+style='mso-spacerun:yes'> \*
+  MERGEFORMAT <span style='mso-element:field-separator'>
+  <![endif]-->
+  <span
+style='>
+    <!--[if gte vml 1]><v:shapetype id="_x0000_t202"
+ coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="Text_x0020_Box_x0020_70" o:spid="_x0000_s1047"
+ type="#_x0000_t202" style='width:427.75pt;height:44.7pt;visibility:visible;
+ mso-wrap-style:square;mso-left-percent:-10001;mso-top-percent:-10001;
+ mso-position-horizontal:absolute;mso-position-horizontal-relative:char;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line;
+ mso-left-percent:-10001;mso-top-percent:-10001;v-text-anchor:top' o:gfxdata="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
+" fillcolor="#eeece1 [3214]" strokecolor="#7030a0">
+  <v:fill color2="#877e4c [1486]" rotate="t" angle="45" focus="100%" type="gradient"/>
+  <v:textbox style='mso-fit-shape-to-text:t'>
+    <![if !mso]>
+    <table cellpadding=0 cellspacing=0 width="100%">
+      <tr>
+        <td><div>
+            <p class=MsoListParagraphCxSpFirst style='margin-left:0cm;mso-add-space:
+    auto;text-align:justify'><b style='mso-bidi-font-weight:normal'><i
+    style='mso-bidi-font-style:normal'><font size=2 color=red face=Arial><span
+    style='mso-bidi-line-height:115%;
+    mso-bidi-font-family:Arial;color:red;font-weight:bold;mso-bidi-font-weight:
+    normal;font-style:italic;mso-bidi-font-style:normal'>Note:</i></b></p>
+            <p class=MsoListParagraphCxSpLast style='margin-left:0cm;mso-add-space:
+    auto;text-align:justify'><font size=2 face=Arial><span style='font-size:
+    10.0pt;mso-bidi-line-height:115%;mso-bidi-font-family:
+    Arial'>Due
+              to windows security, we recommend that the installer be run as
+              the Local Administrator</p>
+          </div>
+          <![if !mso]></td>
+      </tr>
+    </table>
+  </v:textbox>
+  <w:wrap type="none"/>
+  <w:anchorlock/>
+  </v:shape>
+  <![endif]-->
+  <![if !vml]>
+  <img width="576" height="66"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image005.png"
+alt="Text Box: Note:
+Due to windows security, we recommend that the installer be run as the Local Administrator
+"
+v:shapes="Text_x0020_Box_x0020_70" />
+  <!--[if mso & !supportInlineShapes & supportFields]><span
+style='><v:shape id="_x0000_i1183" type="#_x0000_t75"
+ style='width:427.75pt;height:44.7pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:
+field-end'><![endif]-->
+  <span
+style='><span style='mso-bidi-
+line-height:115%;mso-bidi-font-family:Arial'>
+  </p>
+  <p>To
+    start installation, simply execute the installer</p>
+  <p style='margin-left:0cm;mso-add-space:auto'><span
+style='>1)
+    Click next….</p>
+  <p align="center" style='text-align:center'><span
+style='><span
+style='mso-bidi-line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="_x0000_i1182" type="#_x0000_t75"
+ alt="Description: C:\Users\steve\Documents\Rebasoft\usermanual images\ma-setup1.jpg"
+ style='width:206.25pt;height:159pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image006.jpg"
+  o:title="ma-setup1"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="275" height="212"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image007.jpg"
+alt="Description: C:\Users\steve\Documents\Rebasoft\usermanual images\ma-setup1.jpg"
+v:shapes="_x0000_i1182" /><span style='mso-bookmark:
+_Toc241663408'><span style='mso-bidi-line-height:115%'></p>
+  <p class="MsoListParagraphCxSpFirst" style='margin-left:0cm;mso-add-space:auto'><span
+style='><span
+style='mso-bidi-line-height:115%'></p>
+  <p class="MsoListParagraphCxSpMiddle" style='margin-left:0cm;mso-add-space:auto'><span
+style='><span
+style='mso-bidi-line-height:115%'>2) <span
+style='><span style='mso-bidi-
+line-height:115%;mso-bidi-font-family:Arial'>Click "I
+    Agree" to accept the licence agreement ….</p>
+  <p style='margin-left:0cm;mso-add-space:auto'><span
+style='><span
+style='mso-bidi-line-height:115%'></p>
+  <p align="center" style='text-align:center'><span
+style='><span
+style='mso-bidi-line-height:115%'><span
+style='mso-spacerun:yes'> <span style='mso-bookmark:
+_Toc241663408'><span style='mso-bidi-line-height:115%;
+mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="_x0000_i1181"
+ type="#_x0000_t75" alt="Description: C:\Users\steve\Documents\Rebasoft\usermanual images\ma-setup-license.jpg"
+ style='width:209.25pt;height:161.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image008.jpg"
+  o:title="ma-setup-license"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="279" height="215"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image009.jpg"
+alt="Description: C:\Users\steve\Documents\Rebasoft\usermanual images\ma-setup-license.jpg"
+v:shapes="_x0000_i1181" /><span
+style='mso-bidi-line-height:115%'></p>
+  <p class="MsoListParagraphCxSpFirst"><font
+size="2" face="Arial"><span style='mso-bidi-
+line-height:115%'></p>
+  <p class="MsoListParagraphCxSpMiddle" style='margin-left:0cm;mso-add-space:auto'><span
+style='><span
+style='mso-bidi-line-height:115%'>3)<span
+style='mso-spacerun:yes'>  <span style='mso-bookmark:
+_Toc241663408'><span style='mso-bidi-line-height:115%;
+mso-bidi-font-family:Arial'>Select
+    components to install and click next ….</p>
+  <p class="MsoListParagraphCxSpMiddle" style='margin-left:0cm;mso-add-space:auto'><span
+style='><span
+style='mso-bidi-line-height:115%'></p>
+  <p class="MsoListParagraphCxSpMiddle" style='margin-left:0cm;mso-add-space:auto'><span
+style='><span
+style='mso-bidi-line-height:115%'></p>
+  <p align="center" style='margin-left:0cm;
+mso-add-space:auto;text-align:center'><font
+size="2" face="Arial"><span style='mso-bidi-
+line-height:115%;mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="_x0000_i1180" type="#_x0000_t75" alt="Description: C:\Users\steve\Documents\Rebasoft\usermanual images\ma-setup3.jpg"
+ style='width:204pt;height:156.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image010.jpg"
+  o:title="ma-setup3"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="272" height="209"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image011.jpg"
+alt="Description: C:\Users\steve\Documents\Rebasoft\usermanual images\ma-setup3.jpg"
+v:shapes="_x0000_i1180" /><span style='mso-bookmark:
+_Toc241663408'><span style='mso-bidi-line-height:115%'></p>
+  <p style='line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='mso-bookmark:
+_Toc241663408'><span style='
+mso-bidi-font-size:10.0pt'></p>
+  <p style='margin-left:21.3pt;mso-add-space:auto;
+mso-list:l10 level1 lfo1'><font
+size="2" face="Arial"><span style='mso-bidi-
+line-height:115%;mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'>1)<span
+style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp; <span
+style='mso-bidi-line-height:115%'>Enter
+    desired http/https port together Threads and RAM settings desired</p>
+  <p style='line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='mso-bookmark:
+_Toc241663408'><span style='
+mso-bidi-font-size:10.0pt'><span style='mso-spacerun:yes'> </p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><span
+style='mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="Picture_x0020_33" o:spid="_x0000_i1179" type="#_x0000_t75" style='width:260.25pt;
+ height:199.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image012.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="347" height="266"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image013.jpg"
+v:shapes="Picture_x0020_33" /><span
+style='><span style='mso-bidi-font-size:10.0pt'></p>
+  <p style='line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='mso-bookmark:
+_Toc241663408'><span style='
+mso-bidi-font-size:10.0pt'></p>
+  <p style='margin-top:0cm;margin-right:0cm;
+margin-left:36.0pt;mso-layout-grid-align:
+none;text-autospace:none'><font
+size="2" face="Arial"><span style='mso-bidi-
+mso-bidi-font-family:Arial'>If
+    the http or https ports entered are already in use by another application,
+    the installation will prompt you to select an alternative port</p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><span
+style='mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="_x0000_i1178" type="#_x0000_t75" style='width:209.25pt;height:57pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image014.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="279" height="76"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image015.jpg"
+v:shapes="_x0000_i1178" /><span style='mso-bookmark:
+_Toc241663408'><span style='mso-bidi-mso-bidi-font-family:
+Arial'></p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><span
+style='mso-bidi-mso-bidi-font-family:Arial'></p>
+  <p style='margin-top:0cm;margin-right:0cm;
+margin-left:36.0pt;mso-layout-grid-align:
+none;text-autospace:none'><font
+size="2" face="Arial"><span style='mso-bidi-
+mso-bidi-font-family:Arial'>The
+    number of threads is a measure of the number of parallel pollers Auditor
+    should use. The larger the network, the more pollers should be set. Larger
+    numbers of threads requires more RAM. RAM can also be set.</p>
+  <p style='line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='mso-bookmark:
+_Toc241663408'><span style='
+mso-bidi-font-size:10.0pt'></p>
+  <p style='margin-top:0cm;margin-right:0cm;
+margin-left:36.0pt;mso-layout-grid-align:
+none;text-autospace:none'><font
+size="2" face="Arial"><span style='mso-bidi-font-size:10.0pt'></p>
+  <p class="MsoListParagraphCxSpFirst" style='margin-left:21.3pt;mso-add-space:
+auto;mso-list:l10 level1 lfo1'><span style='mso-bookmark:
+_Toc241663408'><span
+style='mso-bidi-line-height:115%;mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>2)<font size="1"
+face="Times New Roman"><span style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp;
+    Specify installation directory for installation and click next ….</p>
+  <p></p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:
+10.0pt;mso-fareast-language:EN-GB;font-weight:bold;mso-bidi-font-weight:normal;
+mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="_x0000_i1177" type="#_x0000_t75"
+ alt="Description: C:\Users\steve.1STADVANCE\Documents\Rebasoft\v2-usermanual-images\installation-3a.jpg"
+ style='width:219.75pt;height:168.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image016.jpg"
+  o:title="installation-3a"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="293" height="225"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image017.jpg"
+alt="Description: C:\Users\steve.1STADVANCE\Documents\Rebasoft\v2-usermanual-images\installation-3a.jpg"
+v:shapes="_x0000_i1177" /></b><span
+style='><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-weight:bold;mso-bidi-font-weight:normal'></b></p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:
+10.0pt;font-weight:bold;mso-bidi-font-weight:normal'></b></p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'>
+  
+    <!--[if mso & !supportInlineShapes & supportFields]><span
+style='><span style='mso-element:field-begin;
+mso-field-lock:yes'><span
+style='mso-spacerun:yes'> SHAPE <span
+style='mso-spacerun:yes'> \*
+  MERGEFORMAT <span style='mso-element:field-separator'>
+  <![endif]-->
+  <span
+style='>
+    <!--[if gte vml 1]><v:shape id="_x0000_s1046"
+ type="#_x0000_t202" style='width:427.75pt;height:44.7pt;visibility:visible;
+ mso-wrap-style:square;mso-left-percent:-10001;mso-top-percent:-10001;
+ mso-position-horizontal:absolute;mso-position-horizontal-relative:char;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line;
+ mso-left-percent:-10001;mso-top-percent:-10001;v-text-anchor:top' o:gfxdata="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
+" fillcolor="#eeece1 [3214]" strokecolor="#7030a0">
+  <v:fill color2="#877e4c [1486]" rotate="t" angle="45" focus="100%" type="gradient"/>
+  <v:textbox style='mso-fit-shape-to-text:t'>
+    <![if !mso]>
+    <table cellpadding=0 cellspacing=0 width="100%">
+      <tr>
+        <td><div>
+            <p class=MsoListParagraphCxSpFirst style='margin-left:0cm;mso-add-space:
+    auto;text-align:justify'><b style='mso-bidi-font-weight:normal'><i
+    style='mso-bidi-font-style:normal'><font size=2 color=red face=Arial><span
+    style='mso-bidi-line-height:115%;
+    mso-bidi-font-family:Arial;color:red;font-weight:bold;mso-bidi-font-weight:
+    normal;font-style:italic;mso-bidi-font-style:normal'>Note:</i></b></p>
+            <p class=MsoListParagraphCxSpLast style='margin-left:0cm;mso-add-space:
+    auto;text-align:justify'><font size=2 face=Arial><span style='font-size:
+    10.0pt;mso-bidi-line-height:115%;mso-bidi-font-family:
+    Arial'>The
+              Java installer does not permit spaces in the specification of the
+              destination folder</p>
+          </div>
+          <![if !mso]></td>
+      </tr>
+    </table>
+  </v:textbox>
+  <w:wrap type="none"/>
+  <w:anchorlock/>
+  </v:shape>
+  <![endif]-->
+  <![if !vml]>
+  <img width="576" height="66"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image018.png"
+alt="Text Box: Note:
+The Java installer does not permit spaces in the specification of the destination folder
+"
+v:shapes="_x0000_s1046" />
+  <!--[if mso & !supportInlineShapes & supportFields]><span
+style='><v:shape id="_x0000_i1176" type="#_x0000_t75"
+ style='width:427.75pt;height:44.7pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:
+field-end'><![endif]-->
+  <span
+style='><b style='mso-bidi-font-weight:normal'><span
+style='mso-bidi-font-weight:bold;mso-bidi-font-weight:normal'></b>
+  </p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:
+10.0pt;font-weight:bold;mso-bidi-font-weight:normal'></b></p>
+  <p style='margin-top:0cm;margin-right:0cm;
+margin-left:36.0pt;mso-layout-grid-align:
+none;text-autospace:none'><font
+size="2" face="Arial"><span style='mso-bidi-font-size:10.0pt'>If
+    Auditor is already installed, the installer will now stop the MACAuditor
+    service in preparation for the upgrade of files</p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:
+10.0pt;font-weight:bold;mso-bidi-font-weight:normal'></b></p>
+  <p style='margin:0cm;mso-add-space:
+auto;text-indent:0cm;mso-list:l10 level1 lfo1;mso-layout-grid-align:
+none;text-autospace:none'><font
+size="2" face="Arial"><span style='mso-bidi-
+mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'>3)<span
+style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-bidi-font-size:
+10.0pt'>If
+    not installed Auditor <span style='mso-spacerun:yes'> will install PostgreSQL
+    and JRE</p>
+  <p style='margin-top:0cm;margin-right:0cm;
+margin-left:36.0pt;mso-layout-grid-align:
+none;text-autospace:none'><font
+size="2" face="Arial"><span style='mso-bidi-font-size:10.0pt'></p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><span
+style='mso-bidi-mso-fareast-language:EN-GB;
+mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="_x0000_i1175" type="#_x0000_t75"
+ alt="Description: C:\Users\steve.1STADVANCE\Documents\Rebasoft\v2-usermanual-images\installation-postgres-c++.jpg"
+ style='width:225pt;height:173.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image019.jpg"
+  o:title="installation-postgres-c++"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="300" height="231"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image020.jpg"
+alt="Description: C:\Users\steve.1STADVANCE\Documents\Rebasoft\v2-usermanual-images\installation-postgres-c++.jpg"
+v:shapes="_x0000_i1175" /><span style='mso-bookmark:
+_Toc241663408'><span style='mso-bidi-font-size:10.0pt'></p>
+  <p style='margin-top:0cm;margin-right:0cm;
+margin-left:36.0pt;mso-layout-grid-align:
+none;text-autospace:none'><font
+size="2" face="Arial"><span style='mso-bidi-font-size:10.0pt'></p>
+  <p class="MsoListParagraphCxSpFirst" style='margin-left:0cm;mso-add-space:auto'><span
+style='></p>
+  <p class="MsoListParagraphCxSpMiddle" style='margin-left:0cm;mso-add-space:auto'><span
+style='><b style='mso-bidi-font-weight:normal'><font
+size="2" face="Arial"><span style='mso-bidi-
+line-height:115%;mso-bidi-font-family:Arial;mso-fareast-language:EN-GB;
+font-weight:bold;mso-bidi-font-weight:normal;mso-no-proof:yes'></b></p>
+  <p class="MsoListParagraphCxSpMiddle" style='margin-left:0cm;mso-add-space:auto'><span
+style='><span
+style='mso-bidi-line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'></p>
+  <p class="MsoListParagraphCxSpMiddle" align="center" style='margin-left:0cm;
+mso-add-space:auto;text-align:center'><font
+size="2" face="Arial"><span style='mso-bidi-
+line-height:115%;mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="Picture_x0020_122" o:spid="_x0000_i1174" type="#_x0000_t75" alt="Description: installation-postgres-db.jpg"
+ style='width:228pt;height:171.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image021.jpg"
+  o:title="installation-postgres-db"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="304" height="229"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image022.jpg"
+alt="Description: installation-postgres-db.jpg" v:shapes="Picture_x0020_122" /></p>
+  <p class="MsoListParagraphCxSpMiddle" align="center" style='margin-left:0cm;
+mso-add-space:auto;text-align:center'><font
+size="2" face="Arial"><span style='mso-bidi-
+line-height:115%;mso-fareast-language:EN-GB;mso-no-proof:yes'></p>
+  <p class="MsoListParagraphCxSpMiddle" style='margin-left:0cm;mso-add-space:auto'><span
+style='><span
+style='mso-bidi-line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>Sometimes,
+    due to windows permissions, postgres will not install. The installer will
+    terminate and a message will request that postgres be installed manually.</p>
+  <p class="MsoListParagraphCxSpMiddle" align="center" style='margin-left:0cm;
+mso-add-space:auto;text-align:center'><font
+size="2" face="Arial"><span style='mso-bidi-
+line-height:115%;mso-fareast-language:EN-GB;mso-no-proof:yes'></p>
+  <p class="MsoListParagraphCxSpMiddle" style='margin-left:0cm;mso-add-space:auto'><span
+style='><span
+style='mso-bidi-line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>7)<span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'> Auditor
+    installs as a system service, a command window should appear during this
+    process</p>
+  <p style='margin-left:0cm;mso-add-space:auto'><span
+style='><span
+style='mso-bidi-line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'></p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><span
+style='mso-bidi-mso-fareast-language:EN-GB;
+mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="_x0000_i1173" type="#_x0000_t75"
+ alt="Description: C:\Users\steve\Documents\Rebasoft\usermanual images\ma-setup5.jpg"
+ style='width:225pt;height:153pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image023.jpg"
+  o:title="ma-setup5"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="300" height="204"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image024.jpg"
+alt="Description: C:\Users\steve\Documents\Rebasoft\usermanual images\ma-setup5.jpg"
+v:shapes="_x0000_i1173" /><span style='mso-bookmark:
+_Toc241663408'><span style='mso-bidi-font-size:10.0pt'></p>
+  <p style='line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='mso-bookmark:
+_Toc241663408'><span style='
+mso-bidi-font-size:10.0pt'></p>
+  <p style='line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='mso-bookmark:
+_Toc241663408'><span style='
+mso-bidi-font-size:10.0pt'>8)</p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><span
+style='mso-bidi-mso-fareast-language:EN-GB;
+mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_8" o:spid="_x0000_i1172"
+ type="#_x0000_t75" alt="Description: C:\Users\steve\Documents\Rebasoft\usermanual images\ma-setup6.jpg"
+ style='width:219.75pt;height:168pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image025.jpg"
+  o:title="ma-setup6"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="293" height="224"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image026.jpg"
+alt="Description: C:\Users\steve\Documents\Rebasoft\usermanual images\ma-setup6.jpg"
+v:shapes="Picture_x0020_8" /><span
+style='><span style='mso-bidi-font-size:10.0pt'></p>
+  <p style='line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='mso-bookmark:
+_Toc241663408'><span style='
+mso-bidi-font-size:10.0pt'></p>
+  <p class="MsoListParagraphCxSpFirst"><font
+size="2" face="Arial"><span style='mso-bidi-
+line-height:115%'></p>
+  <p class="MsoListParagraphCxSpMiddle">Once
+    Auditor installation is complete (administrators can view the details of
+    where files have been installed by clicking the details button) click next…..</p>
+  <p><font
+size="2" face="Arial"><span style='mso-bidi-
+line-height:115%'></p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><span
+style='mso-bidi-mso-fareast-language:EN-GB;
+mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="_x0000_i1171" type="#_x0000_t75"
+ alt="Description: C:\Users\steve\Documents\Rebasoft\usermanual images\ma-setup-complete.jpg"
+ style='width:219pt;height:168.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image027.jpg"
+  o:title="ma-setup-complete"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="292" height="225"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image028.jpg"
+alt="Description: C:\Users\steve\Documents\Rebasoft\usermanual images\ma-setup-complete.jpg"
+v:shapes="_x0000_i1171" /><span style='mso-bookmark:
+_Toc241663408'><span style='mso-bidi-font-size:10.0pt'></p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><span
+style='mso-bidi-font-size:10.0pt'></p>
+  <h2><a name="_Toc310517983" id="_Toc310517983"><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><font
+size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;line-height:
+115%'><span style='mso-bidi-line-height:115%'>Installing
+      Auditor – Linux</i></b></a></h2>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><span
+style='mso-bidi-font-size:10.0pt'></p>
+  <p><a
+name="_Toc241663414" id="_Toc241663414"><span style='
+line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Auditor
+    required PostgreSQL V9.x or later and Java (JRE) 6 or above. These should
+    be installed in the normal way using the package administration utility supplied
+    with the Linux distribution. Auditor has been tested on SUSE and Red Hat
+    Linux distributions. </a></p>
+  <p><span
+style='mso-bookmark:_Toc241663414'><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>The
+    following instructions assume installation on a SUSE Linux system. Rebasoft
+    has published other installation instructions at <a
+href="http://www.rebasoft.net/support"><span
+style='mso-bookmark:_Toc241663414'>www.rebasoft.net/support</a><span
+style='><span style='mso-bookmark:_Toc241663414'>,
+    alternatively please contact your Rebasoft reseller for additional assistance</p>
+  <p><span
+style='mso-bookmark:_Toc241663414'>
+    <!--[if mso & !supportInlineShapes & supportFields]><span
+style='><span style='mso-bookmark:_Toc241663414'><span
+style='mso-element:field-begin;mso-field-lock:yes'><span
+style='><span style='mso-bookmark:_Toc241663414'><span
+style='mso-spacerun:yes'> SHAPE <span
+style='mso-spacerun:yes'> \* MERGEFORMAT <span style='mso-element:field-separator'><![endif]-->
+    <span
+style='><span style='mso-bookmark:_Toc241663414'>
+    <!--[if gte vml 1]><v:shape
+ id="_x0000_s1045" type="#_x0000_t202" style='width:427.75pt;height:44.7pt;
+ visibility:visible;mso-wrap-style:square;mso-left-percent:-10001;
+ mso-top-percent:-10001;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+ mso-position-vertical-relative:line;mso-left-percent:-10001;mso-top-percent:-10001;
+ v-text-anchor:top' o:gfxdata="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
+" fillcolor="#eeece1 [3214]" strokecolor="#7030a0">
+ <v:fill color2="#877e4c [1486]" rotate="t" angle="45" focus="100%" type="gradient"/>
+ <v:textbox style='mso-fit-shape-to-text:t'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td>
+    <div>
+    <p class=MsoListParagraphCxSpFirst style='margin-left:0cm;mso-add-space:
+    auto'><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+    normal'><font size=2 color=red face=Arial><span style='
+    mso-bidi-line-height:115%;mso-bidi-font-family:Arial;
+    color:red;font-weight:bold;mso-bidi-font-weight:normal;font-style:italic;
+    mso-bidi-font-style:normal'>Note:</i></b></p>
+    <p class=MsoListParagraphCxSpLast style='margin-left:0cm;mso-add-space:
+    auto'><font size=2 face=Arial><span style='line-height:
+    115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>P0stgr3s_2MEshould
+    be used for the default PostgreSQL password<span
+    style='mso-bidi-line-height:115%;mso-bidi-font-family:
+    Arial'></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </v:textbox>
+ <w:wrap type="none"/>
+ <w:anchorlock/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="576" height="66"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image029.png"
+alt="Text Box: Note:
+P0stgr3s_2MEshould be used for the default PostgreSQL password
+"
+v:shapes="_x0000_s1045" />
+    <!--[if mso & !supportInlineShapes & supportFields]><span
+style='><span style='mso-bookmark:_Toc241663414'><v:shape
+ id="_x0000_i1170" type="#_x0000_t75" style='width:427.75pt;height:44.7pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-bookmark:
+_Toc241663414'><span style='mso-element:field-end'><![endif]-->
+    <span
+style='><span style='mso-bookmark:_Toc241663414'></p>
+  <p style='mso-list:l19 level1 lfo23'><span
+style='><span style='mso-bookmark:_Toc241663414'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1)<font size="1"
+face="Times New Roman"><span style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp;
+    Install libpq5</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><a
+href="http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Flibpq5-9.0.4-54.1.x86_64.rpm&amp;query=libpq"><span
+style='><span style='mso-bookmark:_Toc241663414'>http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Flibpq5-9.0.4-54.1.x86_64.rpm&amp;query=libpq</a><span
+style='><span style='mso-bookmark:_Toc241663414'> </p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>rpm
+    -i libpq5-9.0.4-54.1.x86_64.rpm</p>
+  <p style='mso-list:l19 level1 lfo23'><span
+style='><span style='mso-bookmark:_Toc241663414'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>2)<font size="1"
+face="Times New Roman"><span style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp;
+    Install libecpg6</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><a
+href="http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Flibecpg6-9.0.4-54.1.x86_64.rpm&amp;query=libecpg6"><span
+style='><span style='mso-bookmark:_Toc241663414'>http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Flibecpg6-9.0.4-54.1.x86_64.rpm&amp;query=libecpg6</a><span
+style='><span style='mso-bookmark:_Toc241663414'> </p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>rpm
+    -i libecpg6-9.0.4-54.1.x86_64.rpm</p>
+  <p style='mso-list:l19 level1 lfo23'><span
+style='><span style='mso-bookmark:_Toc241663414'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>3)<font size="1"
+face="Times New Roman"><span style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp;
+    Install PostgresSQL server</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><a
+href="http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Fpostgresql-server-9.0.4-54.2.x86_64.rpm&amp;query=postgresql"><span
+style='><span style='mso-bookmark:_Toc241663414'>http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Fpostgresql-server-9.0.4-54.2.x86_64.rpm&amp;query=postgresql</a><span
+style='><span style='mso-bookmark:_Toc241663414'> </p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>rpm
+    -i postgresql-server-9.0.4-54.2.x86_64.rpm</p>
+  <p style='mso-list:l19 level1 lfo23'><span
+style='><span style='mso-bookmark:_Toc241663414'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>4)<font size="1"
+face="Times New Roman"><span style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp;
+    Install PostgreSQL</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><a
+href="http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Fpostgresql-9.0.4-54.2.x86_64.rpm&amp;query=postgresql"><span
+style='><span style='mso-bookmark:_Toc241663414'>http://software.opensuse.org/search/download?base=SUSE%3ASLE-11&amp;file=server%3A%2Fdatabase%3A%2Fpostgresql%2FSLE_11%2Fx86_64%2Fpostgresql-9.0.4-54.2.x86_64.rpm&amp;query=postgresql</a><span
+style='><span style='mso-bookmark:_Toc241663414'> </p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>rpm
+    -i postgresql-9.0.4-54.2.x86_64.rpm</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>/etc/init.d/postgresql
+    start</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>su
+    - postgres</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>psql</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>create
+    user rebasoft PASSWORD 'rebasoft';</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>create
+    database rebasoft owner = rebasoft;</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>\c
+    rebasoft</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>create
+    language 'plpgsql';</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>to
+    exit the terminal, type<span
+style='><span style='mso-bookmark:_Toc241663414'><font
+face="Courier New"><span style='font-family:"Courier New"'> \q</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'></p>
+  <p style='mso-list:l19 level1 lfo23'><span
+style='><span style='mso-bookmark:_Toc241663414'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>5)<font size="1"
+face="Times New Roman"><span style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp;
+    Install JRE</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><a
+href="http://www.oracle.com/technetwork/java/javase/downloads/jre-6u25-download-346243.html"><span
+style='><span style='mso-bookmark:_Toc241663414'>http://www.oracle.com/technetwork/java/javase/downloads/jre-6u25-download-346243.html</a><span
+style='><span style='mso-bookmark:_Toc241663414'><span
+class="MsoHyperlink"><u><font color="blue">
+    <o:p></o:p>
+    </u></p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>chmod
+    755 jre-6u25-linux-x64-rpm.bin</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>./jre-6u25-linux-x64-rpm.bin</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>ln
+    -s /usr/java/jre1.6.0_25/ /opt/java </p>
+  <p><span
+style='mso-bookmark:_Toc241663414'></p>
+  <p><span
+style='mso-bookmark:_Toc241663414'></p>
+  <p style='mso-list:l19 level1 lfo23'><span
+style='><span style='mso-bookmark:_Toc241663414'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>6)<font size="1"
+face="Times New Roman"><span style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp;
+    Install Auditor</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>tar
+    -vxf rebasoft_auditor_unix_1078.tgz -C /</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>cp
+    /opt/Rebasoft/MACAuditor/resources/unix/start.template /opt/Rebasoft/MACAuditor/resources/start</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>cp
+    /opt/Rebasoft/MACAuditor/resources/unix/macauditord /etc/init.d/macauditord</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>chkconfig<span
+style='mso-spacerun:yes'> 
+    --add macauditord</p>
+  <p style='margin-left:36.0pt'><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:"Courier New"'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>/etc/init.d/macauditord
+    start</p>
+  <p><span
+style='mso-bookmark:_Toc241663414'><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>If
+    the server fails to start due to ident issues, edit the pg_hba.conf file: <span style='mso-bookmark:
+_Toc241663408'><span style='mso-bookmark:_Toc241663414'><font face="Courier New"><span
+style='font-family:&quot;Courier New&quot;'>/var/lib/pgsql/data/pg_hba.conf</p>
+  <p><span
+style='mso-bookmark:_Toc241663414'><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>Append &quot;</p>
+  <p><span
+style='mso-bookmark:_Toc241663414'><font size="2" face="Courier New"><span
+style='line-height:115%;font-family:&quot;Courier New&quot;'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>host<span
+style='mso-spacerun:yes'>  
+    all<span style='mso-spacerun:yes'>        rebasoft<span style='mso-spacerun:yes'>             
+    127.0.0.1/32<span style='mso-spacerun:yes'>            md5</p>
+  <p><span
+style='mso-bookmark:_Toc241663414'><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>and
+    restart postgresql <span
+style='><span style='mso-bookmark:_Toc241663414'><font
+face="Courier New"><span style='font-family:&quot;Courier New&quot;'>/etc/init.d/postgresql
+    restart</p>
+  <p><span
+style='mso-bookmark:_Toc241663414'><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>/etc/init.d/macauditor
+    restart</p>
+  <p><span
+style='mso-bookmark:_Toc241663414'><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>Log
+    into Auditor, set logging to INFO from the system settings page</p>
+  <h2><span style='mso-bookmark:_Toc241663414'><a
+name="_Toc310517984" id="_Toc310517984"><b style='mso-bidi-font-weight:normal'><i
+style='mso-bidi-font-style:normal'><font size="3" color="#e36c0a" face="Arial"><span
+style='font-size:12.0pt;line-height:115%'><span style='mso-bidi-
+line-height:115%'>Logging
+          in for the first time</i></b></a></h2>
+  <p class="MsoListParagraphCxSpFirst" style='margin-left:0cm;mso-add-space:auto'><span
+style='>Users
+    and administrators can access Auditor from a workstation with a compliant
+    browser by opening the following address:</p>
+  <p class="MsoListParagraphCxSpMiddle"></p>
+  <p class="MsoListParagraphCxSpMiddle">http://&lt;IP
+    or DNS address of server&gt;:&lt;port&gt;</p>
+  <p class="MsoListParagraphCxSpMiddle"></p>
+  <p class="MsoListParagraphCxSpMiddle" align="center" style='margin-left:0cm;
+mso-add-space:auto;text-align:center'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_109"
+ o:spid="_x0000_i1169" type="#_x0000_t75" alt="Description: C:\Users\steve.1STADVANCE\Documents\Rebasoft\v2-usermanual-images\login.jpg"
+ style='width:146.25pt;height:133.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image030.jpg"
+  o:title="login"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="195" height="178"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image031.jpg"
+alt="Description: C:\Users\steve.1STADVANCE\Documents\Rebasoft\v2-usermanual-images\login.jpg"
+v:shapes="Picture_x0020_109" /><span
+style='><span style='mso-bidi-
+line-height:115%;mso-bidi-font-family:Arial'></p>
+  <p class="MsoListParagraphCxSpMiddle"></p>
+  <p class="MsoListParagraphCxSpMiddle"></p>
+  <p>To
+    access Auditor, at the login screen enter the default username and password
+    of "admin" and "admin". We recommend administrators change the default installation
+    password from "admin"
+    via the
+    <!--[if supportFields]><span style='mso-bookmark:
+_Toc241663408'><span style='mso-element:field-begin'><span
+style='><span style='mso-bidi-
+line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-spacerun:yes'> REF _Ref310516907 \h <span style='mso-element:
+field-separator'><![endif]-->
+    <span style='mso-bookmark:
+_Toc241663408'>User administration<span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'>
+    <!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003300310030003500310036003900300037000000</w:data>
+</xml><![endif]-->
+    <!--[if supportFields]><span style='mso-bookmark:
+_Toc241663408'><span style='mso-element:field-end'><![endif]-->
+    <span
+style='><span style='mso-bidi-
+line-height:115%;mso-bidi-font-family:Arial'></p>
+  <h2><a name="_Toc241663415" id="_Toc241663415"></a><a
+name="_Toc310517985" id="_Toc310517985"><span style='mso-bookmark:_Toc241663415'><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><font
+size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;line-height:
+115%'><span style='mso-bidi-line-height:115%'>License
+        Administration</i></b></a><span style='mso-bookmark:
+_Toc241663415'></h2>
+  <p><span style='mso-bookmark:_Toc241663415'><font
+size="2" face="Arial"><span style='font-family:"Arial","sans-serif";
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-fareast-language:
+EN-US'>Auditor's
+    license is deeply embedded within the application. License information is
+    constantly evaluated as devices are polled for SNMP information. The active
+    interfaces for a device are updated and added to the total count for all
+    devices polled; so from hour to hour and day to day, the number of active
+    interfaces will vary.</p>
+  <p><span style='mso-bookmark:_Toc241663415'><font
+size="2" face="Arial"><span style='font-family:"Arial","sans-serif";
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-fareast-language:
+EN-US'>When
+    the number of active interfaces polled exceeds the licensed number of interfaces,
+    the data for interfaces in excess of the license maximum are not stored in
+    the database for that polling period. If, subsequently, the total number
+    (including the extra ones) falls below the license level, data will once
+    again be written to the database). Polling of interfaces from a device happens
+    in the order the device presents the data to Auditor, this varies by vendor.
+    Devices are polled in sequence, typically every 30 minutes. </p>
+  <p><span style='mso-bookmark:_Toc241663415'><font
+size="2" face="Arial"><span style='font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-fareast-language:
+EN-US'>If
+    switches or other devices are no longer required the license can be recycled
+    by pressing <span style='mso-bookmark:
+_Toc241663408'><span style='mso-bookmark:_Toc241663415'><span style='font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-no-proof:
+yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_31" o:spid="_x0000_i1168"
+ type="#_x0000_t75" style='width:12pt;height:12pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image032.gif"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="16" height="16"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image032.gif"
+v:shapes="Picture_x0020_31" /><span
+style='><span style='mso-bookmark:_Toc241663415'><font
+size="2" face="Arial"><span style='font-family:"Arial","sans-serif";
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-fareast-language:
+EN-US'><span style='mso-spacerun:yes'> next
+    to the device in question.</p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Toc241663415'><font size="3" face="Times New Roman"><span
+style='font-size:12.0pt;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_100"
+ o:spid="_x0000_i1167" type="#_x0000_t75" style='width:381.75pt;height:91.5pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image033.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="509" height="122"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image034.jpg"
+v:shapes="Picture_x0020_100" /><span
+style='><span style='mso-bookmark:_Toc241663415'><font
+size="2" face="Arial"><span style='font-family:"Arial","sans-serif";
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-fareast-language:
+EN-US'></p>
+  <h4><span style='mso-bookmark:_Toc241663415'><b><i><font
+size="2" color="#e36c0a" face="Arial"><span style='line-height:
+115%;font-family:"Arial","sans-serif"'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>Licensing
+        rational</i></b></h4>
+  <p><span style='mso-bookmark:_Toc241663415'><font
+size="2" face="Arial"><span style='font-family:"Arial","sans-serif";
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-fareast-language:
+EN-US'>Auditor
+    core is licensed by the total number of up interfaces. The total is calculated
+    by adding all the up interfaces on devices polled by Auditor. </p>
+  <p><span style='mso-bookmark:_Toc241663415'><b
+style='mso-bidi-font-weight:normal'><span
+style='font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+Calibri;mso-fareast-theme-font:minor-latin;mso-fareast-language:EN-US;
+font-weight:bold;mso-bidi-font-weight:normal'>Note</b><span
+style='><span style='mso-bookmark:_Toc241663415'><font
+size="2" face="Arial"><span style='font-family:"Arial","sans-serif";
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-fareast-language:
+EN-US'> that
+    once an interface is seen up it is counted in the total until the device
+    licenses are recycled.</p>
+  <p><span style='mso-bookmark:_Toc241663415'><font
+size="2" face="Arial"><span style='font-family:"Arial","sans-serif";
+mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;mso-fareast-language:
+EN-US'>Capacity
+    planning module is a separate license option based on the number of Auditor
+    core interface license level.</p>
+  <h4><span style='mso-bookmark:_Toc241663415'><span
+style='><span style='mso-bookmark:_Toc241663415'><font
+face="Arial"><span style='font-family:&quot;Arial&quot;,&quot;sans-serif&quot;'></h4>
+  <h4><span style='mso-bookmark:_Toc241663415'><b><i><font
+size="2" color="#e36c0a" face="Arial"><span style='line-height:
+115%;font-family:"Arial","sans-serif"'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>Adding
+        a License key</i></b></h4>
+  <span style='mso-bookmark:_Toc241663415'>
+  <p><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial'></p>
+  <p><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial'>When
+    accessing the Auditor web interface for the first time, it runs in trial
+    mode – this means it will operate for a period of 7 days unless a license
+    key is applied to the system. License administration is accessed from the
+    Admin dropdown in the top frame, by clicking the arrow:</p>
+  <p align="center" style='text-align:center'><span
+style='><span
+style='line-height:115%;mso-fareast-language:EN-GB;mso-no-proof:
+yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_86" o:spid="_x0000_i1166"
+ type="#_x0000_t75" style='width:89.25pt;height:147.75pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image035.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="119" height="197"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image036.jpg"
+v:shapes="Picture_x0020_86" /></p>
+  <p><span style='line-height:115%'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>To
+    view license information simply click on the relevant link </p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><span
+style='mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="Picture_x0020_102" o:spid="_x0000_i1165" type="#_x0000_t75" style='width:285.75pt;
+ height:47.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image037.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="381" height="63"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image038.jpg"
+v:shapes="Picture_x0020_102" /><span
+style='><span style='mso-bidi-font-size:10.0pt'></p>
+  <p>Irrespective
+    of the modules licensed, Rebasoft issues a single license key that contains
+    all the desired elements. To add a license, simply cut and paste the license
+    string into the "New License" box and click "load license". </p>
+  <p></p>
+  <p></p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><span
+style='mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="Picture_x0020_106" o:spid="_x0000_i1164" type="#_x0000_t75" style='width:310.5pt;
+ height:69.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image039.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="414" height="93"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image040.jpg"
+v:shapes="Picture_x0020_106" /><span
+style='><span style='mso-bidi-
+mso-bidi-font-family:Arial'></p>
+  <p></p>
+  <p></p>
+  <p>The
+    license will validate and confirmation of the system license will be displayed.
+    If the license level is exceeded, Auditor will not collect information from
+    the additional interfaces until a new key is obtained from an Auditor reseller.</p>
+  <p></p>
+  <p style='text-align:
+justify;mso-layout-grid-align:none;text-autospace:none'>
+  <span
+style='>
+    <!--[if mso & !supportInlineShapes & supportFields]><span
+style='><span style='mso-element:field-begin;
+mso-field-lock:yes'><span
+style='mso-spacerun:yes'> SHAPE <span
+style='mso-spacerun:yes'> \*
+  MERGEFORMAT <span style='mso-element:field-separator'>
+  <![endif]-->
+  <span
+style='>
+    <!--[if gte vml 1]><v:shape id="Text_x0020_Box_x0020_53"
+ o:spid="_x0000_s1044" type="#_x0000_t202" style='width:427.75pt;height:67.95pt;
+ visibility:visible;mso-wrap-style:square;mso-left-percent:-10001;
+ mso-top-percent:-10001;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+ mso-position-vertical-relative:line;mso-left-percent:-10001;mso-top-percent:-10001;
+ v-text-anchor:top' o:gfxdata="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
+" fillcolor="#eeece1 [3214]" strokecolor="#7030a0">
+  <v:fill color2="#877e4c [1486]" rotate="t" angle="45" focus="100%" type="gradient"/>
+  <v:textbox style='mso-fit-shape-to-text:t'>
+    <![if !mso]>
+    <table cellpadding=0 cellspacing=0 width="100%">
+      <tr>
+        <td><div>
+            <p><font size=2 face=Arial><span style='
+    line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Note:</p>
+            <p><font size=2 face=Arial><span style='
+    line-height:115%;mso-fareast-font-family:"Times New Roman"'><span
+    style='mso-bidi-font-size:11.0pt;line-height:115%'>After
+              applying the license key, the Auditor <span style='mso-spacerun:yes'> service
+              must be restarted to activate the new license level and re-enable
+              device polling.</p>
+          </div>
+          <![if !mso]></td>
+      </tr>
+    </table>
+  </v:textbox>
+  <w:wrap type="none"/>
+  <w:anchorlock/>
+  </v:shape>
+  <![endif]-->
+  <![if !vml]>
+  <img width="576" height="97"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image041.png"
+alt="Text Box: Note:
+After applying the license key, the Auditor  service must be restarted to activate the new license level and re-enable device polling.
+"
+v:shapes="Text_x0020_Box_x0020_53" />
+  <!--[if mso & !supportInlineShapes & supportFields]><span
+style='><v:shape id="_x0000_i1163" type="#_x0000_t75"
+ style='width:427.75pt;height:67.95pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:
+field-end'><![endif]-->
+  <span
+style='><span style='mso-bidi-
+mso-bidi-font-family:Arial'>
+  </p>
+  <p></p>
+  <p align="center" style='
+text-align:center;mso-layout-grid-align:none;text-autospace:
+none'><span
+style='mso-bidi-mso-bidi-font-family:Arial'></p>
+  <p>
+  </p>
+  
+  <h2><a name="_Toc310517986" id="_Toc310517986"></a><a name="_Toc241663416" id="_Toc241663416"><span style='mso-bookmark:
+_Toc310517986'><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'><font size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;
+line-height:115%'><span style='mso-bidi-line-height:115%'>Application
+          structure</i></b></a></h2>
+  <p><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>Auditor
+    has been designed with ease of use in mind. From V2.4 onwards views are selectable.
+    Depending on the user set-up, the view selector will have one or more options.</p>
+  <p><span style='
+line-height:115%;mso-bidi-font-family:Arial'><span style='mso-bidi-font-size:
+11.0pt;line-height:115%'>The
+    screen shot below shows the main areas for interacting with Auditor:</p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_52"
+ o:spid="_x0000_i1162" type="#_x0000_t75" style='width:471pt;height:306pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image042.jpg"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="628" height="408"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image043.jpg"
+v:shapes="Picture_x0020_52" /></p>
+  <p><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>The <b style='mso-bidi-font-weight:
+normal'><span style='font-weight:bold;mso-bidi-font-weight:normal'>Search</b> input
+    allows searching on any string. See Searches for more information on searching. </p>
+  <p><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>The <b style='mso-bidi-font-weight:
+normal'><span style='font-weight:bold;mso-bidi-font-weight:normal'>View selector </b>shows
+    the available views options. In 2.4 this allows users to view Capacity or
+    Operations reporting. Admin users will see all licensed views, non-admin
+    users will see those views they are authorised to see. </p>
+  <p>
+    <!--[if mso & !supportInlineShapes & supportFields]><span
+style='mso-element:field-begin;mso-field-lock:yes'><span
+style='mso-spacerun:yes'> SHAPE <span
+style='mso-spacerun:yes'> \* MERGEFORMAT <span style='mso-element:field-separator'><![endif]-->
+    <!--[if gte vml 1]><v:shape
+ id="Text_x0020_Box_x0020_90" o:spid="_x0000_s1043" type="#_x0000_t202"
+ style='width:427.75pt;height:62.7pt;visibility:visible;mso-wrap-style:square;
+ mso-left-percent:-10001;mso-top-percent:-10001;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+ mso-position-vertical-relative:line;mso-left-percent:-10001;mso-top-percent:-10001;
+ v-text-anchor:top' o:gfxdata="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
+" fillcolor="#eeece1 [3214]" strokecolor="#7030a0">
+ <v:fill color2="#877e4c [1486]" rotate="t" angle="45" focus="100%" type="gradient"/>
+ <v:textbox style='mso-fit-shape-to-text:t'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td>
+    <div>
+    <p><font size=2 face=Arial><span style='
+    line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Note:</p>
+    <p><font size=2 face=Arial><span style='
+    line-height:115%;mso-fareast-font-family:"Times New Roman"'><span
+    style='mso-bidi-font-size:11.0pt;line-height:115%'>Clicking the <span
+    style='mso-fareast-language:EN-GB;mso-no-proof:yes'><v:shape id="Picture_x0020_99"
+     o:spid="_x0000_i1027" type="#_x0000_t75" style='width:20.25pt;height:18pt;
+     visibility:visible;mso-wrap-style:square'>
+     <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image044.png"
+      o:title=""/>
+    </v:shape><span style='mso-fareast-font-family:"Times New Roman"'><span
+    style='mso-spacerun:yes'> button shows the home page within the
+    selected view.</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </v:textbox>
+ <w:wrap type="none"/>
+ <w:anchorlock/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="576" height="90"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image045.png"
+alt="Text Box: Note:
+Clicking the   button shows the home page within the selected view.
+"
+v:shapes="Text_x0020_Box_x0020_90" />
+    <!--[if mso & !supportInlineShapes & supportFields]><v:shape
+ id="_x0000_i1161" type="#_x0000_t75" style='width:427.75pt;height:62.7pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:field-end'><![endif]-->
+    <span
+style='mso-bidi-font-family:Arial'></p>
+  <p><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>The <b style='mso-bidi-font-weight:
+normal'><span style='font-weight:bold;mso-bidi-font-weight:normal'>Admin selector </b>is<b style='mso-bidi-font-weight:normal'><span
+style='font-weight:bold;mso-bidi-font-weight:normal'> </b>only
+    shown to
+    "admin" class users and provides the navigation to the Admin &amp;
+    configuration functions in Auditor.</p>
+  <p><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>The <a name="sitesframe" id="sitesframe"><b
+style='mso-bidi-font-weight:normal'><span style='font-weight:bold;mso-bidi-font-weight:
+normal'>Navigator </b></a>lists
+    the browse structure depending on the view and Tags implemented. </p>
+  <p><a name="informationframe" id="informationframe"><font
+size="2" face="Arial"><span style='line-height:115%;mso-bidi-font-family:
+Arial'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Search
+      results or Navigator selections are displayed in the <b style='mso-bidi-font-weight:
+normal'><span style='font-weight:bold;mso-bidi-font-weight:normal'>Display frame</b></a>
+    <!--[if supportFields]><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:Arial;
+font-weight:bold;mso-bidi-font-weight:normal'><span style='mso-element:field-begin'></b><span
+style='mso-bidi-font-family:Arial'> XE &quot;<b style='mso-bidi-font-weight:
+normal'><span style='font-weight:bold;mso-bidi-font-weight:normal'>Information
+frame</b>&quot; <![endif]-->
+    <!--[if supportFields]><b
+style='mso-bidi-font-weight:normal'><span style='mso-bidi-font-family:Arial;
+font-weight:bold;mso-bidi-font-weight:normal'><span style='mso-element:field-end'></b><![endif]-->
+    <span
+style='mso-bidi-font-family:Arial'>.</p>
+  <p><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>Finally,
+    the <b
+style='mso-bidi-font-weight:normal'><span style='font-weight:bold;mso-bidi-font-weight:
+normal'>Event
+    viewer</b> displays system information, including license status and utilisation
+    and a link to system event alerts.</p>
+  <h4><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><font
+size="2" color="#e36c0a" face="Cambria"><span style='line-height:
+115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Table
+        sorting</i></b></h4>
+  <p><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>Most
+    of the tables in Auditor can be sorted by column; simply click the mouse
+    on the desired column heading. The first click will sort from low to high,
+    the second from high to low:</p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_12"
+ o:spid="_x0000_i1160" type="#_x0000_t75" alt="Description: table-sorting.jpg"
+ style='width:276pt;height:83.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image046.jpg"
+  o:title="table-sorting"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="368" height="111"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image047.jpg"
+alt="Description: table-sorting.jpg" v:shapes="Picture_x0020_12" /></p>
+  <p><span style='
+line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>To
+    aid comprehension, lists are paginated. To navigate around a list, the table
+    modifier is displayed at the foot of the table:</p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_57"
+ o:spid="_x0000_i1159" type="#_x0000_t75" alt="Description: list-modifier.jpg"
+ style='width:196.5pt;height:27pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image048.jpg"
+  o:title="list-modifier"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="262" height="36"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image048.jpg"
+alt="Description: list-modifier.jpg" v:shapes="Picture_x0020_57" /></p>
+  <p><span style='
+line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>By
+    default, 10 list items are displayed, but this can be increased by changing
+    the
+    "Show:" value from the dropdown.</p>
+  <p class="MsoListParagraphCxSpFirst" style='mso-list:l24 level1 lfo17'><span style='line-height:115%;font-family:
+Symbol;mso-bidi-font-family:Symbol'>
+<li>The first page of the list can be displayed by clicking: <span style='mso-fareast-language:EN-GB;mso-no-proof:
+yes'>
+  <!--[if gte vml 1]><v:shape id="Picture_x0020_58" o:spid="_x0000_i1158"
+ type="#_x0000_t75" alt="Description: first.png" style='width:11.25pt;height:11.25pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image049.png"
+  o:title="first"/>
+</v:shape><![endif]-->
+  <![if !vml]>
+  <img border="0" width="15" height="15"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image050.jpg"
+alt="Description: first.png" v:shapes="Picture_x0020_58" />
+  </p>
+  <p class="MsoListParagraphCxSpMiddle" style='mso-list:l24 level1 lfo17'><span style='line-height:115%;font-family:
+Symbol;mso-bidi-font-family:Symbol'>
+<li>The last page of the list can be displayed by clicking: <span style='mso-fareast-language:EN-GB;mso-no-proof:
+yes'>
+  <!--[if gte vml 1]><v:shape id="Picture_x0020_60" o:spid="_x0000_i1157"
+ type="#_x0000_t75" alt="Description: last.png" style='width:11.25pt;height:11.25pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image051.png"
+  o:title="last"/>
+</v:shape><![endif]-->
+  <![if !vml]>
+  <img border="0" width="15" height="15"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image052.jpg"
+alt="Description: last.png" v:shapes="Picture_x0020_60" />
+  </p>
+  <p class="MsoListParagraphCxSpMiddle" style='mso-list:l24 level1 lfo17'><span style='line-height:115%;font-family:
+Symbol;mso-bidi-font-family:Symbol'>
+<li>The previous page of the list can be displayed by clicking: <span style='mso-fareast-language:EN-GB;mso-no-proof:
+yes'>
+  <!--[if gte vml 1]><v:shape id="Picture_x0020_61" o:spid="_x0000_i1156"
+ type="#_x0000_t75" alt="Description: prev.png" style='width:10.5pt;height:10.5pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image053.png"
+  o:title="prev"/>
+</v:shape><![endif]-->
+  <![if !vml]>
+  <img border="0" width="14" height="14"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image054.jpg"
+alt="Description: prev.png" v:shapes="Picture_x0020_61" />
+  </p>
+  <p style='mso-list:l24 level1 lfo17'><span style='line-height:115%;font-family:
+Symbol;mso-bidi-font-family:Symbol'>
+<li>The next page of the list can be displayed by clicking: <span style='mso-fareast-language:EN-GB;mso-no-proof:
+yes'>
+  <!--[if gte vml 1]><v:shape id="Picture_x0020_62" o:spid="_x0000_i1155"
+ type="#_x0000_t75" alt="Description: next.png" style='width:11.25pt;height:11.25pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image055.png"
+  o:title="next"/>
+</v:shape><![endif]-->
+  <![if !vml]>
+  <img border="0" width="15" height="15"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image056.jpg"
+alt="Description: next.png" v:shapes="Picture_x0020_62" />
+  </p>
+  <p>CSV exporting of data is available from paginated reports</p>
+  <h4><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><font
+size="2" color="#e36c0a" face="Cambria"><span style='line-height:
+115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Navigating
+        reports</i></b></h4>
+  <p>From each of the ribbon graphical reports, it is possible to "zoom" the
+    time frame in and out by selecting in the graph. Simply left click at the
+    start
+    &amp; drag the mouse to the desired end time frame. The menu will automatically
+    appear showing the options available.</p>
+  <p></p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_111"
+ o:spid="_x0000_i1154" type="#_x0000_t75" style='width:114.75pt;height:99.75pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image057.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="153" height="133"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image058.jpg"
+v:shapes="Picture_x0020_111" /></p>
+  <p>
+    <!--[if mso & !supportInlineShapes & supportFields]><span
+style='mso-element:field-begin;mso-field-lock:yes'><span
+style='mso-spacerun:yes'> SHAPE <span
+style='mso-spacerun:yes'> \* MERGEFORMAT <span style='mso-element:field-separator'><![endif]-->
+    <!--[if gte vml 1]><v:shape
+ id="Text_x0020_Box_x0020_76" o:spid="_x0000_s1042" type="#_x0000_t202"
+ style='width:466.7pt;height:48.45pt;visibility:visible;mso-wrap-style:square;
+ mso-left-percent:-10001;mso-top-percent:-10001;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+ mso-position-vertical-relative:line;mso-left-percent:-10001;mso-top-percent:-10001;
+ v-text-anchor:top' o:gfxdata="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
+AAQABADzAAAA7QUAAAAA
+" strokecolor="#7030a0">
+ <v:fill color2="#767676" rotate="t" angle="45" focus="100%" type="gradient"/>
+ <v:textbox style='mso-fit-shape-to-text:t'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td>
+    <div>
+    <p style='margin-bottom:.0001pt'><b
+    style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><font
+    size=2 color=red face=Arial><span style='line-height:115%;
+    mso-bidi-font-family:Arial;color:red;font-weight:bold;mso-bidi-font-weight:
+    normal;font-style:italic;mso-bidi-font-style:normal'><span
+    style='mso-bidi-font-size:11.0pt;line-height:115%'>Note:</i></b></p>
+    <p style='
+    text-align:justify'><font size=2 face=Arial><span style='
+    line-height:115%;mso-bidi-font-family:Arial'><span style='mso-bidi-font-size:
+    11.0pt;line-height:115%'>When zooming on Dashboard, Site or Device overview
+    on one selected report, Auditor<span style='mso-spacerun:yes'>  will
+    automatically zoom the other visible reports to the same timeframe</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </v:textbox>
+ <w:wrap type="none"/>
+ <w:anchorlock/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="628" height="71"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image059.png"
+alt="Text Box: Note:
+When zooming on Dashboard, Site or Device overview on one selected report, Auditor  will automatically zoom the other visible reports to the same timeframe
+"
+v:shapes="Text_x0020_Box_x0020_76" />
+    <!--[if mso & !supportInlineShapes & supportFields]><v:shape
+ id="_x0000_i1153" type="#_x0000_t75" style='width:466.7pt;height:48.45pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:field-end'><![endif]-->
+    <span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'></p>
+  <p>In addition to zooming, it is possible to select reports for the selected
+    site and timeframe. </p>
+  <h4><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><font
+size="2" color="#e36c0a" face="Cambria"><span style='line-height:
+115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Timeline
+        manipulation</i></b></h4>
+  <p><span style='
+line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>In
+    the forensics reports, Auditor displays timelines for easy visual assimilation
+    of information. It is possible from these time lines to move back and forward
+    along the time line at a particular resolution, and to zoom in or out.</p>
+  <p><span style='
+line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>The
+    default display for all time-lines is 8 days</p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_127"
+ o:spid="_x0000_i1152" type="#_x0000_t75" style='width:315.75pt;height:83.25pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image060.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="421" height="111"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image061.jpg"
+v:shapes="Picture_x0020_127" /></p>
+  <p><a name="_Toc241663428" id="_Toc241663428"><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>It
+      is also possible to view the detailed data behind the time line by clicking "Details" underneath
+      the timeline.</a></p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Toc241663428'><span
+style='line-height:115%;mso-fareast-language:EN-GB;mso-no-proof:
+yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_29" o:spid="_x0000_i1151"
+ type="#_x0000_t75" alt="Description: ipforensics-detail.jpg" style='width:374.25pt;
+ height:79.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image062.jpg"
+  o:title="ipforensics-detail"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="499" height="106"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image063.jpg"
+alt="Description: ipforensics-detail.jpg" v:shapes="Picture_x0020_29" /></p>
+  <p><span style='mso-bookmark:_Toc241663428'><span style='line-height:115%'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>To
+    aid visualising information on screen, it is also possible to arrange timelines
+    and details to suit user requirements in lining up IP and MAC over time.</p>
+  <h1><span style='mso-bookmark:_Toc241663428'><a name="_Toc310517987" id="_Toc310517987"><b
+style='mso-bidi-font-weight:normal'>Using
+        Auditor</b></a> </h1>
+  <p>Once Auditor is set-up and collecting information, it can be reported upon.
+    There are three main methods accessing data and drilling into reports:</p>
+  <p class="MsoListParagraphCxSpFirst" style='text-align:justify;
+mso-list:l15 level1 lfo3'>
+<li>
+  <!--[if supportFields]><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-element:field-begin'><span
+style='mso-spacerun:yes'> REF _Ref308429838 \h <span style='mso-element:
+field-separator'><![endif]-->
+  Using the Navigator<span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'>
+  <!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003300300038003400320039003800330038000000</w:data>
+</xml><![endif]-->
+  <!--[if supportFields]><span style='mso-element:
+field-end'><![endif]-->
+  <span style='mso-bidi-
+line-height:115%;mso-bidi-font-family:Arial'>
+  </p>
+  <p class="MsoListParagraphCxSpMiddle" style='text-align:justify;
+mso-list:l15 level1 lfo3'>
+<li>
+  <!--[if supportFields]><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-element:field-begin'><span
+style='mso-spacerun:yes'> REF _Ref308430657 \h <span style='mso-element:
+field-separator'><![endif]-->
+  Searches
+  <!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003300300038003400330030003600350037000000</w:data>
+</xml><![endif]-->
+  <!--[if supportFields]><span style='mso-element:
+field-end'><![endif]-->
+  <span style='mso-bidi-
+line-height:115%;mso-bidi-font-family:Arial'>
+  </p>
+  <p style='text-align:justify;
+mso-list:l15 level1 lfo3'>
+<li>
+  <!--[if supportFields]><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-element:field-begin'><span
+style='mso-spacerun:yes'> REF _Ref308430700 \h <span style='mso-element:
+field-separator'><![endif]-->
+  Events
+  <!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003300300038003400330030003700300030000000</w:data>
+</xml><![endif]-->
+  <!--[if supportFields]><span style='mso-element:
+field-end'><![endif]-->
+  <span style='mso-bidi-
+line-height:115%;mso-bidi-font-family:Arial'>
+  </p>
+  <p></p>
+  <h2><a name="_Toc241663430" id="_Toc241663430"></a><a name="_Ref230583032" id="_Ref230583032"></a><a
+name="_Toc310517988" id="_Toc310517988"></a><a name="_Ref308429838" id="_Ref308429838"><span style='mso-bookmark:
+_Toc310517988'><span style='mso-bookmark:_Ref230583032'><span style='mso-bookmark:
+_Toc241663430'><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'><font size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;
+line-height:115%'><span style='mso-bidi-line-height:115%'>Using
+          the Navigator</i></b></a><span
+style='mso-bookmark:_Ref230583032'><span style='mso-bookmark:_Toc241663430'></h2>
+  <span style='mso-bookmark:_Toc241663430'><span style='mso-bookmark:_Ref230583032'>
+  <p>Auditor allows users to logically drill down from Sites to Devices to VLANs,
+    Interfaces or MACs within a few clicks. Navigation is simply an exercise
+    in expanding or collapsing sites that you have defined, clicking hyperlinks
+    or through the Site visuals. An expanded view of all sites/devices can be
+    seen using the collapse/expand all controls at the top of the list:</p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="_x0000_i1150" type="#_x0000_t75"
+ style='width:144.75pt;height:108pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image064.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="193" height="144"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image065.jpg"
+v:shapes="_x0000_i1150" /></p>
+  <p>If a site is selected, a preselected image is displayed in the display frame
+    and child sites and/or devices at that level are displayed in the display
+    frame. For example, when USA is clicked, a map of the USA, and the sites
+    contained within the USA site are displayed. </p>
+  <h3><a name="_Toc310517989" id="_Toc310517989"><b style='mso-bidi-font-weight:normal'><font
+size="2" color="#f79646" face="Arial"><span style='line-height:
+115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Filtering
+        the list of sites &amp; devices</b></a></h3>
+  <p><span style='
+line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>To
+    help with getting rapidly to the right device Sites and devices entries can
+    be filtered. To access the Sites &amp; Devices filter, click the icon next
+    to the heading</p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial;mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="Picture_x0020_69" o:spid="_x0000_i1149" type="#_x0000_t75" style='width:247.5pt;
+ height:57.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image066.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="330" height="77"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image067.png"
+v:shapes="Picture_x0020_69" /></p>
+  <p>To find the device of interest, simply start keying the start of the ID,
+    Auditor will dynamically compress the list</p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial;mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="Picture_x0020_70" o:spid="_x0000_i1148" type="#_x0000_t75" style='width:127.5pt;
+ height:81pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image068.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="170" height="108"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image069.png"
+v:shapes="Picture_x0020_70" /></p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial'></p>
+  <h2><a name="_Toc310517990" id="_Toc310517990"></a><a name="_Ref308430657" id="_Ref308430657"><span style='mso-bookmark:
+_Toc310517990'><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'><font size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;
+line-height:115%'><span style='mso-bidi-line-height:115%'>Searches</i></b></a></h2>
+  <p>Auditor's powerful search engine allows users to search for items in the
+    database. Most users will use the search as way to quickly navigate to the
+    point of interest. Searching can be on full or partial matches to the string
+    entered in the search box. </p>
+  <p>Search accuracy can be improved by specifying a more complete string. For
+    example, searching on "10.100.1" will bring up all the matching records with
+    the string – in this case matching IP addresses and devices.</p>
+  <p>Searches return results in for MAC, User ID, IP address, Hostnames, Device
+    details, Interfaces and VLANS: </p>
+  <p>
+    <!--[if mso & !supportInlineShapes & supportFields]><span
+style='mso-element:field-begin;mso-field-lock:yes'><span
+style='mso-spacerun:yes'> SHAPE <span
+style='mso-spacerun:yes'> \* MERGEFORMAT <span style='mso-element:field-separator'><![endif]-->
+    <!--[if gte vml 1]><v:shape
+ id="Text_x0020_Box_x0020_72" o:spid="_x0000_s1041" type="#_x0000_t202"
+ style='width:457.7pt;height:34.95pt;visibility:visible;mso-wrap-style:square;
+ mso-left-percent:-10001;mso-top-percent:-10001;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+ mso-position-vertical-relative:line;mso-left-percent:-10001;mso-top-percent:-10001;
+ v-text-anchor:top' o:gfxdata="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
+AAAEAAQA8wAAAO4FAAAAAA==
+" strokecolor="#7030a0">
+ <v:fill color2="#767676" rotate="t" angle="45" focus="100%" type="gradient"/>
+ <v:textbox style='mso-fit-shape-to-text:t'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td>
+    <div>
+    <p style='
+    text-align:justify'><b style='mso-bidi-font-weight:normal'><i
+    style='mso-bidi-font-style:normal'><font size=2 color=red face=Arial><span
+    style='line-height:115%;mso-bidi-font-family:Arial;
+    color:red;font-weight:bold;mso-bidi-font-weight:normal;font-style:italic;
+    mso-bidi-font-style:normal'><span style='mso-bidi-font-size:11.0pt;
+    line-height:115%'>Tip:</i></b></p>
+    <p style='
+    text-align:justify'><font size=2 face=Arial><span style='
+    line-height:115%;mso-bidi-font-family:Arial'><span style='mso-bidi-font-size:
+    11.0pt;line-height:115%'>You can search for multiple IP addresses by
+    entering a comma between desired IP's</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </v:textbox>
+ <w:wrap type="none"/>
+ <w:anchorlock/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="616" height="53"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image070.png"
+alt="Text Box: Tip:
+You can search for multiple IP addresses by entering a comma between desired IP's
+"
+v:shapes="Text_x0020_Box_x0020_72" />
+    <!--[if mso & !supportInlineShapes & supportFields]><v:shape
+ id="_x0000_i1147" type="#_x0000_t75" style='width:457.7pt;height:34.95pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:field-end'><![endif]-->
+    <span
+style='mso-bidi-line-height:115%'></p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_97"
+ o:spid="_x0000_i1146" type="#_x0000_t75" style='width:149.25pt;height:114pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image071.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="199" height="152"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image072.jpg"
+v:shapes="Picture_x0020_97" /></p>
+  <p>The search results table lists the possible matches. Clicking items on the
+    list allows a user to navigate to the relevant forensics report.</p>
+  <p>
+    <!--[if mso & !supportInlineShapes & supportFields]><span
+style='mso-element:field-begin;mso-field-lock:yes'><span
+style='mso-spacerun:yes'> SHAPE <span
+style='mso-spacerun:yes'> \* MERGEFORMAT <span style='mso-element:field-separator'><![endif]-->
+    <!--[if gte vml 1]><v:shape
+ id="Text_x0020_Box_x0020_73" o:spid="_x0000_s1040" type="#_x0000_t202"
+ style='width:466.7pt;height:48.45pt;visibility:visible;mso-wrap-style:square;
+ mso-left-percent:-10001;mso-top-percent:-10001;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+ mso-position-vertical-relative:line;mso-left-percent:-10001;mso-top-percent:-10001;
+ v-text-anchor:top' o:gfxdata="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
+AAAEAAQA8wAAAO4FAAAAAA==
+" strokecolor="#7030a0">
+ <v:fill color2="#767676" rotate="t" angle="45" focus="100%" type="gradient"/>
+ <v:textbox style='mso-fit-shape-to-text:t'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td>
+    <div>
+    <p style='
+    text-align:justify'><b style='mso-bidi-font-weight:normal'><i
+    style='mso-bidi-font-style:normal'><font size=2 color=red face=Arial><span
+    style='line-height:115%;mso-bidi-font-family:Arial;
+    color:red;font-weight:bold;mso-bidi-font-weight:normal;font-style:italic;
+    mso-bidi-font-style:normal'><span style='mso-bidi-font-size:11.0pt;
+    line-height:115%'>Tip:</i></b></p>
+    <p style='
+    text-align:justify'><font size=2 face=Arial><span style='
+    line-height:115%;mso-bidi-font-family:Arial'><span style='mso-bidi-font-size:
+    11.0pt;line-height:115%'>If you click the search button without entering
+    any parameters, Auditor <span style='mso-spacerun:yes'> returns a
+    search of all entries in the database for the current month.</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </v:textbox>
+ <w:wrap type="none"/>
+ <w:anchorlock/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="628" height="71"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image073.png"
+alt="Text Box: Tip:
+If you click the search button without entering any parameters, Auditor  returns a search of all entries in the database for the current month.
+"
+v:shapes="Text_x0020_Box_x0020_73" />
+    <!--[if mso & !supportInlineShapes & supportFields]><v:shape
+ id="_x0000_i1145" type="#_x0000_t75" style='width:466.7pt;height:48.45pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:field-end'><![endif]-->
+    <br
+style='mso-special-character:line-break' />
+    <![if !supportLineBreakNewLine]>
+    <br style='mso-special-character:line-break' />
+  </p>
+  <p><span style='
+line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Only
+    when you select a search result does Auditor query the database (default
+    8 days) to see when the item occurred. Information displayed in timelines
+    allows users to view longer or short periods of time as required. Using this
+    method Auditor, for example, does require users to know when someone was
+    on the network to see if they've ever logged in.</p>
+  <h2><a name="_Toc310517991" id="_Toc310517991"></a><a name="_Ref308430700" id="_Ref308430700"><span style='mso-bookmark:
+_Toc310517991'><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'><font size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;
+line-height:115%'><span style='mso-bidi-line-height:115%'>Events</i></b></a></h2>
+  <p><span style='
+line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Auditor
+    alerts users and logs these events to the web console or, optionally, one
+    or more syslog servers.</p>
+  <p><span style='
+line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Events
+    are classified by type (System, User, Watchlist, Whitelist and device).</p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_48"
+ o:spid="_x0000_i1144" type="#_x0000_t75" alt="Description: events-filter.jpg"
+ style='width:348pt;height:106.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image074.jpg"
+  o:title="events-filter"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="464" height="142"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image075.jpg"
+alt="Description: events-filter.jpg" v:shapes="Picture_x0020_48" /></p>
+  <p><span style='
+line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Clicking
+    any of the hyperlinks will filter the event list to display the relevant
+    information.</p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_49"
+ o:spid="_x0000_i1143" type="#_x0000_t75" alt="Description: events.jpg"
+ style='width:365.25pt;height:155.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image076.jpg"
+  o:title="events"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="487" height="207"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image077.jpg"
+alt="Description: events.jpg" v:shapes="Picture_x0020_49" /></p>
+  <p><span style='
+line-height:115%'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Events
+    can be deleted, acknowledged or un-acknowledged. These actions do not affect
+    any events that have already been forwarded to any external syslog received
+    configured in
+    <!--[if supportFields]><span
+style='mso-element:field-begin'><span
+style='mso-spacerun:yes'> REF _Ref258736738 \h <span style='mso-element:
+field-separator'><![endif]-->
+    Syslog settings for Alert
+    <!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003200350038003700330036003700330038000000</w:data>
+</xml><![endif]-->
+    <!--[if supportFields]><span style='mso-element:field-end'><![endif]-->
+    settings.</p>
+  <h1><a name="_Toc310517992" id="_Toc310517992"><b style='mso-bidi-font-weight:normal'><font
+size="4" color="#e36c0a" face="Arial"><span style='font-size:14.0pt;line-height:
+115%'>Operations
+        View</b></a></h1>
+  <p>The operations view is the Core of Auditor. It provides the capability to
+    report and support for operational requirements. Access to data and reports
+    is via the Navigator or searches. Browsing reports is hierarchal starting
+    at a Site and drilling down to child sites or devices.</p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial'></p>
+  <p>At the top of the site overview report, there are quick-links to reports
+    on IP addresses, end-devices and interfaces.</p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_134"
+ o:spid="_x0000_i1142" type="#_x0000_t75" style='width:314.25pt;height:39.75pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image078.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="419" height="53"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image079.jpg"
+v:shapes="Picture_x0020_134" /></p>
+  <p>If there are any Whitelist alerts, these are also shown as quick-links</p>
+  <p>The default is to hide visuals and display a simple dashboard of connected
+    devices, however in the visual it is also possible for users to position
+    sites and devices on the visuals and save them for the next user using the "save" icon
+    next to the Site visual.</p>
+  <p></p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial;mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="_x0000_i1141" type="#_x0000_t75" alt="Description: site-visual.jpg"
+ style='width:380.25pt;height:217.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image080.jpg"
+  o:title="site-visual"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="507" height="290"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image081.jpg"
+alt="Description: site-visual.jpg" v:shapes="_x0000_i1141" /><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'></p>
+  <p>Within the Site overview, a series of time based summary reports for the
+    site are display:</p>
+  <p class="MsoListParagraphCxSpFirst" style='text-align:justify;
+mso-list:l5 level1 lfo15'>
+<li>MAC Addresses seen
+  </p>
+  <p class="MsoListParagraphCxSpMiddle" style='text-align:justify;
+mso-list:l5 level1 lfo15'>
+<li>Top 5 Devices over time
+  </p>
+  <p class="MsoListParagraphCxSpMiddle" style='text-align:justify;
+mso-list:l5 level1 lfo15'>
+<li>IP Addresses seen
+  </p>
+  <p class="MsoListParagraphCxSpMiddle" style='text-align:justify;
+mso-list:l5 level1 lfo15'>
+<li>Devices seen in use
+  </p>
+  <p class="MsoListParagraphCxSpMiddle" style='text-align:justify;
+mso-list:l5 level1 lfo15'>
+<li>Interfaces seen in use
+  </p>
+  <p class="MsoListParagraphCxSpMiddle" style='text-align:justify;
+mso-list:l5 level1 lfo15'>
+<li>Interfaces by MAC count
+  </p>
+  <p style='text-align:justify;
+mso-list:l5 level1 lfo15'>
+<li>Interfaces by IP count
+  </p>
+  <p>It is also possible to report on "Down interface", (this can be used as
+    the basis of a free ports report), MAC's by Vendor, MAC's by IP count, MAC's
+    by Interface count and IP's by MAC count. </p>
+  <p>Auditor will, during initial device discovery, poll the interface clock
+    for last used status and use this as a start point for last used information.
+    Where interface last used status is unavailable, Auditor will use the polling
+    information. Subsequent polling for interface status will update Auditor
+    down interface reports.</p>
+  <p>From the Sites and devices menu, selecting a device will show a device overview,
+    key reports, interface statistics and lists of the interfaces and VLANs on
+    the device:</p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="_x0000_i1140" type="#_x0000_t75"
+ style='width:468pt;height:204.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image082.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="624" height="273"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image083.jpg"
+v:shapes="_x0000_i1140" /></p>
+  <p>Clicking a device provides an overview with a summary of key information
+    and quick links to reports. Auditor shows the hostname, IP address/DNS name,
+    type and the SNMP retrieved description. The device up-time is also displayed.
+    All information in the device details area is searchable within the database.
+    For each device, below the device details, users can view reports for the
+    device.</p>
+  <p>Please note the "Tools" line – this is where
+    <!--[if supportFields]><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-element:field-begin'><span
+style='mso-spacerun:yes'> REF _Ref258345622 \h <span style='mso-element:
+field-separator'><![endif]-->
+    Integration
+    <!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003200350038003300340035003600320032000000</w:data>
+</xml><![endif]-->
+    <!--[if supportFields]><span style='mso-element:
+field-end'><![endif]-->
+    <span style='mso-bidi-
+line-height:115%;mso-bidi-font-family:Arial'> for
+    devices appears. We have shown a few examples. </p>
+  <p>To the right of the device details are the stored tags for the device. These
+    tags can be updated or deleted as required.</p>
+  <p><span style='
+mso-bidi-line-height:115%'>Auditor also shows the up and down
+    interfaces on a device, this information can feed into capacity plans – the
+    image below shows areas of interest:</p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="Picture_x0020_1" o:spid="_x0000_i1139" type="#_x0000_t75" alt="Description: interface-overview.jpg"
+ style='width:471pt;height:205.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image084.jpg"
+  o:title="interface-overview"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="628" height="274"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image085.jpg"
+alt="Description: interface-overview.jpg" v:shapes="Picture_x0020_1" /><span
+style='mso-bidi-line-height:115%'></p>
+  <p class="MsoListParagraphCxSpFirst" style='margin-left:32.2pt;mso-add-space:
+auto;text-align:justify;mso-list:l2 level1 lfo16'><a
+name="_Ref230429202" id="_Ref230429202"></a><a name="_Ref230429200" id="_Ref230429200"><span style='mso-bookmark:
+_Ref230429202'><span
+style='line-height:115%;mso-fareast-font-family:Arial;
+mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>1)<font size="1"
+face="Times New Roman"><span style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-bidi-font-family:
+Arial'>To
+      filter on an interface, simply click the interface name for the Interface
+      overview – this will report on MAC address seen over time on that interface,
+      IP's seen, and MAC Address vendors.</a></p>
+  <p class="MsoListParagraphCxSpMiddle" style='margin-left:32.2pt;mso-add-space:
+auto;text-align:justify;mso-list:l2 level1 lfo16'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>2)<font size="1"
+face="Times New Roman"><span style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-bidi-font-family:
+Arial'>To
+    directly list the MAC addresses on the interface click on the number under
+    the MAC's column</p>
+  <p class="MsoListParagraphCxSpMiddle" style='margin-left:32.2pt;mso-add-space:
+auto;text-align:justify;mso-list:l2 level1 lfo16'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>3)<font size="1"
+face="Times New Roman"><span style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-bidi-font-family:
+Arial'>If
+    you move the cursor over the Last Changed column, Auditor <span
+style='mso-spacerun:yes'> will
+    display the MAC, IP/Netmask (if any) configured for the interface</p>
+  <p style='margin-left:32.2pt;mso-add-space:auto;
+text-align:justify;mso-list:l2 level1 lfo16'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial'><span style='mso-list:Ignore'>4)<font size="1"
+face="Times New Roman"><span style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-bidi-font-family:
+Arial'>Recent
+    shows the last 30 minutes of the interface status – in the image above, you
+    can see FastEthernet0/3 has been "going up and down", possibly indicating
+    an issue.</p>
+  <h2><span style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><a
+name="_Toc310517993" id="_Toc310517993"></a><a name="_Toc241663431" id="_Toc241663431"><span style='mso-bookmark:
+_Toc310517993'><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'><font size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;
+line-height:115%'><span style='mso-bidi-line-height:115%'>IP
+          Forensics</i></b></a></h2>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>From
+    any screen it is possible to drill into IP forensics, where details on DNS,
+    UserID, ARP and interfaces are shown for the IP address.</p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_75"
+ o:spid="_x0000_i1138" type="#_x0000_t75" style='width:425.25pt;height:345.75pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image086.jpg"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="567" height="461"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image087.jpg"
+v:shapes="Picture_x0020_75" /><span style='background:yellow;
+mso-highlight:yellow'></p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><font
+size="2" face="Arial"></p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>New
+    in V2.1 is the ability not only to display DNS, but to cache and search on
+    it in the database. IP information can be located now via MAC, User and DNS.</p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>Where
+    possible, Auditor will show last seen MAC to IP association. If the ARP information
+    for the Last Seen MAC is not collected by the system, Auditor cannot display
+    this information.</p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>Below
+    the Last Seen entry, Auditor will show if there is any user association with
+    the IP address, and show, over time, which users have been associated with
+    the IP address. The User or green bar can be clicked to navigate to
+    <!--[if supportFields]><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-element:field-begin'><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span style='mso-spacerun:yes'> REF
+_Ref258734673 \h <span style='mso-element:field-separator'><![endif]-->
+    <span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'>User
+    forensics
+    <!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003200350038003700330034003600370033000000</w:data>
+</xml><![endif]-->
+    <!--[if supportFields]><span style='mso-bookmark:
+_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-element:field-end'><![endif]-->
+    <span style='mso-bookmark:
+_Ref230429200'><span style='mso-bookmark:_Ref230429202'>.</p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>IP
+    forensics shows the ARP information for IP relation to MAC address, and where
+    that MAC address has been seen over time.</p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_143"
+ o:spid="_x0000_i1137" type="#_x0000_t75" style='width:342.75pt;height:95.25pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image088.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="457" height="127"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image089.jpg"
+v:shapes="Picture_x0020_143" /></p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>On
+    IP forensics and IP address lists
+    <!--[if supportFields]><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-element:field-begin'><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span style='mso-spacerun:yes'> REF
+_Ref258735108 \h <span style='mso-element:field-separator'><![endif]-->
+    <span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'>Active
+    Tests
+    <!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003200350038003700330035003100300038000000</w:data>
+</xml><![endif]-->
+    <!--[if supportFields]><span style='mso-bookmark:
+_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-element:field-end'><![endif]-->
+    <span style='mso-bookmark:
+_Ref230429200'><span style='mso-bookmark:_Ref230429202'>,
+    if configured for the IP range selected, are executed, and the results displayed.
+    See
+    <!--[if supportFields]><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-element:field-begin'><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span style='mso-spacerun:yes'> REF
+_Ref258735162 \h <span style='mso-element:field-separator'><![endif]-->
+    <span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'>Active
+    Tests
+    <!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003200350038003700330035003100360032000000</w:data>
+</xml><![endif]-->
+    <!--[if supportFields]><span style='mso-bookmark:
+_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-element:field-end'><![endif]-->
+    <span style='mso-bookmark:
+_Ref230429200'><span style='mso-bookmark:_Ref230429202'> for
+    a detailed description on how this operates.</p>
+  <h2><span style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><a
+name="_Toc310517994" id="_Toc310517994"></a><a name="_Toc241663432" id="_Toc241663432"><span style='mso-bookmark:
+_Toc310517994'><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'><font size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;
+line-height:115%'><span style='mso-bidi-line-height:115%'>VLAN
+          overview</i></b></a></h2>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>VLAN
+    overview details for the selected VLAN, including device information.</p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_146"
+ o:spid="_x0000_i1136" type="#_x0000_t75" alt="Description: vlan-overview.jpg"
+ style='width:370.5pt;height:148.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image090.jpg"
+  o:title="vlan-overview"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="494" height="198"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image091.jpg"
+alt="Description: vlan-overview.jpg" v:shapes="Picture_x0020_146" /><span
+style='background:yellow;mso-highlight:yellow'></p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><font
+size="2" face="Arial"></p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'>
+    <!--[if mso & !supportInlineShapes & supportFields]><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-element:field-begin;mso-field-lock:yes'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-spacerun:yes'> SHAPE <span
+style='mso-spacerun:yes'> \* MERGEFORMAT <span style='mso-element:field-separator'><![endif]-->
+    <span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'>
+    <!--[if gte vml 1]><v:shape
+ id="Text_x0020_Box_x0020_74" o:spid="_x0000_s1039" type="#_x0000_t202"
+ style='width:435.35pt;height:43.95pt;visibility:visible;mso-wrap-style:square;
+ mso-left-percent:-10001;mso-top-percent:-10001;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+ mso-position-vertical-relative:line;mso-left-percent:-10001;mso-top-percent:-10001;
+ v-text-anchor:top' o:gfxdata="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
+AAAAAAQABADzAAAA8AUAAAAA
+" strokecolor="#7030a0">
+ <v:fill color2="#767676" rotate="t" angle="45" focus="100%" type="gradient"/>
+ <v:textbox style='mso-fit-shape-to-text:t'>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td>
+    <div>
+    <p style='
+    text-align:justify;line-height:normal'><b style='mso-bidi-font-weight:normal'><i
+    style='mso-bidi-font-style:normal'><font size=2 color=red face=Arial><span
+    style='mso-bidi-font-family:Arial;color:red;font-weight:
+    bold;mso-bidi-font-weight:normal;font-style:italic;mso-bidi-font-style:
+    normal'><span style='mso-bidi-font-size:11.0pt'>Note:</i></b></p>
+    <p style='
+    text-align:justify;line-height:normal'><font size=2 face=Arial><span
+    style='mso-bidi-mso-bidi-font-family:
+    Arial'>VLAN is "local" is the default VLAN that appears in many devices
+    even if no VLAN's are configured.<span style='mso-bidi-font-family:
+    Arial'></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </v:textbox>
+ <w:wrap type="none"/>
+ <w:anchorlock/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="586" height="65"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image092.png"
+alt="Text Box: Note:
+VLAN is "local" is the default VLAN that appears in many devices even if no VLAN's are configured.
+"
+v:shapes="Text_x0020_Box_x0020_74" />
+    <!--[if mso & !supportInlineShapes & supportFields]><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><v:shape
+ id="_x0000_i1135" type="#_x0000_t75" style='width:435.35pt;height:43.95pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:
+_Ref230429202'><span style='mso-element:field-end'><![endif]-->
+    <span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'></p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>Auditor
+    displays the MAC Addresses, IP Addresses and Interfaces that the VLAN has
+    been seen:<span style='background:yellow;
+mso-highlight:yellow'></p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><b
+style='mso-bidi-font-weight:normal'><font size="2" color="#4f81bd" face="Cambria"><span
+style='line-height:115%;font-family:&quot;Cambria&quot;,&quot;serif&quot;;
+mso-ascii-theme-font:major-latin;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:major-latin;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:major-bidi;
+color:#4F81BD;mso-themecolor:accent1;mso-fareast-language:EN-GB;font-weight:
+bold;mso-bidi-font-weight:normal;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="Picture_x0020_41" o:spid="_x0000_i1134" type="#_x0000_t75" alt="Description: vlan-reports.jpg"
+ style='width:309.75pt;height:271.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image093.jpg"
+  o:title="vlan-reports"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="413" height="362"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image094.jpg"
+alt="Description: vlan-reports.jpg" v:shapes="Picture_x0020_41" /></b><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><b><font
+color="#4f81bd" face="Cambria"><span style='font-family:"Cambria","serif";
+mso-ascii-theme-font:major-latin;mso-fareast-font-family:"Times New Roman";
+mso-fareast-theme-font:major-fareast;mso-hansi-theme-font:major-latin;
+mso-bidi-font-family:"Times New Roman";mso-bidi-theme-font:major-bidi;
+color:#4F81BD;mso-themecolor:accent1;font-weight:bold'></b></p>
+  <h2><span style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><a
+name="_Toc310517995" id="_Toc310517995"></a><a name="_Toc241663433" id="_Toc241663433"><span style='mso-bookmark:
+_Toc310517995'><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'><font size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;
+line-height:115%'><span style='mso-bidi-line-height:115%'>MAC
+          forensics</i></b></a></h2>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>MAC
+    forensics allows users to review the IP and connection history of a MAC address:</p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_160"
+ o:spid="_x0000_i1133" type="#_x0000_t75" style='width:468pt;height:246pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image095.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="624" height="328"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image096.jpg"
+v:shapes="Picture_x0020_160" /><span style='background:yellow;
+mso-highlight:yellow'></p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>Auditor
+    shows the MAC address, and from the Vendor lookup facility, the Vendor or
+    Manufacturer that has the IP Address assigned. </p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>If
+    there is an ARP entry on a device for the MAC address, Auditor will show
+    the IP address allocation history of the MAC address. The IP details show
+    the history of IP address assignment to the MAC address. </p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'>The
+    Connection history shows the connections over time. This is available in
+    graphical timeline view or tabular view if details are selected.</p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%;mso-fareast-language:EN-GB;mso-no-proof:
+yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_161" o:spid="_x0000_i1132"
+ type="#_x0000_t75" style='width:468pt;height:231.75pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image097.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="624" height="309"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image098.jpg"
+v:shapes="Picture_x0020_161" /><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bidi-font-family:Arial'></p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>Connections
+    show the interfaces (and device) that the MAC address has been seen on (The
+    MAC Count shows the total number of unique MAC's also on the interface). </p>
+  <h2><span style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><a
+name="_Toc310517996" id="_Toc310517996"></a><a name="_Ref258734673" id="_Ref258734673"></a><a name="_Toc241663434" id="_Toc241663434"><span
+style='mso-bookmark:_Ref258734673'><span style='mso-bookmark:_Toc310517996'><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><font
+size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;line-height:
+115%'><span style='mso-bidi-line-height:115%'>User
+          forensics</i></b></a></h2>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span
+style='line-height:115%;mso-bidi-font-family:Arial'><span
+style='mso-bidi-font-size:11.0pt;line-height:115%'>User
+    forensics can be used to find the IP and hence the MAC history of a UserID.
+    User forensics will show the last seen connection for the user – relating
+    UserID, to IP address, to MAC Address to Device and interface. Device and
+    Interface details will only be shown if Auditor is collecting information
+    from the device that the users is connected to. </p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><font
+size="2" face="Arial"><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_162"
+ o:spid="_x0000_i1131" type="#_x0000_t75" style='width:408.75pt;height:268.5pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image099.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="545" height="358"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image100.jpg"
+v:shapes="Picture_x0020_162" /><span style='background:yellow;
+mso-highlight:yellow'></p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><a name="_Ref230583061" id="_Ref230583061"></a><a
+name="_Ref251596159" id="_Ref251596159"></a><a name="_Toc241663435" id="_Toc241663435"><span style='mso-bookmark:
+_Ref251596159'><span style='mso-bookmark:_Ref230583061'></a><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span style='mso-bidi-font-family:Arial'></p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span style='mso-bookmark:_Toc241663435'><span
+style='mso-bookmark:_Ref251596159'><span style='mso-bookmark:_Ref230583061'><font
+size="2" face="Arial"><span style='line-height:115%;mso-bidi-font-family:
+Arial'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>User
+    forensics will be populated only if has been correctly configured, and Auditor
+    has had sufficient time to start collecting user data from LDAP or security
+    event log sources.</p>
+  <h2><span style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><a name="_Toc310517997" id="_Toc310517997"><b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'>Hostname
+          forensics</i></b></a></h2>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span style='mso-bookmark:_Toc241663435'><span
+style='mso-bookmark:_Ref251596159'><span style='mso-bookmark:_Ref230583061'><font
+size="2" face="Arial"><span style='line-height:115%;mso-bidi-font-family:
+Arial'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Auditor
+    has the ability to report on the hostname history for any IP address indexed
+    by Auditor. Each IP address indexed by Auditor is added to a collection list
+    and Auditor attempts to resolve the hostname via DNS. If a DNS entry is found,
+    Auditor records this entry in its database. Administrators can control the
+    frequency of DNS lookup, retention period and concurrent lookups via the
+    <!--[if supportFields]><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span
+style='mso-element:field-begin'><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span style='mso-bookmark:_Toc241663435'><span
+style='mso-bookmark:_Ref251596159'><span style='mso-bookmark:_Ref230583061'><span
+style='mso-bidi-font-family:Arial'><span style='mso-spacerun:yes'> REF
+database \h <span style='mso-element:field-separator'><![endif]-->
+    <span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'>Database
+    Settings<span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span style='mso-bidi-font-family:Arial'>
+    <!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B020000000800000009000000640061007400610062006100730065000000</w:data>
+</xml><![endif]-->
+    <!--[if supportFields]><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span
+style='mso-element:field-end'><![endif]-->
+    <span style='mso-bookmark:
+_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span style='mso-bookmark:
+_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span style='mso-bookmark:
+_Ref230583061'><span style='mso-bidi-font-family:Arial'>.
+    When a DNS lookup successfully returns a hostname, the data is stored in
+    Auditors database.</p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span style='mso-bookmark:_Toc241663435'><span
+style='mso-bookmark:_Ref251596159'><span style='mso-bookmark:_Ref230583061'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span style='mso-bidi-font-family:Arial'></p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span
+style='line-height:115%;mso-fareast-language:EN-GB;mso-no-proof:
+yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_85" o:spid="_x0000_i1130"
+ type="#_x0000_t75" style='width:351pt;height:55.5pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image101.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="468" height="74"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image102.jpg"
+v:shapes="Picture_x0020_85" /><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span style='mso-bidi-font-family:Arial'></p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span style='mso-bidi-font-family:Arial'></p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span style='mso-bookmark:_Toc241663435'><span
+style='mso-bookmark:_Ref251596159'><span style='mso-bookmark:_Ref230583061'><font
+size="2" face="Arial"><span style='line-height:115%;mso-bidi-font-family:
+Arial'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>DNS
+    overview allows a top-level view of hostname assignments allowing, at a glance,
+    a view of the most active DNS assignments:</p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span
+style='line-height:115%;mso-fareast-language:EN-GB;mso-no-proof:
+yes'>
+    <!--[if gte vml 1]><v:shape id="_x0000_i1129" type="#_x0000_t75" style='width:243.75pt;
+ height:195.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image103.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="325" height="261"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image104.jpg"
+v:shapes="_x0000_i1129" /><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span style='mso-bidi-font-family:Arial'></p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span style='mso-bookmark:_Toc241663435'><span
+style='mso-bookmark:_Ref251596159'><span style='mso-bookmark:_Ref230583061'><font
+size="2" face="Arial"><span style='line-height:115%;mso-bidi-font-family:
+Arial'><span style='mso-bidi-font-size:11.0pt;line-height:115%'>Administrators
+    can click on a hostname to view the Hostname forensics report. This report
+    details the IP assignment history for the selected hostname.</p>
+  <p><span style='mso-bookmark:_Ref230429200'><span
+style='mso-bookmark:_Ref230429202'><span style='mso-bookmark:_Toc241663435'><span
+style='mso-bookmark:_Ref251596159'><span style='mso-bookmark:_Ref230583061'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span style='mso-bidi-font-family:Arial'></p>
+  <p align="center" style='text-align:center'><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span
+style='line-height:115%;mso-fareast-language:EN-GB;mso-no-proof:
+yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_84" o:spid="_x0000_i1128"
+ type="#_x0000_t75" style='width:337.5pt;height:204.75pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image105.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="450" height="273"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image106.jpg"
+v:shapes="Picture_x0020_84" /><span
+style='mso-bookmark:_Ref230429200'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Ref230583061'><span style='mso-bidi-font-family:Arial'></p>
+  <span style='mso-bookmark:_Ref230583061'><span style='mso-bookmark:_Ref251596159'><span
+style='mso-bookmark:_Toc241663435'><span style='mso-bookmark:_Ref230429202'><span
+style='mso-bookmark:_Ref230429200'>
+  <h2><a name="_Toc310517998" id="_Toc310517998"></a><a name="_Ref258341285" id="_Ref258341285"></a><a
+name="_Ref252201405" id="_Ref252201405"></a><a name="_Ref251596245" id="_Ref251596245"></a><a name="_Toc241663436" id="_Toc241663436"><span
+style='mso-bookmark:_Ref251596245'><span style='mso-bookmark:_Ref252201405'><span
+style='mso-bookmark:_Ref258341285'><span style='mso-bookmark:_Toc310517998'><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><font
+size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;line-height:
+115%'><span style='mso-bidi-line-height:115%'>Watch
+          list</i></b></a></h2>
+  <p>Auditor is able to help track devices on the network. Whether users require
+    alerts about a rogue access point, or a stolen Laptop, as soon as it is seen
+    on the network, a Watch list alert is displayed and a syslog alert is optionally
+    generated. Clicking on the hyperlink shows a list of watched devices and
+    when seen on the network: </p>
+  <p><span
+style='line-height:115%;mso-fareast-language:EN-GB;mso-no-proof:
+yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_71" o:spid="_x0000_i1127"
+ type="#_x0000_t75" alt="Description: watchlist-hit.jpg" style='width:450.75pt;
+ height:101.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image107.jpg"
+  o:title="watchlist-hit"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="601" height="135"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image108.jpg"
+alt="Description: watchlist-hit.jpg" v:shapes="Picture_x0020_71" /><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'></p>
+  <p><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>Users
+    can click manage the alert or click on the MAC address link to see further
+    details on the device. </p>
+  <p><span
+style='line-height:115%'><span style='mso-bidi-font-size:11.0pt;
+line-height:115%'>Watch
+    lists can be added via 2 methods. From the MAC forensics screen by clicking
+    the "Add Watch entry" link: </p>
+  <p></p>
+  <p align="center" style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='mso-bidi-font-size:
+10.0pt;line-height:115%;mso-bidi-font-family:Arial;mso-fareast-language:EN-GB;
+font-weight:bold;mso-bidi-font-weight:normal;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="_x0000_i1126" type="#_x0000_t75" alt="Description: watchlist-via-mac.jpg"
+ style='width:400.5pt;height:111pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image109.jpg"
+  o:title="watchlist-via-mac"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="534" height="148"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image110.jpg"
+alt="Description: watchlist-via-mac.jpg" v:shapes="_x0000_i1126" /></b><b><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial;
+font-weight:bold'></b></p>
+  <p><b><span style='
+mso-bidi-line-height:115%;mso-bidi-font-family:Arial;
+font-weight:bold'></b></p>
+  <p><span style='
+mso-bidi-line-height:115%;mso-bidi-font-family:Arial;
+mso-bidi-font-weight:bold'>Or
+    via the Watch list admin drop down:</p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_98"
+ o:spid="_x0000_i1125" type="#_x0000_t75" style='width:100.5pt;height:161.25pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image111.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="134" height="215"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image112.jpg"
+v:shapes="Picture_x0020_98" /><span style='mso-bidi-font-size:
+10.0pt;line-height:115%'></p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%'></p>
+  <p align="center" style='text-align:center'>
+    <!--[if mso & !supportInlineShapes & supportFields]><span
+style='mso-element:field-begin;mso-field-lock:yes'><span
+style='mso-spacerun:yes'> SHAPE <span
+style='mso-spacerun:yes'> \* MERGEFORMAT <span style='mso-element:field-separator'><![endif]-->
+    <!--[if gte vml 1]><v:shape
+ id="Text_x0020_Box_x0020_71" o:spid="_x0000_s1038" type="#_x0000_t202"
+ style='width:466.3pt;height:43.5pt;visibility:visible;mso-wrap-style:square;
+ mso-left-percent:-10001;mso-top-percent:-10001;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+ mso-position-vertical-relative:line;mso-left-percent:-10001;mso-top-percent:-10001;
+ v-text-anchor:top' o:gfxdata="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
+BAAEAPMAAADsBQAAAAA=
+" strokecolor="#7030a0">
+ <v:fill color2="#767676" rotate="t" angle="45" focus="100%" type="gradient"/>
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td>
+    <div>
+    <p><a name="_Toc241664991"></a><a name="_Toc241663965"></a><a
+    name="_Toc241663791"></a><a name="_Toc241663498"></a><a name="_Toc241663437"></a><a
+    name="_Toc241663215"><span style='mso-bookmark:_Toc241663437'><span
+    style='mso-bookmark:_Toc241663498'><span style='mso-bookmark:_Toc241663791'><span
+    style='mso-bookmark:_Toc241663965'><span style='mso-bookmark:_Toc241664991'><b
+    style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><font
+    size=2 color=red face=Arial><span style='line-height:115%;
+    color:red;font-weight:bold;mso-bidi-font-weight:normal;font-style:italic;
+    mso-bidi-font-style:normal'><span style='mso-bidi-font-size:11.0pt;
+    line-height:115%'>Note:</i></b></a><b
+    style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><font
+    color=red><span style='color:red;font-weight:bold;mso-bidi-font-weight:
+    normal;font-style:italic;mso-bidi-font-style:normal'></i></b></p>
+    <p><a name="_Toc241663966"></a><a name="_Toc241663792"></a><a
+    name="_Toc241663499"></a><a name="_Toc241663438"></a><a name="_Toc241663216"><span
+    style='mso-bookmark:_Toc241663438'><span style='mso-bookmark:_Toc241663499'><span
+    style='mso-bookmark:_Toc241663792'><span style='mso-bookmark:_Toc241663966'><font
+    size=2 face=Arial><span style='line-height:115%'><span
+    style='mso-bidi-font-size:11.0pt;line-height:115%'>Only administrators can
+    add a watch entry</a></p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </v:textbox>
+ <w:wrap type="none"/>
+ <w:anchorlock/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img width="628" height="64"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image113.png"
+alt="Text Box: Note:
+Only administrators can add a watch entry
+"
+v:shapes="Text_x0020_Box_x0020_71" />
+    <!--[if mso & !supportInlineShapes & supportFields]><v:shape
+ id="_x0000_i1124" type="#_x0000_t75" style='width:466.3pt;height:43.5pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:field-end'><![endif]-->
+  </p>
+  <p></p>
+  <p>Watch lists are configured in the following screen:</p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial;mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="Picture_x0020_80" o:spid="_x0000_i1123" type="#_x0000_t75" alt="Description: watchlist.jpg"
+ style='width:398.25pt;height:279.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image114.jpg"
+  o:title="watchlist"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="531" height="373"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image115.jpg"
+alt="Description: watchlist.jpg" v:shapes="Picture_x0020_80" /><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'></p>
+  <p class="MsoListParagraphCxSpFirst" style='margin-left:54.0pt;mso-add-space:
+auto;mso-list:l27 level1 lfo11'><font
+size="2" face="Arial"><span style='mso-bidi-
+line-height:115%;mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'>1.<span
+style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp; <span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'>Add
+    device (plus a description) to the watch list.</p>
+  <p class="MsoListParagraphCxSpMiddle" style='margin-left:54.0pt;mso-add-space:
+auto;mso-list:l27 level1 lfo11'><font
+size="2" face="Arial"><span style='mso-bidi-
+line-height:115%;mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'>2.<span
+style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp; <span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'>Once
+    the watch list device is added, decide on an alerting setting if required.</p>
+  <p style='margin-left:54.0pt;mso-add-space:auto;
+text-align:justify;mso-list:l27 level1 lfo11'><font
+size="2" face="Arial"><span style='mso-bidi-
+line-height:115%;mso-fareast-font-family:Arial;mso-bidi-font-family:Arial'>3.<span
+style='font:7.0pt &quot;Times New Roman&quot;'>&nbsp;&nbsp;&nbsp;&nbsp; <span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'>Alerts
+    for watch lists can be multiple and can be deleted without the Watch list
+    entry being deleted.</p>
+  <p>Alerts are only sent when a MAC address is first seen by the Auditor </p>
+  <p>
+    <!--[if gte vml 1]><v:shape id="_x0000_s1037" type="#_x0000_t202"
+ style='position:absolute;margin-left:-1.4pt;margin-top:5.1pt;width:471.1pt;
+ height:59.2pt;z-index:251703296;visibility:visible;mso-wrap-style:square;
+ mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;
+ mso-width-relative:margin;mso-height-relative:margin;v-text-anchor:top'
+ o:gfxdata="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
+AAAAAAQABADzAAAA8AUAAAAA
+" strokecolor="#7030a0">
+ <v:fill color2="#767676" rotate="t" angle="45" focus="100%" type="gradient"/>
+ <v:textbox>
+  <![if !mso]>
+  <table cellpadding=0 cellspacing=0 width="100%">
+   <tr>
+    <td>
+    <div>
+    <p><b style='mso-bidi-font-weight:normal'><i
+    style='mso-bidi-font-style:normal'><font size=2 color=red face=Arial><span
+    style='mso-bidi-line-height:115%;
+    mso-bidi-font-family:Arial;color:red;font-weight:bold;mso-bidi-font-weight:
+    normal;font-style:italic;mso-bidi-font-style:normal'>Note:</i></b></p>
+    <p><font size=2 face=Arial><span
+    style='mso-bidi-line-height:115%;
+    mso-bidi-font-family:Arial'>Restarting Auditor <span
+    style='mso-spacerun:yes'> does not cause generation of new alerts as
+    the system retains Watchlist status information in the database.</p>
+    </div>
+    <![if !mso]></td>
+   </tr>
+  </table>
+  </v:textbox>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <span style='mso-ignore:vglayout;position:
+relative;z-index:251703296;left:-3px;top:6px;width:634px;height:91px'><img
+width="634" height="85"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image116.png"
+alt="Text Box: Note:
+Restarting Auditor  does not cause generation of new alerts as the system retains Watchlist status information in the database.
+"
+v:shapes="_x0000_s1037" /></p>
+  <p></p>
+  <p></p>
+  <br style='mso-ignore:vglayout' clear="all" />
+  <p>If a previously seen MAC address leaves the network (for the CAM hold down
+    period) and Auditor is then restarted you will, of course, generate an alert
+    as this would be classed as a new Watchlist hit.<br style='mso-special-character:
+line-break' />
+    <![if !supportLineBreakNewLine]>
+    <br style='mso-special-character:line-break' />
+  </p>
+  <p>The syslog message will be sent as:</p>
+  <p>messages.2:Sep&nbsp; 1 17:32:42 172.21.40.199 Auditor <span
+style='mso-spacerun:yes'> Watch
+    Entry Seen:00:1f:c5:ed:ae:23 on Device:172.21.40.254 ifIndex:3 Reason:Wii</p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_77"
+ o:spid="_x0000_i1122" type="#_x0000_t75" style='width:195.75pt;height:116.25pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image117.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="261" height="155"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image118.jpg"
+v:shapes="Picture_x0020_77" /></p>
+  <p>The MAC Forensics screen now also alerts users as to whether the particular
+    device is being watched.</p>
+  <h2><a name="_Toc310517999" id="_Toc310517999"></a><a name="_Ref258341288" id="_Ref258341288"></a><a
+name="_Ref252202187" id="_Ref252202187"></a><a name="_Ref252202186" id="_Ref252202186"></a><a name="_Ref252201418" id="_Ref252201418"><span
+style='mso-bookmark:_Ref252202186'><span style='mso-bookmark:_Ref252202187'><span
+style='mso-bookmark:_Ref258341288'><span style='mso-bookmark:_Toc310517999'><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><font
+size="3" color="#e36c0a" face="Arial"><span style='font-size:12.0pt;line-height:
+115%'><span style='mso-bidi-line-height:115%'>White
+          list</i></b></a></h2>
+  <p>While list is selectable by site, and is a facility to generate alerts on
+    new devices accessing the network at that site. For example if you have a
+    locked down standard build for a remote location, you can use Auditor <span
+style='mso-spacerun:yes'> to
+    alert on any device not previously seen connecting to the network at that
+    site. White list alerts are reported to the Site overview screen, the events
+    system and, optionally, a syslog receiver.</p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial;mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2" o:spid="_x0000_i1121" type="#_x0000_t75" alt="Description: wl-site-ovv.jpg"
+ style='width:264pt;height:89.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image119.jpg"
+  o:title="wl-site-ovv"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="352" height="119"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image120.jpg"
+alt="Description: wl-site-ovv.jpg" v:shapes="Picture_x0020_2" /><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'></p>
+  <p>White lists are configured by accessing the admin selector:</p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="_x0000_i1120" type="#_x0000_t75"
+ style='width:91.5pt;height:153.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image121.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="122" height="205"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image122.jpg"
+v:shapes="_x0000_i1120" /></p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial'></p>
+  <p>White list settings provide the ability to start, stop and reset White list
+    monitoring. If a configured site has one or more devices being polled by
+    Auditor , monitoring can be activated by clicking the "Monitor" button.</p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial;mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="Picture_x0020_87" o:spid="_x0000_i1119" type="#_x0000_t75" alt="Description: white-list admin.jpg"
+ style='width:381.75pt;height:176.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image123.jpg"
+  o:title="white-list admin"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="509" height="235"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image124.jpg"
+alt="Description: white-list admin.jpg" v:shapes="Picture_x0020_87" /><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'></p>
+  <p>If an asset system already records the MAC address of devices, these can
+    be manually added to Auditor <span style='mso-spacerun:yes'> via the "Add" button.</p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial;mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="_x0000_i1118" type="#_x0000_t75" alt="Description: white-list admin-add.jpg"
+ style='width:252pt;height:171pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image125.jpg"
+  o:title="white-list admin-add"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="336" height="228"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image126.jpg"
+alt="Description: white-list admin-add.jpg" v:shapes="_x0000_i1118" /><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'></p>
+  <p>Once monitoring has been activated new devices seen are alerted to the event
+    subsystem, where the device, interface and MAC address are shown. Users can
+    click the MAC address to view MAC forensics</p>
+  <p><span style='
+mso-bidi-line-height:115%;mso-bidi-font-family:Arial;
+mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_5"
+ o:spid="_x0000_i1117" type="#_x0000_t75" alt="Description: wl-alert.jpg"
+ style='width:402pt;height:67.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image127.jpg"
+  o:title="wl-alert"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="536" height="90"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image128.jpg"
+alt="Description: wl-alert.jpg" v:shapes="Picture_x0020_5" /><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'></p>
+  <p></p>
+  <p>White lists, once set up can be changed and updated via the White list administration
+    dialog: </p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial;mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="_x0000_i1116" type="#_x0000_t75" alt="Description: wl-admin.jpg" style='width:391.5pt;
+ height:92.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image129.jpg"
+  o:title="wl-admin"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="522" height="123"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image130.jpg"
+alt="Description: wl-admin.jpg" v:shapes="_x0000_i1116" /><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'></p>
+  <p>Newly discovered MAC addresses can be automatically included in the White
+    list by clicking the "Reset" button. Users can also add a list of MAC addresses
+    by clicking the "Add" button.</p>
+  <p>MAC addresses can be added singly to the White list by selecting them from
+    the
+    "new" list</p>
+  <p></p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial;mso-fareast-language:EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape
+ id="Picture_x0020_94" o:spid="_x0000_i1115" type="#_x0000_t75" alt="Description: white-list admin-individual.jpg"
+ style='width:396.75pt;height:204pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image131.jpg"
+  o:title="white-list admin-individual"/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="529" height="272"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image132.jpg"
+alt="Description: white-list admin-individual.jpg" v:shapes="Picture_x0020_94" /><span
+style='mso-bidi-line-height:115%;mso-bidi-font-family:Arial'></p>
+  <p>Individual MAC addresses can be added by clicking "Add to White list"</p>
+  <p>For roaming users, a Global Whitelist override is provided. Any MAC address
+    in the global list will not generate an alert if newly discovered at a monitored
+    site:</p>
+  <p align="center" style='text-align:center'><span style='line-height:115%;mso-fareast-language:
+EN-GB;mso-no-proof:yes'>
+    <!--[if gte vml 1]><v:shape id="Picture_x0020_89"
+ o:spid="_x0000_i1114" type="#_x0000_t75" style='width:321.75pt;height:132.75pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image133.png"
+  o:title=""/>
+</v:shape><![endif]-->
+    <![if !vml]>
+    <img border="0" width="429" height="177"
+src="Rebasoft%20MAC%20Auditor%20Installation%20and%20Administration%20guide-v2.4_files/image134.jpg"
+v:shapes="Picture_x0020_89" /></p>
+  <p align="center" style='text-align:center'><span style='mso-bidi-line-height:
+115%;mso-bidi-font-family:Arial'></p>
+  <h1>&nbsp;</h1>
+  </body>
+  </html>

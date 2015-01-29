@@ -1,0 +1,81 @@
+<h1><span class="purple">Active Tests</span></h1>
+<p >Active test provides the ability to immediately test the
+  presence of an IP address and availability of TCP ports on that IP address or
+  subnet in real time. With SNMP methods of polling IP addresses, the data can be
+  5 minutes or more out of date and typically just provides a record of an IP
+  address being present on the network in the past.</p>
+    <center><img src="2_2/images/image119.png" width="400" /></center>
+
+<p >Active Test goes further; in that an administrator can pre-define
+  a series of tests to verify the availability of a TCP port, and record the
+  response time of those tests, clicking the relevant disc initiates the test.</p>
+    <table cellpadding="0" cellspacing="0" width="90%" align="center">
+      <tr>
+        <td class="box"><i><span class="purple">Note:</span></i><p style="font-size:1em;">
+      Active Test is only initiated by the operator via the web browser
+        session. Active test is activated only from IP forensics in a subnet with
+        Active tests configured, or commanded via the "Active Test All" button when
+        displaying a list of IP addresses in a search result.</p></td>
+  </tr>
+</table>
+<p >Active Test works by sending a SYN to the target IP address
+  and port. If the port connection is made, Rebasoft Auditor closes the session
+  and records the response time. If the IP/port does not respond, only the single
+  packet is sent and no retransmission occurs. This way, the network overhead is
+  negligible.</p>
+  
+  <p><img src="2_2/images/test-now.jpg" hspace="5" vspace="2" align="left" /> provides a method for ad hoc testing, simply enter the port no. to be tested and click the arrow, the
+  result will show below the input box, hover over the disc to see the response
+  time.</p><br />
+<p >Active Test provides 2 key benefits:</p>
+<ol><li>In the absence of any other tools, active test
+  verifies the instant status of a remote IP address, avoiding the need to deploy
+  cable test for initial diagnosis. This speeds up the process of problem
+  solving. The port test can also verify the correct services are showing as
+  available - a possible indication of correct functioning of the remote device.</li>
+  <li>Active test can also test if a port is available, so it can be used as a security tool to identify end
+  device ports that should not be available - a possible indication of
+  miss-configuration, presence of malware or even presence of a rogue device.</p>
+<p>To access Active Test
+  administration, select from the Admin menu:</p>
+  <center><img src="2_2/images/image120.png"  /></center>
+<p >Active Test
+  administration list tests that are available and the ability to remove them by
+  clicking the delete under action:</p>
+    <center><img src="2_2/images/image121.png" width="400"/></center>
+
+<p >To add a new test
+  select the test type - the current version of Rebasoft Auditor supports TCP
+  type tests only. Complete the fields and click the "Add Active Test"
+  button.</p>
+    <center><img src="2_2/images/image122.jpg" width="230" /></center>
+
+<p >The table below describes the settings available for Active
+  test:</p>
+<div align="center">
+  <table border="1" cellspacing="0" cellpadding="4">
+    <tr>
+      <th width="121" valign="top">Field</th>
+      <th width="416" valign="top">Description</th>
+    </tr>
+    <tr>
+      <td width="121" valign="top">Name</p></td>
+      <td width="416" valign="top">The
+          name is displayed in IP forensics - it is recommended that is be short</td>
+    </tr>
+    <tr>
+      <td width="121" valign="top">Description</p></td>
+      <td width="416" valign="top">A description of the active test</td>
+    </tr>
+    <tr>
+      <td width="121" valign="top">Settings</td>
+      <td width="416" valign="top">The
+          desired destination TCP port of the Active test. IANA publishes a list of well-known
+          port numbers: <a href="http://www.iana.org/assignments/port-numbers" target="_blank">iana port numbers &raquo;</a></td>
+    </tr>
+    <tr>
+      <td width="121" valign="top">Filter</td>
+      <td width="416" valign="top">If a Filter is entered here, only an IP address matching the subnet(s)
+          identified by that filter in the subnets admin section will be tested.</td>
+    </tr>
+  </table>

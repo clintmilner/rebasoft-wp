@@ -1,0 +1,50 @@
+<h1><span class="purple">Watch list</span></h1>
+  <p>Auditor is able to help track devices on the network. Whether users require
+    alerts about a rogue access point, or a stolen Laptop, as soon as it is seen
+    on the network, a Watch list alert is displayed and a syslog alert is optionally
+    generated. Clicking on the hyperlink shows a list of watched devices and
+    when seen on the network: </p>
+  <center><img border="0" src="2_4/images/image108.jpg" /></center>
+  <p>Users
+    can click manage the alert or click on the MAC address link to see further
+    details on the device. </p>
+  <p>Watch
+    lists can be added via 2 methods. From the MAC forensics screen by clicking
+    the "Add Watch entry" link: </p>
+<center><img border="0" src="2_4/images/image110.jpg" /></center>
+  <p>Or via the Watch list admin drop down:</p>
+    <center><img border="0" src="2_4/images/image112.jpg" /></center>
+    <p><br />
+      <br />
+    </p>
+<table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+      <tr valign="middle">
+        <td style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+        <td style="border: 1px solid #663399;"><span class="box">Only administrators can add a watch entry</span></td>
+      </tr>
+    </table>
+<p>Watch lists are configured in the following screen:</p>
+  <center><img border="0" src="2_4/images/image115.jpg" /></center>
+  <p>Add device (plus a description) to the watch list.</p>
+  <p>Once
+    the watch list device is added, decide on an alerting setting if required.</p>
+  <p>Alerts
+    for watch lists can be multiple and can be deleted without the Watch list
+    entry being deleted.</p>
+  <p>Alerts are only sent when a MAC address is first seen by the Auditor </p>
+  <table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+    <tr valign="middle">
+      <td style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">note:</span></td>
+      <td style="border: 1px solid #663399;"><span class="box">Restarting Auditor  does not cause generation of new alerts as the system retains Watchlist status information in the database.</span></td>
+    </tr>
+  </table>
+  <p>If a previously seen MAC address leaves the network (for the CAM hold down
+    period) and Auditor is then restarted you will, of course, generate an alert
+    as this would be classed as a new Watchlist hit.</p>
+<p>The syslog message will be sent as:</p>
+  <p>messages.2:Sep&nbsp; 1 17:32:42 172.21.40.199 Auditor <span
+style='mso-spacerun:yes'> Watch
+    Entry Seen:00:1f:c5:ed:ae:23 on Device:172.21.40.254 ifIndex:3 Reason:Wii</p>
+<center><img border="0" src="2_4/images/image118.jpg" /></center>
+  <p>The MAC Forensics screen now also alerts users as to whether the particular
+    device is being watched.</p>

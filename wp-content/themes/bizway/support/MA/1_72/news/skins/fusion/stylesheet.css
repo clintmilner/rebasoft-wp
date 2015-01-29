@@ -1,0 +1,38 @@
+fieldset {
+	display: block;
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 3px;
+	margin: 0 auto;
+}
+
+label { cursor: pointer; margin-right: 10px; }
+
+fieldset { margin: 20px -5px 0; padding: 5px; }
+fieldset fieldset { width: 95%; margin: 0 auto; }
+legend { font-weight: bold; }
+input { padding: 3px; margin: 2px 0px; }
+input, select, textarea { font-family: inherit; font-size: inherit; border: 1px solid #ccc; }
+
+dd { padding-left: 40px }
+
+#links {background:purple; padding: 2px 22px 2px 22px; color:#fff;}
+#links a, #footer a {color:#fff;}
+
+#login { margin: -45px 0 30px 5px padding:22px; font-size:12px;}
+
+.mainoption { font-weight: bold; }
+
+.adminpanel { border-collapse: collapse; border-spacing: 0px; width: 100%; }
+.adminpanel td { border: 1px solid #DCDCDC; padding: 3px 3px 3px 3px; }
+.adminpanel th { background-color: whitesmoke; border: 1px solid #DCDCDC; text-align: center; padding: 3px 3px 3px 3px; }
+
+#fn_notice { background-color: lightblue; border: 1px solid #85b0be; padding: 10px; list-style-type: none; }
+#fn_notice li { border-top: 1px solid #85b0be; padding: 5px; }
+#fn_notice li.title { font-variant: small-caps; border-width: 0px; font-weight: bold; }
+
+#fn_warning { background-color: pink; border: 1px solid #d798a3; padding: 10px; list-style-type: none; }
+#fn_warning li { border-top: 1px solid #d798a3; padding: 5px; }
+#fn_warning li.title { font-variant: small-caps; border-width: 0px; font-weight: bold; }
+
+.category-selection { border: 1px solid #85b0be; padding: 3px; overflow: auto; width: 95%; max-height: 65px; }

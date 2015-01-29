@@ -1,0 +1,70 @@
+<h2><span class="purple">License administration</span></h2>
+<p>Rebasoft Auditor's license is deeply embedded within the application. License information is constantly evaluated as devices are polled for SNMP information. The active interfaces for a device are updated and added to the total count for all devices polled; so from hour to hour and day to day, the number of active interfaces will vary.</p>
+<p>When the number of active interfaces polled exceeds the licensed number of interfaces, the data for interfaces in excess of the license maximum are not stored in the database for that polling period. If, subsequently, the total number (including the &quot;extra ones&quot; fall below the license level, data will once again be written to the database)
+
+Polling of interfaces from a device happens in the order the device presents the data to Auditor, this varies by vendor. Devices are polled in sequence, typically every 30 minutes.
+<h4>Licensing</h4>
+  <p>Rebasoft license Rebasoft Auditor on the number of interfaces
+    counted on the devices that are polled by it to collect information. For an
+</p>
+  <ol>
+  <li>The interface must be up (down interfaces do not
+  count towards license)</li>
+  <li>The interface must have a MAC address (virtual
+  interfaces which do not have a MAC address assigned by the device do not count)</li>
+  <li>The MAC address must be unique (MAC addresses
+  that are used across a number of interfaces are only counted once)</li></ol>
+  <p>Rebasoft Auditor shows, for each device configured in Device administration
+    how many interfaces are counted. The license evaluation is re-calculated each
+</p>
+
+<h4>Installation of License key</h4>
+  <p>When accessing the Rebasoft Auditor web interface for
+    the first time, it runs in trial mode - this means it will operate for a period
+    of 7 days unless a license key is applied to the system. License administration
+</p>
+  <center><img src="../img/Usermanual_2_1/image070.png" /></center>
+  <p>To add a license,
+    simply cut and paste the license string into the "New License" box and click
+  "load license". </p>
+    <center><img src="../img/Usermanual_2_0/image058.jpg" /></center>
+
+  <p>The license will
+    validate and confirmation of the system license will be displayed. If the
+    license level is exceeded, Rebasoft Auditor will not collect information from the interfaces above the license level. until a new key is obtained from a Rebasoft Auditor reseller, or the total number of active interfaces</p>
+    <center><img src="../img/Usermanual_2_1/license-summary.jpg" width="500" /></center><br /><br />
+
+  <table cellpadding=0 cellspacing=0 width="100%">
+    <tr>
+      <td class="box" style="font-size:0.8em;"><b><i><span style='color:red'>Note:</span></i></b><br />
+    If an invalid license is applied, or a version mismatch is detected,
+          Rebasoft Auditor will write a message to the Rebasoft Auditor log, located in
+          SYSTEM32 directory and will not perform any further polling until a valid
+      license is loaded</td>
+    </tr>
+  </table>
+<br /><br />
+      <table cellpadding=0 cellspacing=0 width="100%">
+        <tr>
+          <td class="box" style="font-size:0.8em;"><b><i><span style='color:red'>Note:</span></i></b><br />
+            If
+              the license is being updated on an expired system, the Rebasoft Auditor service
+          must be restarted to re-enable device polling.</td>
+        </tr>
+      </table>
+  <h4>Licensing</h4>
+  <p>Rebasoft license Rebasoft Auditor on the number of interfaces
+    counted on the devices that are polled by it to collect information. For an
+</p>
+  <ol>
+  <li>The interface must be up (down interfaces do not
+  count towards license)</li>
+  <li>The interface must have a MAC address (virtual
+  interfaces which do not have a MAC address assigned by the device do not count)</li>
+  <li>The MAC address must be unique (MAC addresses
+  that are used across a number of interfaces are only counted once)</li></ol>
+  <p>Rebasoft Auditor shows, for each device configured in Device administration
+    how many interfaces are counted. The license evaluation is re-calculated each
+</p>
+      <center><img src="../img/Usermanual_2_1/license-count.jpg" width="500" /></center><br /><br />
+

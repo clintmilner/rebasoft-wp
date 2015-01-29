@@ -1,0 +1,94 @@
+<a name="top"></a><h1><span class="purple">Services administration</span></h1>
+<p>Auditor provides organisations with the ability to configure services for various purposes:</p>
+<center><a href="#radius">Radius Accounting</a> | <a href="#trap">SNMP trap receiver</a> | <a href="#dhcp">DHCP listener</a></center>
+        
+<p>Service settings are accessed from the Administration
+        drop down in the top frame (clicking the arrow):</p>
+<center><img border="0" width="133" height="213"
+src="2_6/images/service-admin.png" /></center>
+<p>&nbsp;</p>
+<table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+      <tr valign="middle">
+        <td width="6%" valign="top" style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">Note:</span></td>
+        <td width="94%" style="border: 1px solid #663399;">
+          With all the services configured below, please ensure that the relevant Windows Firewall or iptables settings allow inbound traffic on the specified listener ports.</td>
+      </tr>
+    </table>
+
+<a name="radius"></a><h2>Radius Accounting</h2>
+<p>Radius accounting provides the ability to use Radius as a mechanism to collect userID information for use in user forensics</p>
+<p>Configure Radius forensics by:</p>
+<ol>
+<li>Configure the listener service - this just needs a name and a port number which Auditor is required to listen for radius traffic
+<br /><br /><center><img border="0" width="250"
+src="2_6/images/new_radius_service.png" /></center>
+</li>
+<li>Start the listener service
+<br /><br /><center><img border="0" width="350"
+src="2_6/images/start_radius_service.png" /></center>
+</li>
+<li>Configure host and secret for the relevant remote hosts
+<br /><br /><center><img border="0" width="300"
+src="2_6/images/add_radius_host.png" /></center>
+</li>
+</ol>
+<p style="text-align:right"><a href="#top">Back to top &raquo;</a></p>
+<a name="trap"></a><h2>SNMP Trap receiver</h2>
+<p>SNMP Trap receiver provides the ability to receive and process MAC notification messages from network enabled devices. This enables Auditor to process device connections in real-time. MAC notification implementation varies from vendor to vendor, but provides the most reliable mechanism for real-time device connections. </p>
+<p>Configure SNMP trap listener by:
+<ol>
+<li>Configure the listener service - this just needs a name and a port number which Auditor is required to listen for SNMP traps
+<br /><br /><center><img border="0" width="250"
+src="2_6/images/add_snmp_trap_listner.PNG" /></center>
+</li>
+<li>Start the listener service
+<br /><br /><center><img border="0" width="350"
+src="2_6/images/start_snmp_trap_listener.PNG" /></center>
+</li>
+</ol>
+<p style="text-align:right"><a href="#top">Back to top &raquo;</a></p>
+<a name="dhcp"></a><h2>DHCP listener</h2>
+<p>DHCP provides the ability to glean information about end-devices as they connected to the network when they request an IP address from a DHCP server. The DHCPDISCOVER message provides a rich source of information about the requesting device (in order for it to obtain the best service from the DHCP server). In addition to the end device details, DHCP can provide a degree of real-time notification of devices connecting to the network (this may be useful if MAC notification is unavailable)</p>
+<table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+  <tr valign="middle">
+    <td width="6%" valign="top" style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">Note:</span></td>
+    <td width="94%" style="border: 1px solid #663399;">Unlike MAC notification, DHCP cannot provide a switch port location for the end device. Auditor will only localise the device during the normally SNMP polling cycle</td>
+  </tr>
+</table>
+<p>Auditor Core provides the ability to &quot;tap in&quot; to the DHCP messages via a configurable  DHCP listener service. The information in the DHCPDISCOVER packet is cross-referenced against known message types and a match is tagged to the MAC element.</p>
+<p>
+<center><img
+src="2_6/images/dhcp_tag.png" alt="DHCP Tag" border="0" /></center></p>
+<p>Configure DHCP listener by:
+<ol>
+<li>Configure the listener service - this just needs a name and a port number which Auditor is required to listen for DHCP, and a probability match setting. The probability match is used in ensuring a full fingerprint match in order to generate tags for MAC forensics.
+<br /><br /><center><img border="0" width="250"
+src="2_6/images/add_dhcp_listener_service.PNG" /></center>
+</li>
+<li>Start the listener service
+<br /><br /><center><img border="0" width="350"
+src="2_6/images/start_dhcp_listerner_service.PNG" /></center>
+</li>
+</ol>
+<p>All the listener services show statistics for packets received and processed
+
+<br /><br /><p><center>
+  <img border="0" width="400"
+src="2_6/images/dhcp_listener_stats.PNG" /></center></p>
+  <table border="0" cellpadding="4" cellspacing="0" align="center" width="90%">
+    <tr valign="middle">
+      <td width="6%" valign="top" style="background:#663399;" ><span style="color:#fff; text-transform:uppercase; font-weight:bold;">Note:</span></td>
+      <td width="94%" style="border: 1px solid #663399;">The DHCP messages will  need network administrators to configure the Auditor Core server as a destination address for IP helper/BOOTP broadcast messages. Please consult your vendor configuration guide for details. IP helper will then replicate the DHCPDISCOVER broadcast messages to the Auditor server for processing. </td>
+    </tr>
+  </table>
+<p>&nbsp;</p>
+  <p>In addition to configuring the service, Auditor provides the ability to select the DHCP components to process as tags. These are set in DataBase settings in <a href="help.php?version=2.6&system-settings#db">System settings</a>:</p>
+  <p><center>
+    <img
+src="2_6/images/dhcp_database_settings.png" alt="" width="500" border="0" /></center></p>
+<p>&nbsp;</p>
+<p>While there is a default DHCP database installed as standard, Rebasoft has provided the ability for Administrators to tune the settings for discovered DHCP messages, as well as to add messages that are not in the database: </p>
+<p><center><img
+src="2_6/images/dhcp_fingerprint_edit.png" alt="" width="600" border="0" /></center></p>
+<p>&nbsp;</p>
+<p style="text-align:right"><a href="#top">Back to top &raquo;</a></p>

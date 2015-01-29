@@ -217,19 +217,16 @@ function interface_theloop_for_page() {
     <?php do_action( 'interface_after_post_header' ); ?>
     <?php do_action( 'interface_before_post_content' ); ?>
     <div class="entry-content clearfix">
-<?php
-      global $post;
-      $pagename = $post->post_name;
-      echo 'DEBUG: ' . $pagename;
-?>
 
 <?php if( is_active_sidebar( 'page-sub-nav' ) ) {
-  echo '<nav id="page-sub-nav">';
+  echo '<div id="page-sub-nav" class="column clearfix">';
+    echo '<div class="">';
 
   // Calling the horizontal sub-nav
   dynamic_sidebar( 'page-sub-nav' );
 
-  echo '</nav><!-- #content -->';
+    echo '</div><!-- #content -->';
+  echo '</div><!-- #content -->';
 }
 ?>
 

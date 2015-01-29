@@ -249,6 +249,11 @@
 		padding: 10px;
 		height: inherit;
 	}
+	
+	#page-sub-nav ul li a {
+		font-size: smaller;
+	}
+	
 	/* Dropdown */
 	#access ul li ul,
 	#access ul li:hover ul ul,
@@ -311,7 +316,7 @@
 		text-align: left;
 	}
 	#main {
-		padding-top: 50px;
+		/*padding-top: 50px;*/
 	}
 	/* Column */
 	.column {
@@ -494,7 +499,7 @@
 }
 
 /* All Mobile size smaller than standard 320 (devices and browsers) */
-@media only screen and (max-width: 319px) {
+@media only screen and (max-width: 479px) {
 	.container,
 	.narrow-layout .wrapper,
 	.narrow-layout .container {

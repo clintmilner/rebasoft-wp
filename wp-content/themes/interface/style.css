@@ -257,6 +257,7 @@ hr {
 /* Text Elements */
 p {
     margin-bottom: 1.2em;
+    color: #333;
 }
 
 strong {
@@ -733,6 +734,7 @@ a.more-link:hover {
 }
 .page-title-wrap.shrink h1 {
     font-size: 16px;
+    padding-left: 32px;
 }
 #topnav {
     -webkit-transition: all 0.4s ease-in-out;
@@ -761,6 +763,7 @@ a.more-link:hover {
 }
 #topnav.shrink #site-title a img {
     height: 40px;
+    padding-left: 10px;
 }
 #topnav.shrink #access a,
 #topnav.shrink #access .search-toggle  {
@@ -813,6 +816,10 @@ a.more-link:hover {
     position: relative;
     padding-right: 35px;
     z-index: 9999;
+}
+#topnav.shrink .hgroup-right {
+    padding-right: 10px;
+    
 }
 
 /* Social Profiles */
@@ -1213,6 +1220,38 @@ a.more-link:hover {
     font-family: 'Roboto', sans-serif;
 }
 
+#page-sub-nav {
+    background-color: #dbdbdb;
+    margin-bottom: 15px;
+}
+#page-sub-nav div,
+#page-sub-nav .widget {
+    margin: 0 auto;
+    height: auto;
+}
+#page-sub-nav ul.menu {
+    margin: 0;
+    text-align: center;
+}
+#page-sub-nav ul li {
+    display: inline-block;
+    height: 48px;
+    padding: 0 5px;
+}
+
+#page-sub-nav ul li a {
+    line-height: 48px;
+    color: #17222c;
+}
+
+#page-sub-nav ul li.current_page_item {
+    border-bottom: 2px solid #ff981e;
+}
+#page-sub-nav ul li.current_page_item a,
+#page-sub-nav ul li a:hover {
+    color: #ff981e;
+}
+
 /* =Featured Slider
 -------------------------------------------------------------- */
 .featured-slider {
@@ -1376,10 +1415,11 @@ a.more-link:hover {
 /* =Content
 ----------------------------------------------- */
 #main {
-    padding: 1% 1% 10px;
+    padding: 0 0 10px;
+
 }
 #main.shrink {
-    padding-top: 200px;
+    padding-top: 170px;
 }
 .home #main {
     padding: 0 0 10px 0;
@@ -1710,6 +1750,13 @@ footer.entry-meta a.readmore {
     padding-bottom: 5px;
     display: block;
     overflow: hidden;
+}
+
+.entry-content > * {
+    padding: 0 1% 5px 1%;
+}
+.entry-content > #page-sub-nav {
+    padding: 0;
 }
 
 .entry-content dt,
@@ -2402,6 +2449,7 @@ div.bbp-search-form button {
 }
 .three-item-cta p {
     padding: 0 15px;
+    color: #f8f8f8;
     
 }
 .three-item-cta .service-icon,

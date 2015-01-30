@@ -914,6 +914,7 @@ a.more-link:hover {
 #access ul li.current_page_item a,
 #access ul li:hover > a {
     color: #7f4098;
+    text-decoration: underline;
 }
 /* Dropdown */
 #access ul li ul,
@@ -1038,7 +1039,7 @@ a.more-link:hover {
     display: block;
     padding-top: 5px;
     text-transform: none;
-    font-weight: normal;
+
     font-family: 'Roboto', sans-serif;
 }
 #page-sub-nav {
@@ -1103,8 +1104,6 @@ a.more-link:hover {
     line-height: 42px;
     padding: 10px 20px;
     background-color: #53425f;
-    /*background-color: rgba(99, 198, 174, 0.9);*/
-
     color: #f8f8f8;
     font-family: 'Roboto Slab', serif;
 }
@@ -1214,7 +1213,6 @@ a.more-link:hover {
 ----------------------------------------------- */
 #main {
     padding: 0 0 10px;
-
 }
 #main.shrink {
     padding-top: 170px;
@@ -2064,7 +2062,7 @@ div.bbp-search-form button {
 }
 .business-layout .widget-title {
     font-weight: normal;
-    font-size: 22px;
+    font-size: 2.1em;
     line-height: 29px;
 }
 /* Custom Menu Widget */
@@ -2388,7 +2386,7 @@ section.widget.news-footer {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 20px;
-    font-weight: normal;
+    font-weight: 100;
     text-transform: none;
     display: block;
     padding-top: 20px;
@@ -2504,11 +2502,11 @@ section.widget.news-footer {
 #colophon .widget_nav_menu ul li a {
     border-bottom: none;
     margin: 0 0 0 10px;
-    /*padding: 0 0 0 10px;*/
     padding: 0;
 }
 #colophon .widget_nav_menu ul li a:hover {
     color: #dbdbdb;
+    text-decoration: underline;
 }
 /* Footer Info Bar  */
 #colophon .info-bar {

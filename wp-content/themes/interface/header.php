@@ -53,8 +53,7 @@
 		 */
 		wp_head();
 	?>
-	<link href='http://fonts.googleapis.com/css?family=Roboto:300|Roboto+Slab:300' rel='stylesheet' type='text/css'>
-</head>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300|Roboto+Slab:400' rel='stylesheet' type='text/css'></head>
 
 <body <?php body_class(); ?>>
 <?php

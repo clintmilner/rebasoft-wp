@@ -64,13 +64,13 @@ add_action( 'interface_footer_sidebar', 'interface_display_footer_sidebar', 10 )
  * Shows all the widgets that are dragged and dropped on the Footer Sidebar.
  */
 function interface_display_footer_sidebar() {
-	if( is_active_sidebar( 'interface_footer_sidebar' ) || is_active_sidebar( 'interface_footer_column2' ) || is_active_sidebar( 'interface_footer_column3' ) ) {
+	if( is_active_sidebar( 'interface_footer_sidebar' ) || is_active_sidebar( 'interface_footer_column2' ) || is_active_sidebar( 'interface_footer_column3' ) || is_active_sidebar( 'interface_footer_column4' ) ) {
 		?>
 
 <div class="widget-wrap">
   <div class="container">
     <div class="widget-area clearfix">
-      <div class="one-third">
+      <div class="one-fourth">
         <?php
 						// Calling the footer column 1 sidebar
 						if ( is_active_sidebar( 'interface_footer_sidebar' ) ) :
@@ -79,9 +79,9 @@ function interface_display_footer_sidebar() {
 						
 						?>
       </div>
-      <!-- .one-third -->
+      <!-- .one-fourth -->
       
-      <div class="one-third">
+      <div class="one-fourth">
         <?php
 						// Calling the footer column 2 sidebar
 						if ( is_active_sidebar( 'interface_footer_column2' ) ) :
@@ -89,9 +89,9 @@ function interface_display_footer_sidebar() {
 						endif;
 						?>
       </div>
-      <!-- .one-third -->
+      <!-- .one-fourth -->
       
-      <div class="one-third">
+      <div class="one-fourth">
         <?php
 						// Calling the footer column 3 sidebar
 						if ( is_active_sidebar( 'interface_footer_column3' ) ) :
@@ -99,8 +99,17 @@ function interface_display_footer_sidebar() {
 						endif;
 						?>
       </div>
-      <!-- .one-third --> 
-    </div>
+      <!-- .one-fourth -->
+		<div class="one-fourth">
+			<?php
+			// Calling the footer column 4 sidebar
+			if ( is_active_sidebar( 'interface_footer_column4' ) ) :
+				dynamic_sidebar( 'interface_footer_column4' );
+			endif;
+			?>
+		</div>
+		<!-- .one-fourth -->
+	</div>
     <!-- .widget-area --> 
   </div>
   <!-- .container --> 

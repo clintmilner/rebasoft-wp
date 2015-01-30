@@ -82,6 +82,9 @@
 	.widget_promotional_bar .promotional-text {
 		width: 77.5%;
 	}
+	.three-item-cta div .one-third:last-child {
+		width: 100%;
+	}
 	/* Custom Gallery Page */
 	.custom-gallery #main .column {
 		margin-left: -20px;
@@ -199,6 +202,10 @@
 	}
 	.home #main.shrink {
 		padding-top: 0;
+	}
+	
+	.textwidget div .one-third:last-child {
+		width: 100%;
 	}
 
 	/* Responsive Navigation */

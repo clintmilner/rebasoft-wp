@@ -62,4 +62,13 @@ jQuery( function() {
 			}
 		});
 	})();
+	
+	(function(){
+		var dk = jQuery( '.dk' ), 
+			lt = jQuery( '.lt' ),
+			height;
+		height = Math.max( dk.height(), lt.height() );
+		dk.height( height );
+		lt.height( height );
+	})();
 } );

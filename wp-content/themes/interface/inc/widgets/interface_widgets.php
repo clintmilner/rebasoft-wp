@@ -107,6 +107,17 @@ function interface_widgets_init() {
 		'before_title'  	=> '<h1 class="widget-title">',
 		'after_title'   	=> '</h1>'
 	) );
+	
+	// Registering footer sidebar 4
+	register_sidebar( array(
+		'name' 				=> __( 'Footer - Column4', 'interface' ),
+		'id' 					=> 'interface_footer_column4',
+		'description'   	=> __( 'Shows widgets at footer Column 4.', 'interface' ),
+		'before_widget' 	=> '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  	=> '</aside>',
+		'before_title'  	=> '<h1 class="widget-title">',
+		'after_title'   	=> '</h1>'
+	) );
 
 	// Registering widgets
 	register_widget( "interface_custom_tag_widget" );
